@@ -5,3 +5,5 @@ Thumbs.db
 transcripts/
 learning_notes.txt
 messages.txt
+push.bat
+*.bat
