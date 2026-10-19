@@ -1,0 +1,1229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emergency Relief English | Bernie - Lesson & Homework</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0b1329;
+      --card-bg: #132247;
+      --card-inner: #1a2d5a;
+      --card-border: #263e77;
+      --primary: #38bdf8;
+      --primary-hover: #0284c7;
+      --accent: #f97316;
+      --accent-light: #ffedd5;
+      --success: #10b981;
+      --success-bg: rgba(16, 185, 129, 0.15);
+      --error: #ef4444;
+      --error-bg: rgba(239, 68, 68, 0.15);
+      --warning: #f59e0b;
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+      --text-dim: #64748b;
+      --font-main: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-main);
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Top Emergency Banner */
+    .top-strip {
+      background: linear-gradient(90deg, #ea580c, #f97316, #ea580c);
+      color: #fff;
+      padding: 8px 16px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1024px;
+      margin: 0 auto;
+      padding: 24px 16px 60px;
+      flex: 1;
+    }
+
+    /* Header Profile Card */
+    .header-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 20px;
+      padding: 24px 28px;
+      margin-bottom: 24px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+    }
+
+    .header-info h1 {
+      font-size: 1.75rem;
+      font-weight: 800;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .header-info p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-top: 4px;
+    }
+
+    .student-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--card-inner);
+      border: 1px solid var(--card-border);
+      padding: 8px 16px;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--primary);
+    }
+
+    .flag-icon {
+      font-size: 1.25rem;
+    }
+
+    /* Tabs Navigation */
+    .tab-bar {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 24px;
+      border-bottom: 1px solid var(--card-border);
+      padding-bottom: 12px;
+      overflow-x: auto;
+    }
+
+    .tab-btn {
+      background: transparent;
+      color: var(--text-muted);
+      border: none;
+      font-family: inherit;
+      font-size: 1rem;
+      font-weight: 700;
+      padding: 10px 20px;
+      border-radius: 12px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .tab-btn:hover {
+      background: var(--card-inner);
+      color: #fff;
+    }
+
+    .tab-btn.active {
+      background: var(--primary);
+      color: #0b1329;
+      box-shadow: 0 4px 14px rgba(56, 189, 248, 0.35);
+    }
+
+    /* Tab Contents */
+    .tab-content {
+      display: none;
+      animation: fadeIn 0.3s ease;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Flashcard & Vocab Grid */
+    .section-title {
+      font-size: 1.35rem;
+      font-weight: 800;
+      margin: 28px 0 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #fff;
+    }
+
+    .vocab-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .vocab-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 18px 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+
+    .vocab-card:hover {
+      transform: translateY(-2px);
+      border-color: var(--primary);
+    }
+
+    .vocab-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 8px;
+    }
+
+    .vocab-word {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: #fff;
+    }
+
+    .vocab-pos {
+      font-size: 0.75rem;
+      font-family: var(--font-mono);
+      background: var(--card-inner);
+      padding: 2px 8px;
+      border-radius: 6px;
+      color: var(--text-muted);
+    }
+
+    .audio-btn {
+      background: rgba(56, 189, 248, 0.15);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      color: var(--primary);
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 1.1rem;
+      transition: all 0.2s;
+      flex-shrink: 0;
+    }
+
+    .audio-btn:hover {
+      background: var(--primary);
+      color: #0b1329;
+      transform: scale(1.08);
+    }
+
+    .vocab-phonetic {
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      color: var(--warning);
+      margin-bottom: 6px;
+    }
+
+    .vocab-trans {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+    }
+
+    .vocab-example {
+      background: var(--card-inner);
+      border-radius: 10px;
+      padding: 10px 12px;
+      font-size: 0.88rem;
+      border-left: 3px solid var(--primary);
+    }
+
+    .vocab-example-en {
+      color: #fff;
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+
+    .vocab-example-es {
+      color: var(--text-muted);
+      font-size: 0.82rem;
+    }
+
+    /* Homework Layout */
+    .hw-score-card {
+      background: linear-gradient(135deg, #1e293b, #0f172a);
+      border: 1px solid var(--card-border);
+      border-radius: 18px;
+      padding: 20px 24px;
+      margin-bottom: 28px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .hw-score-title {
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: #fff;
+    }
+
+    .hw-score-subtitle {
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+
+    .score-meter {
+      font-family: var(--font-mono);
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: var(--primary);
+      background: rgba(56, 189, 248, 0.12);
+      padding: 6px 18px;
+      border-radius: 12px;
+      border: 1px solid rgba(56, 189, 248, 0.25);
+    }
+
+    .question-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 18px;
+      padding: 22px 24px;
+      margin-bottom: 20px;
+      transition: border-color 0.2s;
+    }
+
+    .question-card.correct {
+      border-color: var(--success);
+      box-shadow: 0 0 15px rgba(16, 185, 129, 0.15);
+    }
+
+    .question-card.incorrect {
+      border-color: var(--error);
+      box-shadow: 0 0 15px rgba(239, 68, 68, 0.15);
+    }
+
+    .q-number-tag {
+      font-size: 0.75rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--accent);
+      margin-bottom: 6px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .q-text {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 12px;
+      line-height: 1.4;
+    }
+
+    .q-scenario {
+      background: var(--card-inner);
+      padding: 10px 14px;
+      border-radius: 10px;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+      border-left: 3px solid var(--accent);
+    }
+
+    /* Options Grid */
+    .options-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    @media (min-width: 640px) {
+      .options-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .option-btn {
+      background: var(--card-inner);
+      border: 1px solid var(--card-border);
+      color: var(--text);
+      font-family: inherit;
+      font-size: 0.95rem;
+      font-weight: 600;
+      padding: 12px 16px;
+      border-radius: 12px;
+      cursor: pointer;
+      text-align: left;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      transition: all 0.2s;
+    }
+
+    .option-btn:hover {
+      background: rgba(56, 189, 248, 0.15);
+      border-color: var(--primary);
+    }
+
+    .option-btn.selected {
+      background: rgba(56, 189, 248, 0.25);
+      border-color: var(--primary);
+      color: #fff;
+    }
+
+    .option-btn.correct-choice {
+      background: var(--success-bg);
+      border-color: var(--success);
+      color: #fff;
+    }
+
+    .option-btn.wrong-choice {
+      background: var(--error-bg);
+      border-color: var(--error);
+      color: #fff;
+    }
+
+    /* Action & Clue Buttons */
+    .q-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      padding-top: 12px;
+      border-top: 1px solid var(--card-inner);
+    }
+
+    .btn-clue {
+      background: rgba(245, 158, 11, 0.15);
+      border: 1px solid rgba(245, 158, 11, 0.4);
+      color: var(--warning);
+      padding: 8px 14px;
+      border-radius: 10px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s;
+    }
+
+    .btn-clue:hover {
+      background: var(--warning);
+      color: #0b1329;
+    }
+
+    .clue-box {
+      display: none;
+      background: rgba(245, 158, 11, 0.08);
+      border: 1px dashed var(--warning);
+      border-radius: 12px;
+      padding: 12px 16px;
+      margin-top: 12px;
+      font-size: 0.9rem;
+      color: #fef3c7;
+      line-height: 1.45;
+    }
+
+    .clue-box.open {
+      display: block;
+      animation: fadeIn 0.25s ease;
+    }
+
+    .feedback-msg {
+      font-size: 0.9rem;
+      font-weight: 700;
+      display: none;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .feedback-msg.show-correct {
+      display: inline-flex;
+      color: var(--success);
+    }
+
+    .feedback-msg.show-wrong {
+      display: inline-flex;
+      color: var(--error);
+    }
+
+    /* Finish / Summary Section */
+    .finish-box {
+      background: var(--card-bg);
+      border: 2px dashed var(--card-border);
+      border-radius: 20px;
+      padding: 30px;
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .btn-submit {
+      background: linear-gradient(135deg, var(--primary), var(--primary-hover));
+      color: #0b1329;
+      border: none;
+      font-family: inherit;
+      font-size: 1.1rem;
+      font-weight: 800;
+      padding: 14px 32px;
+      border-radius: 14px;
+      cursor: pointer;
+      box-shadow: 0 4px 20px rgba(56, 189, 248, 0.4);
+      transition: all 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-submit:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 24px rgba(56, 189, 248, 0.6);
+    }
+
+    /* Reference Sheet Tables */
+    .ref-table-wrap {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      overflow: hidden;
+      margin-bottom: 24px;
+    }
+
+    .ref-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.95rem;
+    }
+
+    .ref-table th {
+      background: var(--card-inner);
+      color: var(--primary);
+      padding: 14px 18px;
+      font-weight: 700;
+      border-bottom: 1px solid var(--card-border);
+    }
+
+    .ref-table td {
+      padding: 14px 18px;
+      border-bottom: 1px solid var(--card-border);
+    }
+
+    .ref-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .ref-table tr:hover {
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    .ref-en {
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .ref-es {
+      color: var(--text-muted);
+      font-size: 0.88rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 24px;
+      color: var(--text-dim);
+      font-size: 0.85rem;
+      border-top: 1px solid var(--card-border);
+      background: var(--bg);
+    }
+
+    footer a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Status Strip -->
+  <div class="top-strip">
+    <span>🚨 Field Worker Emergency English Training</span>
+    <span>Preply Student Portal • Buenos Aires 🇦🇷</span>
+  </div>
+
+  <div class="container">
+    
+    <!-- Student Header Profile -->
+    <header class="header-card">
+      <div class="header-info">
+        <h1>Bernie's Disaster Relief English 🚑</h1>
+        <p>Vocabulario esencial, pronunciación con audio y tarea interactiva con pistas en español.</p>
+      </div>
+      <div class="student-badge">
+        <span class="flag-icon">🇦🇷</span>
+        <span>Student: Bernie • Teacher: Lewis O'Shea</span>
+      </div>
+    </header>
+
+    <!-- Navigation Tabs -->
+    <nav class="tab-bar">
+      <button class="tab-btn active" onclick="switchTab('homework')">📝 Tarea Interactiva (Homework)</button>
+      <button class="tab-btn" onclick="switchTab('vocab')">📚 Vocabulario con Audio</button>
+      <button class="tab-btn" onclick="switchTab('fieldsheet')">📻 Guía de Campo (Cheat Sheet)</button>
+    </nav>
+
+    <!-- TAB 1: HOMEWORK (PRIMARY VIEW) -->
+    <main id="tab-homework" class="tab-content active">
+      
+      <!-- Score Progress Bar -->
+      <div class="hw-score-card">
+        <div>
+          <div class="hw-score-title">Tu progreso en la tarea</div>
+          <div class="hw-score-subtitle">Completá las 8 preguntas. Si te trabás, ¡tocá el botón amarillo para ver la pista en español!</div>
+        </div>
+        <div class="score-meter" id="score-display">0 / 8</div>
+      </div>
+
+      <!-- Question 1 -->
+      <div class="question-card" id="qcard-1">
+        <div class="q-number-tag">
+          <span>Pregunta 1 • Situación de Campo</span>
+          <span class="feedback-msg" id="fb-1"></span>
+        </div>
+        <div class="q-scenario">
+          🏢 <strong>Situación:</strong> Hubo un terremoto. El equipo entra a un edificio colapsado y encuentra a 4 personas con vida bajo los escombros.
+        </div>
+        <div class="q-text">¿Cómo se dice en inglés que encontraron a 4 "sobrevivientes"?</div>
+        <div class="options-grid">
+          <button class="option-btn" onclick="checkOption(1, this, false)">A) "We found 4 shelters."</button>
+          <button class="option-btn" onclick="checkOption(1, this, true)">B) "We found 4 survivors."</button>
+          <button class="option-btn" onclick="checkOption(1, this, false)">C) "We found 4 shortages."</button>
+          <button class="option-btn" onclick="checkOption(1, this, false)">D) "We found 4 safe zones."</button>
+        </div>
+        <div class="q-actions">
+          <button class="btn-clue" onclick="toggleClue(1)">💡 Pista en español</button>
+          <button class="audio-btn" onclick="speakText('We found 4 survivors in the building.')" title="Escuchar pronunciación">🔊</button>
+        </div>
+        <div class="clue-box" id="clue-1">
+          🇦🇷 <strong>Pista para Bernie:</strong> En emergencias, a las personas que siguen vivas después del desastre las llamamos <em>survivors</em> (sobrevivientes). <em>Shelter</em> es el albergue y <em>shortage</em> es la escasez.
+        </div>
+      </div>
+
+      <!-- Question 2 -->
+      <div class="question-card" id="qcard-2">
+        <div class="q-number-tag">
+          <span>Pregunta 2 • Suministros Críticos</span>
+          <span class="feedback-msg" id="fb-2"></span>
+        </div>
+        <div class="q-scenario">
+          💧 <strong>Situación:</strong> En el campamento hay 300 personas pero solo quedan 20 bidones de agua limpia.
+        </div>
+        <div class="q-text">¿Qué frase decís por radio para reportar que "tenemos escasez de agua"?</div>
+        <div class="options-grid">
+          <button class="option-btn" onclick="checkOption(2, this, false)">A) "We have an evacuate of water."</button>
+          <button class="option-btn" onclick="checkOption(2, this, false)">B) "We have an injured of water."</button>
+          <button class="option-btn" onclick="checkOption(2, this, true)">C) "We have a shortage of clean water."</button>
+          <button class="option-btn" onclick="checkOption(2, this, false)">D) "We are safe zone of water."</button>
+        </div>
+        <div class="q-actions">
+          <button class="btn-clue" onclick="toggleClue(2)">💡 Pista en español</button>
+          <button class="audio-btn" onclick="speakText('We have a shortage of clean water.')" title="Escuchar pronunciación">🔊</button>
+        </div>
+        <div class="clue-box" id="clue-2">
+          🇦🇷 <strong>Pista para Bernie:</strong> Cuando algo no alcanza o falta (escasez), en inglés se usa la palabra <strong>shortage</strong> (*shór-tidch*). Acordate del template: <em>"We have a shortage of [item]."</em>
+        </div>
+      </div>
+
+      <!-- Question 3 -->
+      <div class="question-card" id="qcard-3">
+        <div class="q-number-tag">
+          <span>Pregunta 3 • Alerta Máxima</span>
+          <span class="feedback-msg" id="fb-3"></span>
+        </div>
+        <div class="q-scenario">
+          🌊 <strong>Situación:</strong> El agua del río está subiendo muy rápido y va a inundar las casas del pueblo en 15 minutos.
+        </div>
+        <div class="q-text">¿Qué orden les das a los vecinos del pueblo?</div>
+        <div class="options-grid">
+          <button class="option-btn" onclick="checkOption(3, this, true)">A) "We must evacuate now! Move to high ground!"</button>
+          <button class="option-btn" onclick="checkOption(3, this, false)">B) "We distribute the water at 8 PM."</button>
+          <button class="option-btn" onclick="checkOption(3, this, false)">C) "Please assess the building."</button>
+          <button class="option-btn" onclick="checkOption(3, this, false)">D) "Stay inside your home."</button>
+        </div>
+        <div class="q-actions">
+          <button class="btn-clue" onclick="toggleClue(3)">💡 Pista en español</button>
+          <button class="audio-btn" onclick="speakText('We must evacuate now! Move to high ground!')" title="Escuchar pronunciación">🔊</button>
+        </div>
+        <div class="clue-box" id="clue-3">
+          🇦🇷 <strong>Pista para Bernie:</strong> En inundaciones, cuando la gente debe abandonar el lugar de inmediato se usa el verbo <strong>evacuate</strong> (evacuar) y la indicación directa <em>"move to high ground"</em> (vayan a zonas altas).
+        </div>
+      </div>
+
+      <!-- Question 4 -->
+      <div class="question-card" id="qcard-4">
+        <div class="q-number-tag">
+          <span>Pregunta 4 • Atención Médica</span>
+          <span class="feedback-msg" id="fb-4"></span>
+        </div>
+        <div class="q-scenario">
+          🩹 <strong>Situación:</strong> Una persona tiene un corte sangrando en el brazo y otra se dobló el tobillo, pero no hay médicos todavía.
+        </div>
+        <div class="q-text">Vos empezás a colocar vendas y desinfectar. ¿Qué estás haciendo?</div>
+        <div class="options-grid">
+          <button class="option-btn" onclick="checkOption(4, this, false)">A) "I am rescuing the shelter."</button>
+          <button class="option-btn" onclick="checkOption(4, this, true)">B) "I am giving first aid."</button>
+          <button class="option-btn" onclick="checkOption(4, this, false)">C) "I am missing the injured."</button>
+          <button class="option-btn" onclick="checkOption(4, this, false)">D) "I am trapped in the village."</button>
+        </div>
+        <div class="q-actions">
+          <button class="btn-clue" onclick="toggleClue(4)">💡 Pista en español</button>
+          <button class="audio-btn" onclick="speakText('I am giving first aid.')" title="Escuchar pronunciación">🔊</button>
+        </div>
+        <div class="clue-box" id="clue-4">
+          🇦🇷 <strong>Pista para Bernie:</strong> La atención básica inicial con gasas, desinfectante y vendajes se llama <strong>first aid</strong> (primeros auxilios). Se dice: <em>"giving first aid"</em>.
+        </div>
+      </div>
+
+      <!-- Question 5 -->
+      <div class="question-card" id="qcard-5">
+        <div class="q-number-tag">
+          <span>Pregunta 5 • Rescate</span>
+          <span class="feedback-msg" id="fb-5"></span>
+        </div>
+        <div class="q-scenario">
+          🏠 <strong>Situación:</strong> La puerta de una vivienda se trabó con escombros. Adentro hay una familia que no puede salir por sus propios medios.
+        </div>
+        <div class="q-text">¿Cómo describís la situación de la familia?</div>
+        <div class="options-grid">
+          <button class="option-btn" onclick="checkOption(5, this, false)">A) "The family is safe zone."</button>
+          <button class="option-btn" onclick="checkOption(5, this, false)">B) "The family is distributing blankets."</button>
+          <button class="option-btn" onclick="checkOption(5, this, true)">C) "The family is trapped inside."</button>
+          <button class="option-btn" onclick="checkOption(5, this, false)">D) "The family is assessment."</button>
+        </div>
+        <div class="q-actions">
+          <button class="btn-clue" onclick="toggleClue(5)">💡 Pista en español</button>
+          <button class="audio-btn" onclick="speakText('The family is trapped inside.')" title="Escuchar pronunciación">🔊</button>
+        </div>
+        <div class="clue-box" id="clue-5">
+          🇦🇷 <strong>Pista para Bernie:</strong> Cuando alguien está encerrado sin poder salir, usamos la palabra <strong>trapped</strong> (*trapt* = atrapado/a).
+        </div>
+      </div>
+
+      <!-- Question 6 -->
+      <div class="question-card" id="qcard-6">
+        <div class="q-number-tag">
+          <span>Pregunta 6 • Destino de los Desplazados</span>
+          <span class="feedback-msg" id="fb-6"></span>
+        </div>
+        <div class="q-scenario">
+          ⛺ <strong>Situación:</strong> La escuela del barrio fue acondicionada con colchonetas para que duerman 150 personas sin hogar.
+        </div>
+        <div class="q-text">¿Cómo se le llama en inglés a ese lugar seguro para dormir?</div>
+        <div class="options-grid">
+          <button class="option-btn" onclick="checkOption(6, this, true)">A) "Emergency shelter"</button>
+          <button class="option-btn" onclick="checkOption(6, this, false)">B) "Urgent shortage"</button>
+          <button class="option-btn" onclick="checkOption(6, this, false)">C) "Bridge blocked"</button>
+          <button class="option-btn" onclick="checkOption(6, this, false)">D) "First aid injured"</button>
+        </div>
+        <div class="q-actions">
+          <button class="btn-clue" onclick="toggleClue(6)">💡 Pista en español</button>
+          <button class="audio-btn" onclick="speakText('Please go to the emergency shelter.')" title="Escuchar pronunciación">🔊</button>
+        </div>
+        <div class="clue-box" id="clue-6">
+          🇦🇷 <strong>Pista para Bernie:</strong> El albergue o refugio temporal se llama <strong>shelter</strong> (*shél-ter*). A las personas que perdieron su casa se las llama <em>displaced people</em>.
+        </div>
+      </div>
+
+      <!-- Question 7 -->
+      <div class="question-card" id="qcard-7">
+        <div class="q-number-tag">
+          <span>Pregunta 7 • Ayudando a un Turista</span>
+          <span class="feedback-msg" id="fb-7"></span>
+        </div>
+        <div class="q-scenario">
+          🗺️ <strong>Situación:</strong> Un turista que habla inglés está asustado y quiere meterse a un hotel con grietas peligrosas a buscar su valija.
+        </div>
+        <div class="q-text">¿Qué frase clara y directa le decís en inglés?</div>
+        <div class="options-grid">
+          <button class="option-btn" onclick="checkOption(7, this, false)">A) "Yes, please enter and bring supplies."</button>
+          <button class="option-btn" onclick="checkOption(7, this, true)">B) "Do not enter. It is dangerous! Move to the safe zone."</button>
+          <button class="option-btn" onclick="checkOption(7, this, false)">C) "The bridge is not blocked for you."</button>
+          <button class="option-btn" onclick="checkOption(7, this, false)">D) "We have water shortage in hotel."</button>
+        </div>
+        <div class="q-actions">
+          <button class="btn-clue" onclick="toggleClue(7)">💡 Pista en español</button>
+          <button class="audio-btn" onclick="speakText('Do not enter. It is dangerous! Move to the safe zone.')" title="Escuchar pronunciación">🔊</button>
+        </div>
+        <div class="clue-box" id="clue-7">
+          🇦🇷 <strong>Pista para Bernie:</strong> En emergencias usá órdenes directas y cortas: <em>"Do not enter"</em> (no entre) + <em>"It is dangerous"</em> (es peligroso) + <em>"Move to the safe zone"</em> (vaya a la zona segura).
+        </div>
+      </div>
+
+      <!-- Question 8 -->
+      <div class="question-card" id="qcard-8">
+        <div class="q-number-tag">
+          <span>Pregunta 8 • Comunicación de Radio</span>
+          <span class="feedback-msg" id="fb-8"></span>
+        </div>
+        <div class="q-scenario">
+          📻 <strong>Situación:</strong> La base central por radio te dice: <em>"Truck with blankets arrives in 20 minutes."</em>
+        </div>
+        <div class="q-text">¿Cómo confirmás en inglés que entendiste el mensaje por radio?</div>
+        <div class="options-grid">
+          <button class="option-btn" onclick="checkOption(8, this, true)">A) "Copy that. Thank you."</button>
+          <button class="option-btn" onclick="checkOption(8, this, false)">B) "I am injured, copy."</button>
+          <button class="option-btn" onclick="checkOption(8, this, false)">C) "Trapped truck."</button>
+          <button class="option-btn" onclick="checkOption(8, this, false)">D) "Distribute missing."</button>
+        </div>
+        <div class="q-actions">
+          <button class="btn-clue" onclick="toggleClue(8)">💡 Pista en español</button>
+          <button class="audio-btn" onclick="speakText('Copy that. Thank you.')" title="Escuchar pronunciación">🔊</button>
+        </div>
+        <div class="clue-box" id="clue-8">
+          🇦🇷 <strong>Pista para Bernie:</strong> La forma estándar y profesional en todo el mundo para decir "Copiado / Entendido" por radio en inglés es: <strong>"Copy that"</strong>.
+        </div>
+      </div>
+
+      <!-- Submit / Completion Box -->
+      <div class="finish-box">
+        <h3 style="font-size: 1.4rem; font-weight: 800; margin-bottom: 8px;">¡Gran trabajo en tu entrenamiento, Bernie! 🌟</h3>
+        <p style="color: var(--text-muted); margin-bottom: 20px;">Hacé click para copiar tu puntaje y compartirlo con tu profe Lewis en Preply.</p>
+        <button class="btn-submit" onclick="copyResults()">📋 Copiar resumen para Lewis</button>
+      </div>
+
+    </main>
+
+    <!-- TAB 2: VOCABULARY & AUDIO -->
+    <section id="tab-vocab" class="tab-content">
+      
+      <div class="section-title">👥 Personas y Estado (People & Status)</div>
+      <div class="vocab-grid">
+        
+        <!-- Survivor -->
+        <div class="vocab-card">
+          <div class="vocab-top">
+            <div>
+              <div class="vocab-word">Survivor</div>
+              <div class="vocab-phonetic">/ ser-VÁI-ver /</div>
+            </div>
+            <button class="audio-btn" onclick="speakText('Survivor. We found ten survivors.')">🔊</button>
+          </div>
+          <div class="vocab-trans">Sobreviviente / Superviviente</div>
+          <div class="vocab-example">
+            <div class="vocab-example-en">"We found ten survivors in the building."</div>
+            <div class="vocab-example-es">Encontramos diez sobrevivientes en el edificio.</div>
+          </div>
+        </div>
+
+        <!-- Injured -->
+        <div class="vocab-card">
+          <div class="vocab-top">
+            <div>
+              <div class="vocab-word">Injured</div>
+              <div class="vocab-phonetic">/ IN-djerd /</div>
+            </div>
+            <button class="audio-btn" onclick="speakText('Injured. Five people are injured.')">🔊</button>
+          </div>
+          <div class="vocab-trans">Herido / Lastimado</div>
+          <div class="vocab-example">
+            <div class="vocab-example-en">"Five people are injured. They need a doctor."</div>
+            <div class="vocab-example-es">Cinco personas están heridas. Necesitan un médico.</div>
+          </div>
+        </div>
+
+        <!-- Missing -->
+        <div class="vocab-card">
+          <div class="vocab-top">
+            <div>
+              <div class="vocab-word">Missing</div>
+              <div class="vocab-phonetic">/ MÍS-ing /</div>
+            </div>
+            <button class="audio-btn" onclick="speakText('Missing. Three people are still missing.')">🔊</button>
+          </div>
+          <div class="vocab-trans">Desaparecido / No localizado</div>
+          <div class="vocab-example">
+            <div class="vocab-example-en">"Three children are still missing."</div>
+            <div class="vocab-example-es">Tres niños todavía están desaparecidos.</div>
+          </div>
+        </div>
+
+        <!-- Trapped -->
+        <div class="vocab-card">
+          <div class="vocab-top">
+            <div>
+              <div class="vocab-word">Trapped</div>
+              <div class="vocab-phonetic">/ TRAPT /</div>
+            </div>
+            <button class="audio-btn" onclick="speakText('Trapped. Two people are trapped.')">🔊</button>
+          </div>
+          <div class="vocab-trans">Atrapado / Encerrado</div>
+          <div class="vocab-example">
+            <div class="vocab-example-en">"Two people are trapped on the roof."</div>
+            <div class="vocab-example-es">Dos personas están atrapadas en el techo.</div>
+          </div>
+        </div>
+
+        <!-- Displaced -->
+        <div class="vocab-card">
+          <div class="vocab-top">
+            <div>
+              <div class="vocab-word">Displaced</div>
+              <div class="vocab-phonetic">/ dis-PLÉIST /</div>
+            </div>
+            <button class="audio-btn" onclick="speakText('Displaced. There are displaced people.')">🔊</button>
+          </div>
+          <div class="vocab-trans">Desplazado (sin casa tras el desastre)</div>
+          <div class="vocab-example">
+            <div class="vocab-example-en">"There are 300 displaced people at the school."</div>
+            <div class="vocab-example-es">Hay 300 personas desplazadas en la escuela.</div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="section-title">🏕️ Lugares y Suministros (Places & Supplies)</div>
+      <div class="vocab-grid">
+        
+        <!-- Shelter -->
+        <div class="vocab-card">
+          <div class="vocab-top">
+            <div>
+              <div class="vocab-word">Shelter</div>
+              <div class="vocab-phonetic">/ SHÉL-ter /</div>
+            </div>
+            <button class="audio-btn" onclick="speakText('Shelter. Emergency shelter.')">🔊</button>
+          </div>
+          <div class="vocab-trans">Albergue / Refugio</div>
+          <div class="vocab-example">
+            <div class="vocab-example-en">"Please go to the emergency shelter."</div>
+            <div class="vocab-example-es">Por favor vayan al albergue de emergencia.</div>
+          </div>
+        </div>
+
+        <!-- Shortage -->
+        <div class="vocab-card">
+          <div class="vocab-top">
+            <div>
+              <div class="vocab-word">Shortage</div>
+              <div class="vocab-phonetic">/ SHÓR-tidch /</div>
+            </div>
+            <button class="audio-btn" onclick="speakText('Shortage. Shortage of clean water.')">🔊</button>
+          </div>
+          <div class="vocab-trans">Escasez / Falta de suministros</div>
+          <div class="vocab-example">
+            <div class="vocab-example-en">"We have a shortage of clean water and food."</div>
+            <div class="vocab-example-es">Tenemos escasez de agua limpia y comida.</div>
+          </div>
+        </div>
+
+        <!-- Safe Zone -->
+        <div class="vocab-card">
+          <div class="vocab-top">
+            <div>
+              <div class="vocab-word">Safe zone</div>
+              <div class="vocab-phonetic">/ SÉIF-zóun /</div>
+            </div>
+            <button class="audio-btn" onclick="speakText('Safe zone. Move to the safe zone.')">🔊</button>
+          </div>
+          <div class="vocab-trans">Zona segura</div>
+          <div class="vocab-example">
+            <div class="vocab-example-en">"Move everyone to the safe zone immediately."</div>
+            <div class="vocab-example-es">Muevan a todos a la zona segura de inmediato.</div>
+          </div>
+        </div>
+
+        <!-- First Aid -->
+        <div class="vocab-card">
+          <div class="vocab-top">
+            <div>
+              <div class="vocab-word">First aid</div>
+              <div class="vocab-phonetic">/ FERST-éid /</div>
+            </div>
+            <button class="audio-btn" onclick="speakText('First aid. She is giving first aid.')">🔊</button>
+          </div>
+          <div class="vocab-trans">Primeros auxilios</div>
+          <div class="vocab-example">
+            <div class="vocab-example-en">"She is giving first aid to the survivor."</div>
+            <div class="vocab-example-es">Ella le está dando primeros auxilios al sobreviviente.</div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="section-title">⚡ Acciones de Emergencia (Actions)</div>
+      <div class="vocab-grid">
+        
+        <!-- Evacuate -->
+        <div class="vocab-card">
+          <div class="vocab-top">
+            <div>
+              <div class="vocab-word">Evacuate</div>
+              <div class="vocab-phonetic">/ i-VÁK-yu-eit /</div>
+            </div>
+            <button class="audio-btn" onclick="speakText('Evacuate. We must evacuate now.')">🔊</button>
+          </div>
+          <div class="vocab-trans">Evacuar</div>
+          <div class="vocab-example">
+            <div class="vocab-example-en">"We must evacuate the area right now."</div>
+            <div class="vocab-example-es">Debemos evacuar el área ahora mismo.</div>
+          </div>
+        </div>
+
+        <!-- Assess -->
+        <div class="vocab-card">
+          <div class="vocab-top">
+            <div>
+              <div class="vocab-word">Assess</div>
+              <div class="vocab-phonetic">/ a-SÉS /</div>
+            </div>
+            <button class="audio-btn" onclick="speakText('Assess. First we assess the damage.')">🔊</button>
+          </div>
+          <div class="vocab-trans">Evaluar / Valorar la situación</div>
+          <div class="vocab-example">
+            <div class="vocab-example-en">"First, the team will assess the damage."</div>
+            <div class="vocab-example-es">Primero el equipo va a evaluar los daños.</div>
+          </div>
+        </div>
+
+        <!-- Distribute -->
+        <div class="vocab-card">
+          <div class="vocab-top">
+            <div>
+              <div class="vocab-word">Distribute</div>
+              <div class="vocab-phonetic">/ dis-TRÍB-yut /</div>
+            </div>
+            <button class="audio-btn" onclick="speakText('Distribute. We distribute water and blankets.')">🔊</button>
+          </div>
+          <div class="vocab-trans">Distribuir / Repartir</div>
+          <div class="vocab-example">
+            <div class="vocab-example-en">"We distribute water and blankets at the park."</div>
+            <div class="vocab-example-es">Distribuimos agua y frazadas en el parque.</div>
+          </div>
+        </div>
+
+        <!-- Urgent -->
+        <div class="vocab-card">
+          <div class="vocab-top">
+            <div>
+              <div class="vocab-word">Urgent</div>
+              <div class="vocab-phonetic">/ ÉR-djent /</div>
+            </div>
+            <button class="audio-btn" onclick="speakText('Urgent. This is urgent. Send help.')">🔊</button>
+          </div>
+          <div class="vocab-trans">Urgente</div>
+          <div class="vocab-example">
+            <div class="vocab-example-en">"This is urgent! Send an ambulance."</div>
+            <div class="vocab-example-es">¡Esto es urgente! Envíen una ambulancia.</div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- TAB 3: FIELD CHEAT SHEET -->
+    <section id="tab-fieldsheet" class="tab-content">
+      
+      <div class="section-title">📻 Frases Clave para Radio y Campo</div>
+      
+      <div class="ref-table-wrap">
+        <table class="ref-table">
+          <thead>
+            <tr>
+              <th style="width: 45%;">Lo que querés decir (Español)</th>
+              <th style="width: 45%;">Frase en Inglés</th>
+              <th style="width: 10%;">Audio</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="ref-es">"Tenemos una escasez crítica de agua."</span></td>
+              <td><span class="ref-en">"We have a critical shortage of water."</span></td>
+              <td><button class="audio-btn" onclick="speakText('We have a critical shortage of water.')">🔊</button></td>
+            </tr>
+            <tr>
+              <td><span class="ref-es">"Hay 10 personas heridas en la escuela."</span></td>
+              <td><span class="ref-en">"Ten people are injured at the school."</span></td>
+              <td><button class="audio-btn" onclick="speakText('Ten people are injured at the school.')">🔊</button></td>
+            </tr>
+            <tr>
+              <td><span class="ref-es">"El puente principal está inundado / bloqueado."</span></td>
+              <td><span class="ref-en">"The main bridge is flooded."</span></td>
+              <td><button class="audio-btn" onclick="speakText('The main bridge is flooded.')">🔊</button></td>
+            </tr>
+            <tr>
+              <td><span class="ref-es">"Copiado / Entendido (por radio)."</span></td>
+              <td><span class="ref-en">"Copy that."</span></td>
+              <td><button class="audio-btn" onclick="speakText('Copy that.')">🔊</button></td>
+            </tr>
+            <tr>
+              <td><span class="ref-es">"Repita, por favor (no se escuchó bien)."</span></td>
+              <td><span class="ref-en">"Say again, please."</span></td>
+              <td><button class="audio-btn" onclick="speakText('Say again, please.')">🔊</button></td>
+            </tr>
+            <tr>
+              <td><span class="ref-es">"Por favor diríjanse a la zona segura."</span></td>
+              <td><span class="ref-en">"Please move to the safe zone."</span></td>
+              <td><button class="audio-btn" onclick="speakText('Please move to the safe zone.')">🔊</button></td>
+            </tr>
+            <tr>
+              <td><span class="ref-es">"No entren al edificio. Es peligroso."</span></td>
+              <td><span class="ref-en">"Do not enter the building. It is dangerous."</span></td>
+              <td><button class="audio-btn" onclick="speakText('Do not enter the building. It is dangerous.')">🔊</button></td>
+            </tr>
+            <tr>
+              <td><span class="ref-es">"Esperen en fila aquí para el agua."</span></td>
+              <td><span class="ref-en">"Please wait here in line for water."</span></td>
+              <td><button class="audio-btn" onclick="speakText('Please wait here in line for water.')">🔊</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </section>
+
+  </div>
+
+  <footer>
+    <p>English for Disaster Relief • Prepared by Lewis O'Shea for Bernie 🇦🇷</p>
+    <p style="margin-top: 4px;">Ready for GitHub Pages deployment: <a href="https://github.com/log210788/bernie" target="_blank">github.com/log210788/bernie</a></p>
+  </footer>
+
+  <script>
+    // Tab Switching
+    function switchTab(tabId) {
+      document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+      document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+      
+      const targetBtn = Array.from(document.querySelectorAll('.tab-btn')).find(b => b.getAttribute('onclick').includes(tabId));
+      if (targetBtn) targetBtn.classList.add('active');
+      
+      const targetContent = document.getElementById('tab-' + tabId);
+      if (targetContent) targetContent.classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Toggle Clue in Argentine Spanish
+    function toggleClue(num) {
+      const clueBox = document.getElementById('clue-' + num);
+      if (clueBox) {
+        clueBox.classList.toggle('open');
+      }
+    }
+
+    // Text to Speech
+    function speakText(text) {
+      if ('speechSynthesis' in window) {
+        window.speechSynthesis.cancel();
+        const utterance = new SpeechSynthesisUtterance(text);
+        utterance.lang = 'en-US';
+        utterance.rate = 0.85; // Slightly slower for low English learners
+        window.speechSynthesis.speak(utterance);
+      } else {
+        alert('Tu navegador no soporta audio automático.');
+      }
+    }
+
+    // State & Score Tracking
+    const userAnswers = {};
+    const totalQuestions = 8;
+
+    function checkOption(qNum, btn, isCorrect) {
+      const card = document.getElementById('qcard-' + qNum);
+      const fb = document.getElementById('fb-' + qNum);
+      const options = card.querySelectorAll('.option-btn');
+
+      options.forEach(b => {
+        b.classList.remove('selected', 'wrong-choice', 'correct-choice');
+        b.disabled = false;
+      });
+
+      btn.classList.add('selected');
+
+      if (isCorrect) {
+        userAnswers[qNum] = true;
+        card.classList.remove('incorrect');
+        card.classList.add('correct');
+        btn.classList.add('correct-choice');
+        fb.className = 'feedback-msg show-correct';
+        fb.innerHTML = '✅ ¡Excelente!';
+      } else {
+        userAnswers[qNum] = false;
+        card.classList.remove('correct');
+        card.classList.add('incorrect');
+        btn.classList.add('wrong-choice');
+        fb.className = 'feedback-msg show-wrong';
+        fb.innerHTML = '⚠️ Casi... ¡Probá de nuevo!';
+      }
+
+      updateScore();
+    }
+
+    function updateScore() {
+      let correctCount = 0;
+      for (let i = 1; i <= totalQuestions; i++) {
+        if (userAnswers[i] === true) correctCount++;
+      }
+      const scoreDisplay = document.getElementById('score-display');
+      scoreDisplay.innerText = `${correctCount} / ${totalQuestions}`;
+      
+      if (correctCount === totalQuestions) {
+        scoreDisplay.style.color = '#10b981';
+      }
+    }
+
+    // Copy Results
+    function copyResults() {
+      let correctCount = 0;
+      for (let i = 1; i <= totalQuestions; i++) {
+        if (userAnswers[i] === true) correctCount++;
+      }
+      const text = `Hola Lewis! Completé la tarea de inglés de ayuda en desastres en la web. Mi puntuación: ${correctCount} / ${totalQuestions}. ¡Muchas gracias!`;
+      
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(text).then(() => {
+          alert('¡Resumen copiado! Pegalo en el chat de Preply para enviárselo a Lewis.');
+        }).catch(() => {
+          prompt('Copiá tu mensaje para Lewis:', text);
+        });
+      } else {
+        prompt('Copiá tu mensaje para Lewis:', text);
+      }
+    }
+  </script>
+</body>
+</html>
