@@ -73,7 +73,7 @@
       border: 1px solid var(--card-border);
       border-radius: 20px;
       padding: 24px 28px;
-      margin-bottom: 24px;
+      margin-bottom: 20px;
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
@@ -112,6 +112,63 @@
 
     .flag-icon {
       font-size: 1.25rem;
+    }
+
+    /* Lesson Selector Bar */
+    .lesson-selector-wrap {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 8px 12px;
+      margin-bottom: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .lesson-selector-label {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding-left: 8px;
+    }
+
+    .lesson-pills {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .lesson-pill {
+      background: var(--card-inner);
+      border: 1px solid var(--card-border);
+      color: var(--text);
+      font-family: inherit;
+      font-size: 0.9rem;
+      font-weight: 700;
+      padding: 8px 16px;
+      border-radius: 10px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s;
+    }
+
+    .lesson-pill:hover {
+      border-color: var(--primary);
+      color: #fff;
+    }
+
+    .lesson-pill.active {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #fff;
+      box-shadow: 0 4px 12px rgba(249, 115, 22, 0.35);
     }
 
     /* Tabs Navigation */
@@ -212,15 +269,6 @@
       font-size: 1.35rem;
       font-weight: 800;
       color: #fff;
-    }
-
-    .vocab-pos {
-      font-size: 0.75rem;
-      font-family: var(--font-mono);
-      background: var(--card-inner);
-      padding: 2px 8px;
-      border-radius: 6px;
-      color: var(--text-muted);
     }
 
     .audio-btn {
@@ -591,13 +639,22 @@
     <header class="header-card">
       <div class="header-info">
         <h1>Bernie's Disaster Relief English 🚑</h1>
-        <p>Vocabulario esencial, pronunciación con audio y tarea interactiva con pistas en español.</p>
+        <p>Vocabulario operativo, pronunciación con audio y tarea interactiva con pistas en español.</p>
       </div>
       <div class="student-badge">
         <span class="flag-icon">🇦🇷</span>
         <span>Student: Bernie • Teacher: Lewis O'Shea</span>
       </div>
     </header>
+
+    <!-- Lesson Switcher Banner -->
+    <div class="lesson-selector-wrap">
+      <div class="lesson-selector-label">Seleccioná la lección:</div>
+      <div class="lesson-pills">
+        <button class="lesson-pill active" id="pill-l2" onclick="selectLesson(2)">🚑 Lección 2: Triaje, Logística y SitRep</button>
+        <button class="lesson-pill" id="pill-l1" onclick="selectLesson(1)">🚨 Lección 1: Emergencias y Suministros</button>
+      </div>
+    </div>
 
     <!-- Navigation Tabs -->
     <nav class="tab-bar">
@@ -606,216 +663,432 @@
       <button class="tab-btn" onclick="switchTab('fieldsheet')">📻 Guía de Campo (Cheat Sheet)</button>
     </nav>
 
+    <!-- ========================================== -->
     <!-- TAB 1: HOMEWORK (PRIMARY VIEW) -->
+    <!-- ========================================== -->
     <main id="tab-homework" class="tab-content active">
       
       <!-- Score Progress Bar -->
       <div class="hw-score-card">
         <div>
-          <div class="hw-score-title">Tu progreso en la tarea</div>
-          <div class="hw-score-subtitle">Completá las 8 preguntas. Si te trabás, ¡tocá el botón amarillo para ver la pista en español!</div>
+          <div class="hw-score-title" id="hw-title">Tu progreso en la tarea — Lección 2</div>
+          <div class="hw-score-subtitle">Completá las 8 preguntas operativas. Si te trabás, ¡tocá el botón amarillo para ver la pista en español!</div>
         </div>
         <div class="score-meter" id="score-display">0 / 8</div>
       </div>
 
-      <!-- Question 1 -->
-      <div class="question-card" id="qcard-1">
-        <div class="q-number-tag">
-          <span>Pregunta 1 • Situación de Campo</span>
-          <span class="feedback-msg" id="fb-1"></span>
+      <!-- ====================================== -->
+      <!-- LESSON 2 QUESTIONS CONTAINER -->
+      <!-- ====================================== -->
+      <div id="lesson-2-questions">
+
+        <!-- L2 Q1 -->
+        <div class="question-card" id="qcard-l2-1">
+          <div class="q-number-tag">
+            <span>Pregunta 1 • Evaluación de Rutas</span>
+            <span class="feedback-msg" id="fb-l2-1"></span>
+          </div>
+          <div class="q-scenario">
+            🛣️ <strong>Situación:</strong> Un alud de barro cubrió la autopista principal. Los camiones grandes de suministros no pueden circular de ninguna manera.
+          </div>
+          <div class="q-text">¿Cómo se dice en inglés que la ruta está "intransitable"?</div>
+          <div class="options-grid">
+            <button class="option-btn" onclick="checkOptionL2(1, this, false)">A) "The road is medevac."</button>
+            <button class="option-btn" onclick="checkOptionL2(1, this, true)">B) "The road is impassable."</button>
+            <button class="option-btn" onclick="checkOptionL2(1, this, false)">C) "The road is unconscious."</button>
+            <button class="option-btn" onclick="checkOptionL2(1, this, false)">D) "The road is walking wounded."</button>
+          </div>
+          <div class="q-actions">
+            <button class="btn-clue" onclick="toggleClue('l2-1')">💡 Pista en español</button>
+            <button class="audio-btn" onclick="speakText('The road is impassable for supply trucks.')" title="Escuchar pronunciación">🔊</button>
+          </div>
+          <div class="clue-box" id="clue-l2-1">
+            🇦🇷 <strong>Pista para Bernie:</strong> En reportes de acceso vehicular, cuando una ruta está cortada o no se puede pasar, se dice <strong>impassable</strong> (*im-PÁ-sa-bl*) o <em>blocked</em>.
+          </div>
         </div>
-        <div class="q-scenario">
-          🏢 <strong>Situación:</strong> Hubo un terremoto. El equipo entra a un edificio colapsado y encuentra a 4 personas con vida bajo los escombros.
+
+        <!-- L2 Q2 -->
+        <div class="question-card" id="qcard-l2-2">
+          <div class="q-number-tag">
+            <span>Pregunta 2 • Triaje Médico Crítico</span>
+            <span class="feedback-msg" id="fb-l2-2"></span>
+          </div>
+          <div class="q-scenario">
+            🩸 <strong>Situación:</strong> Una persona fue rescatada con traumatismo craneal severo, abundante sangrado y no responde a estímulos verbales (Código Rojo).
+          </div>
+          <div class="q-text">¿Cómo reportás su estado médico por radio al centro de operaciones?</div>
+          <div class="options-grid">
+            <button class="option-btn" onclick="checkOptionL2(2, this, false)">A) "The patient has minor injuries."</button>
+            <button class="option-btn" onclick="checkOptionL2(2, this, true)">B) "The patient is critical and unconscious."</button>
+            <button class="option-btn" onclick="checkOptionL2(2, this, false)">C) "The patient is a distribution point."</button>
+            <button class="option-btn" onclick="checkOptionL2(2, this, false)">D) "The patient is passable for 4x4."</button>
+          </div>
+          <div class="q-actions">
+            <button class="btn-clue" onclick="toggleClue('l2-2')">💡 Pista en español</button>
+            <button class="audio-btn" onclick="speakText('The patient is critical and unconscious.')" title="Escuchar pronunciación">🔊</button>
+          </div>
+          <div class="clue-box" id="clue-l2-2">
+            🇦🇷 <strong>Pista para Bernie:</strong> Para la prioridad máxima en triaje se usa <strong>critical</strong> (crítico / prioridad 1) y si la persona no se despierta o no reacciona, se dice <strong>unconscious</strong> (*an-KÓN-shas* = inconsciente).
+          </div>
         </div>
-        <div class="q-text">¿Cómo se dice en inglés que encontraron a 4 "sobrevivientes"?</div>
-        <div class="options-grid">
-          <button class="option-btn" onclick="checkOption(1, this, false)">A) "We found 4 shelters."</button>
-          <button class="option-btn" onclick="checkOption(1, this, true)">B) "We found 4 survivors."</button>
-          <button class="option-btn" onclick="checkOption(1, this, false)">C) "We found 4 shortages."</button>
-          <button class="option-btn" onclick="checkOption(1, this, false)">D) "We found 4 safe zones."</button>
+
+        <!-- L2 Q3 -->
+        <div class="question-card" id="qcard-l2-3">
+          <div class="q-number-tag">
+            <span>Pregunta 3 • Evacuación Médica Urgente</span>
+            <span class="feedback-msg" id="fb-l2-3"></span>
+          </div>
+          <div class="q-scenario">
+            🚁 <strong>Situación:</strong> La posta sanitaria de campaña no tiene quirófano y dos heridos graves necesitan traslado de urgencia por helicóptero a la capital.
+          </div>
+          <div class="q-text">¿Qué término operativo estándar internacional utilizás para pedir la evacuación?</div>
+          <div class="options-grid">
+            <button class="option-btn" onclick="checkOptionL2(3, this, true)">A) "Requesting immediate medevac for 2 patients."</button>
+            <button class="option-btn" onclick="checkOptionL2(3, this, false)">B) "Requesting immediate blackout for 2 patients."</button>
+            <button class="option-btn" onclick="checkOptionL2(3, this, false)">C) "Requesting immediate walking wounded."</button>
+            <button class="option-btn" onclick="checkOptionL2(3, this, false)">D) "Requesting immediate safe shortage."</button>
+          </div>
+          <div class="q-actions">
+            <button class="btn-clue" onclick="toggleClue('l2-3')">💡 Pista en español</button>
+            <button class="audio-btn" onclick="speakText('Requesting immediate medevac for two patients.')" title="Escuchar pronunciación">🔊</button>
+          </div>
+          <div class="clue-box" id="clue-l2-3">
+            🇦🇷 <strong>Pista para Bernie:</strong> La sigla internacional para evacuación médica urgente (aérea o terrestre) es <strong>medevac</strong> (*MÉ-di-vak*, de <em>medical evacuation</em>).
+          </div>
         </div>
-        <div class="q-actions">
-          <button class="btn-clue" onclick="toggleClue(1)">💡 Pista en español</button>
-          <button class="audio-btn" onclick="speakText('We found 4 survivors in the building.')" title="Escuchar pronunciación">🔊</button>
+
+        <!-- L2 Q4 -->
+        <div class="question-card" id="qcard-l2-4">
+          <div class="q-number-tag">
+            <span>Pregunta 4 • Hora de Llegada del Convoy</span>
+            <span class="feedback-msg" id="fb-l2-4"></span>
+          </div>
+          <div class="q-scenario">
+            ⏰ <strong>Situación:</strong> Estás esperando en el albergue los camiones con comida y querés saber a qué hora exacta van a llegar.
+          </div>
+          <div class="q-text">¿Qué pregunta estándar hacés por radio al conductor del convoy?</div>
+          <div class="options-grid">
+            <button class="option-btn" onclick="checkOptionL2(4, this, false)">A) "What is your fracture today?"</button>
+            <button class="option-btn" onclick="checkOptionL2(4, this, false)">B) "What is your triage color?"</button>
+            <button class="option-btn" onclick="checkOptionL2(4, this, true)">C) "What is your ETA at the shelter?"</button>
+            <button class="option-btn" onclick="checkOptionL2(4, this, false)">D) "What is your capacity box?"</button>
+          </div>
+          <div class="q-actions">
+            <button class="btn-clue" onclick="toggleClue('l2-4')">💡 Pista en español</button>
+            <button class="audio-btn" onclick="speakText('What is your ETA at the shelter?')" title="Escuchar pronunciación">🔊</button>
+          </div>
+          <div class="clue-box" id="clue-l2-4">
+            🇦🇷 <strong>Pista para Bernie:</strong> <strong>ETA</strong> significa <em>Estimated Time of Arrival</em> (hora estimada de llegada). Es la sigla universal en radio para preguntar cuándo llegan.
+          </div>
         </div>
-        <div class="clue-box" id="clue-1">
-          🇦🇷 <strong>Pista para Bernie:</strong> En emergencias, a las personas que siguen vivas después del desastre las llamamos <em>survivors</em> (sobrevivientes). <em>Shelter</em> es el albergue y <em>shortage</em> es la escasez.
+
+        <!-- L2 Q5 -->
+        <div class="question-card" id="qcard-l2-5">
+          <div class="q-number-tag">
+            <span>Pregunta 5 • Servicios y Hospital</span>
+            <span class="feedback-msg" id="fb-l2-5"></span>
+          </div>
+          <div class="q-scenario">
+            ⚡ <strong>Situación:</strong> El vendaval cortó los cables de alta tensión. El hospital está a oscuras y funcionando únicamente con el generador de emergencia.
+          </div>
+          <div class="q-text">¿Cómo describís este problema en el reporte de situación (SitRep)?</div>
+          <div class="options-grid">
+            <button class="option-btn" onclick="checkOptionL2(5, this, true)">A) "The hospital has a power outage."</button>
+            <button class="option-btn" onclick="checkOptionL2(5, this, false)">B) "The hospital has a walking wounded."</button>
+            <button class="option-btn" onclick="checkOptionL2(5, this, false)">C) "The hospital is bleeding leg."</button>
+            <button class="option-btn" onclick="checkOptionL2(5, this, false)">D) "The hospital is passable for 4x4."</button>
+          </div>
+          <div class="q-actions">
+            <button class="btn-clue" onclick="toggleClue('l2-5')">💡 Pista en español</button>
+            <button class="audio-btn" onclick="speakText('The hospital has a power outage. We need generators.')" title="Escuchar pronunciación">🔊</button>
+          </div>
+          <div class="clue-box" id="clue-l2-5">
+            🇦🇷 <strong>Pista para Bernie:</strong> El corte de suministro eléctrico o apagón se dice <strong>power outage</strong> (*PÁU-er ÁU-tidch*) o <em>blackout</em>.
+          </div>
         </div>
+
+        <!-- L2 Q6 -->
+        <div class="question-card" id="qcard-l2-6">
+          <div class="q-number-tag">
+            <span>Pregunta 6 • Logística de Entrega de Víveres</span>
+            <span class="feedback-msg" id="fb-l2-6"></span>
+          </div>
+          <div class="q-scenario">
+            📦 <strong>Situación:</strong> Coordinás la entrega ordenada de agua potable y pastillas potabilizadoras en la plaza central para evitar aglomeraciones.
+          </div>
+          <div class="q-text">¿Cómo se denomina en inglés a ese puesto formal de entrega a la comunidad?</div>
+          <div class="options-grid">
+            <button class="option-btn" onclick="checkOptionL2(6, this, false)">A) "Bleeding checkpoint"</button>
+            <button class="option-btn" onclick="checkOptionL2(6, this, false)">B) "Fracture center"</button>
+            <button class="option-btn" onclick="checkOptionL2(6, this, true)">C) "Distribution Point (DP)"</button>
+            <button class="option-btn" onclick="checkOptionL2(6, this, false)">D) "Impassable zone"</button>
+          </div>
+          <div class="q-actions">
+            <button class="btn-clue" onclick="toggleClue('l2-6')">💡 Pista en español</button>
+            <button class="audio-btn" onclick="speakText('The distribution point is active at the park.')" title="Escuchar pronunciación">🔊</button>
+          </div>
+          <div class="clue-box" id="clue-l2-6">
+            🇦🇷 <strong>Pista para Bernie:</strong> El lugar oficial donde se entregan alimentos y agua a las familias damnificadas es el <strong>Distribution Point</strong> (*Punto de distribución*, a menudo abreviado como DP).
+          </div>
+        </div>
+
+        <!-- L2 Q7 -->
+        <div class="question-card" id="qcard-l2-7">
+          <div class="q-number-tag">
+            <span>Pregunta 7 • Heridos Leves y Ambulatorios</span>
+            <span class="feedback-msg" id="fb-l2-7"></span>
+          </div>
+          <div class="q-scenario">
+            🚶 <strong>Situación:</strong> Llegan 12 personas con cortes menores o contusiones leves; caminan por sus propios medios y no corren peligro (Triaje Verde).
+          </div>
+          <div class="q-text">¿Cómo se les llama formalmente en triaje de emergencias en inglés?</div>
+          <div class="options-grid">
+            <button class="option-btn" onclick="checkOptionL2(7, this, false)">A) "Critical unconscious"</button>
+            <button class="option-btn" onclick="checkOptionL2(7, this, true)">B) "Minor injuries / Walking wounded"</button>
+            <button class="option-btn" onclick="checkOptionL2(7, this, false)">C) "Collapsed generators"</button>
+            <button class="option-btn" onclick="checkOptionL2(7, this, false)">D) "Water outages"</button>
+          </div>
+          <div class="q-actions">
+            <button class="btn-clue" onclick="toggleClue('l2-7')">💡 Pista en español</button>
+            <button class="audio-btn" onclick="speakText('Minor injuries and walking wounded wait in Tent B.')" title="Escuchar pronunciación">🔊</button>
+          </div>
+          <div class="clue-box" id="clue-l2-7">
+            🇦🇷 <strong>Pista para Bernie:</strong> En triaje internacional a los pacientes verdes o ambulatorios se les llama <strong>minor injuries</strong> (heridas leves) o <strong>walking wounded</strong> (heridos que pueden caminar).
+          </div>
+        </div>
+
+        <!-- L2 Q8 -->
+        <div class="question-card" id="qcard-l2-8">
+          <div class="q-number-tag">
+            <span>Pregunta 8 • Órdenes de Despacho de Vehículos</span>
+            <span class="feedback-msg" id="fb-l2-8"></span>
+          </div>
+          <div class="q-scenario">
+            🚛 <strong>Situación:</strong> Necesitás que la base envíe ya mismo dos ambulancias y una camioneta 4x4 hacia la zona afectada.
+          </div>
+          <div class="q-text">¿Qué verbo formal y profesional utilizás para dar la orden de "despachar / enviar"?</div>
+          <div class="options-grid">
+            <button class="option-btn" onclick="checkOptionL2(8, this, true)">A) "Please dispatch two ambulances to Sector 4."</button>
+            <button class="option-btn" onclick="checkOptionL2(8, this, false)">B) "Please assess two ambulances to Sector 4."</button>
+            <button class="option-btn" onclick="checkOptionL2(8, this, false)">C) "Please fracture two ambulances to Sector 4."</button>
+            <button class="option-btn" onclick="checkOptionL2(8, this, false)">D) "Please medevac the road to Sector 4."</button>
+          </div>
+          <div class="q-actions">
+            <button class="btn-clue" onclick="toggleClue('l2-8')">💡 Pista en español</button>
+            <button class="audio-btn" onclick="speakText('Please dispatch two ambulances to Sector 4.')" title="Escuchar pronunciación">🔊</button>
+          </div>
+          <div class="clue-box" id="clue-l2-8">
+            🇦🇷 <strong>Pista para Bernie:</strong> En operaciones de auxilio y logística, la orden oficial para mandar vehículos o personal a un punto es <strong>dispatch</strong> (*dis-PÁTCH* = despachar / enviar).
+          </div>
+        </div>
+
       </div>
 
-      <!-- Question 2 -->
-      <div class="question-card" id="qcard-2">
-        <div class="q-number-tag">
-          <span>Pregunta 2 • Suministros Críticos</span>
-          <span class="feedback-msg" id="fb-2"></span>
-        </div>
-        <div class="q-scenario">
-          💧 <strong>Situación:</strong> En el campamento hay 300 personas pero solo quedan 20 bidones de agua limpia.
-        </div>
-        <div class="q-text">¿Qué frase decís por radio para reportar que "tenemos escasez de agua"?</div>
-        <div class="options-grid">
-          <button class="option-btn" onclick="checkOption(2, this, false)">A) "We have an evacuate of water."</button>
-          <button class="option-btn" onclick="checkOption(2, this, false)">B) "We have an injured of water."</button>
-          <button class="option-btn" onclick="checkOption(2, this, true)">C) "We have a shortage of clean water."</button>
-          <button class="option-btn" onclick="checkOption(2, this, false)">D) "We are safe zone of water."</button>
-        </div>
-        <div class="q-actions">
-          <button class="btn-clue" onclick="toggleClue(2)">💡 Pista en español</button>
-          <button class="audio-btn" onclick="speakText('We have a shortage of clean water.')" title="Escuchar pronunciación">🔊</button>
-        </div>
-        <div class="clue-box" id="clue-2">
-          🇦🇷 <strong>Pista para Bernie:</strong> Cuando algo no alcanza o falta (escasez), en inglés se usa la palabra <strong>shortage</strong> (*shór-tidch*). Acordate del template: <em>"We have a shortage of [item]."</em>
-        </div>
-      </div>
+      <!-- ====================================== -->
+      <!-- LESSON 1 QUESTIONS CONTAINER (ARCHIVED)-->
+      <!-- ====================================== -->
+      <div id="lesson-1-questions" style="display: none;">
 
-      <!-- Question 3 -->
-      <div class="question-card" id="qcard-3">
-        <div class="q-number-tag">
-          <span>Pregunta 3 • Alerta Máxima</span>
-          <span class="feedback-msg" id="fb-3"></span>
+        <!-- L1 Q1 -->
+        <div class="question-card" id="qcard-l1-1">
+          <div class="q-number-tag">
+            <span>Pregunta 1 • Situación de Campo</span>
+            <span class="feedback-msg" id="fb-l1-1"></span>
+          </div>
+          <div class="q-scenario">
+            🏢 <strong>Situación:</strong> Hubo un terremoto. El equipo entra a un edificio colapsado y encuentra a 4 personas con vida bajo los escombros.
+          </div>
+          <div class="q-text">¿Cómo se dice en inglés que encontraron a 4 "sobrevivientes"?</div>
+          <div class="options-grid">
+            <button class="option-btn" onclick="checkOptionL1(1, this, false)">A) "We found 4 shelters."</button>
+            <button class="option-btn" onclick="checkOptionL1(1, this, true)">B) "We found 4 survivors."</button>
+            <button class="option-btn" onclick="checkOptionL1(1, this, false)">C) "We found 4 shortages."</button>
+            <button class="option-btn" onclick="checkOptionL1(1, this, false)">D) "We found 4 safe zones."</button>
+          </div>
+          <div class="q-actions">
+            <button class="btn-clue" onclick="toggleClue('l1-1')">💡 Pista en español</button>
+            <button class="audio-btn" onclick="speakText('We found 4 survivors in the building.')" title="Escuchar pronunciación">🔊</button>
+          </div>
+          <div class="clue-box" id="clue-l1-1">
+            🇦🇷 <strong>Pista para Bernie:</strong> En emergencias, a las personas que siguen vivas después del desastre las llamamos <em>survivors</em> (sobrevivientes). <em>Shelter</em> es el albergue y <em>shortage</em> es la escasez.
+          </div>
         </div>
-        <div class="q-scenario">
-          🌊 <strong>Situación:</strong> El agua del río está subiendo muy rápido y va a inundar las casas del pueblo en 15 minutos.
-        </div>
-        <div class="q-text">¿Qué orden les das a los vecinos del pueblo?</div>
-        <div class="options-grid">
-          <button class="option-btn" onclick="checkOption(3, this, true)">A) "We must evacuate now! Move to high ground!"</button>
-          <button class="option-btn" onclick="checkOption(3, this, false)">B) "We distribute the water at 8 PM."</button>
-          <button class="option-btn" onclick="checkOption(3, this, false)">C) "Please assess the building."</button>
-          <button class="option-btn" onclick="checkOption(3, this, false)">D) "Stay inside your home."</button>
-        </div>
-        <div class="q-actions">
-          <button class="btn-clue" onclick="toggleClue(3)">💡 Pista en español</button>
-          <button class="audio-btn" onclick="speakText('We must evacuate now! Move to high ground!')" title="Escuchar pronunciación">🔊</button>
-        </div>
-        <div class="clue-box" id="clue-3">
-          🇦🇷 <strong>Pista para Bernie:</strong> En inundaciones, cuando la gente debe abandonar el lugar de inmediato se usa el verbo <strong>evacuate</strong> (evacuar) y la indicación directa <em>"move to high ground"</em> (vayan a zonas altas).
-        </div>
-      </div>
 
-      <!-- Question 4 -->
-      <div class="question-card" id="qcard-4">
-        <div class="q-number-tag">
-          <span>Pregunta 4 • Atención Médica</span>
-          <span class="feedback-msg" id="fb-4"></span>
+        <!-- L1 Q2 -->
+        <div class="question-card" id="qcard-l1-2">
+          <div class="q-number-tag">
+            <span>Pregunta 2 • Suministros Críticos</span>
+            <span class="feedback-msg" id="fb-l1-2"></span>
+          </div>
+          <div class="q-scenario">
+            💧 <strong>Situación:</strong> En el campamento hay 300 personas pero solo quedan 20 bidones de agua limpia.
+          </div>
+          <div class="q-text">¿Qué frase decís por radio para reportar que "tenemos escasez de agua"?</div>
+          <div class="options-grid">
+            <button class="option-btn" onclick="checkOptionL1(2, this, false)">A) "We have an evacuate of water."</button>
+            <button class="option-btn" onclick="checkOptionL1(2, this, false)">B) "We have an injured of water."</button>
+            <button class="option-btn" onclick="checkOptionL1(2, this, true)">C) "We have a shortage of clean water."</button>
+            <button class="option-btn" onclick="checkOptionL1(2, this, false)">D) "We are safe zone of water."</button>
+          </div>
+          <div class="q-actions">
+            <button class="btn-clue" onclick="toggleClue('l1-2')">💡 Pista en español</button>
+            <button class="audio-btn" onclick="speakText('We have a shortage of clean water.')" title="Escuchar pronunciación">🔊</button>
+          </div>
+          <div class="clue-box" id="clue-l1-2">
+            🇦🇷 <strong>Pista para Bernie:</strong> Cuando algo no alcanza o falta (escasez), en inglés se usa la palabra <strong>shortage</strong> (*shór-tidch*). Acordate del template: <em>"We have a shortage of [item]."</em>
+          </div>
         </div>
-        <div class="q-scenario">
-          🩹 <strong>Situación:</strong> Una persona tiene un corte sangrando en el brazo y otra se dobló el tobillo, pero no hay médicos todavía.
-        </div>
-        <div class="q-text">Vos empezás a colocar vendas y desinfectar. ¿Qué estás haciendo?</div>
-        <div class="options-grid">
-          <button class="option-btn" onclick="checkOption(4, this, false)">A) "I am rescuing the shelter."</button>
-          <button class="option-btn" onclick="checkOption(4, this, true)">B) "I am giving first aid."</button>
-          <button class="option-btn" onclick="checkOption(4, this, false)">C) "I am missing the injured."</button>
-          <button class="option-btn" onclick="checkOption(4, this, false)">D) "I am trapped in the village."</button>
-        </div>
-        <div class="q-actions">
-          <button class="btn-clue" onclick="toggleClue(4)">💡 Pista en español</button>
-          <button class="audio-btn" onclick="speakText('I am giving first aid.')" title="Escuchar pronunciación">🔊</button>
-        </div>
-        <div class="clue-box" id="clue-4">
-          🇦🇷 <strong>Pista para Bernie:</strong> La atención básica inicial con gasas, desinfectante y vendajes se llama <strong>first aid</strong> (primeros auxilios). Se dice: <em>"giving first aid"</em>.
-        </div>
-      </div>
 
-      <!-- Question 5 -->
-      <div class="question-card" id="qcard-5">
-        <div class="q-number-tag">
-          <span>Pregunta 5 • Rescate</span>
-          <span class="feedback-msg" id="fb-5"></span>
+        <!-- L1 Q3 -->
+        <div class="question-card" id="qcard-l1-3">
+          <div class="q-number-tag">
+            <span>Pregunta 3 • Alerta Máxima</span>
+            <span class="feedback-msg" id="fb-l1-3"></span>
+          </div>
+          <div class="q-scenario">
+            🌊 <strong>Situación:</strong> El agua del río está subiendo muy rápido y va a inundar las casas del pueblo en 15 minutos.
+          </div>
+          <div class="q-text">¿Qué orden les das a los vecinos del pueblo?</div>
+          <div class="options-grid">
+            <button class="option-btn" onclick="checkOptionL1(3, this, true)">A) "We must evacuate now! Move to high ground!"</button>
+            <button class="option-btn" onclick="checkOptionL1(3, this, false)">B) "We distribute the water at 8 PM."</button>
+            <button class="option-btn" onclick="checkOptionL1(3, this, false)">C) "Please assess the building."</button>
+            <button class="option-btn" onclick="checkOptionL1(3, this, false)">D) "Stay inside your home."</button>
+          </div>
+          <div class="q-actions">
+            <button class="btn-clue" onclick="toggleClue('l1-3')">💡 Pista en español</button>
+            <button class="audio-btn" onclick="speakText('We must evacuate now! Move to high ground!')" title="Escuchar pronunciación">🔊</button>
+          </div>
+          <div class="clue-box" id="clue-l1-3">
+            🇦🇷 <strong>Pista para Bernie:</strong> En inundaciones, cuando la gente debe abandonar el lugar de inmediato se usa el verbo <strong>evacuate</strong> (evacuar) y la indicación directa <em>"move to high ground"</em> (vayan a zonas altas).
+          </div>
         </div>
-        <div class="q-scenario">
-          🏠 <strong>Situación:</strong> La puerta de una vivienda se trabó con escombros. Adentro hay una familia que no puede salir por sus propios medios.
-        </div>
-        <div class="q-text">¿Cómo describís la situación de la familia?</div>
-        <div class="options-grid">
-          <button class="option-btn" onclick="checkOption(5, this, false)">A) "The family is safe zone."</button>
-          <button class="option-btn" onclick="checkOption(5, this, false)">B) "The family is distributing blankets."</button>
-          <button class="option-btn" onclick="checkOption(5, this, true)">C) "The family is trapped inside."</button>
-          <button class="option-btn" onclick="checkOption(5, this, false)">D) "The family is assessment."</button>
-        </div>
-        <div class="q-actions">
-          <button class="btn-clue" onclick="toggleClue(5)">💡 Pista en español</button>
-          <button class="audio-btn" onclick="speakText('The family is trapped inside.')" title="Escuchar pronunciación">🔊</button>
-        </div>
-        <div class="clue-box" id="clue-5">
-          🇦🇷 <strong>Pista para Bernie:</strong> Cuando alguien está encerrado sin poder salir, usamos la palabra <strong>trapped</strong> (*trapt* = atrapado/a).
-        </div>
-      </div>
 
-      <!-- Question 6 -->
-      <div class="question-card" id="qcard-6">
-        <div class="q-number-tag">
-          <span>Pregunta 6 • Destino de los Desplazados</span>
-          <span class="feedback-msg" id="fb-6"></span>
+        <!-- L1 Q4 -->
+        <div class="question-card" id="qcard-l1-4">
+          <div class="q-number-tag">
+            <span>Pregunta 4 • Atención Médica</span>
+            <span class="feedback-msg" id="fb-l1-4"></span>
+          </div>
+          <div class="q-scenario">
+            🩹 <strong>Situación:</strong> Una persona tiene un corte sangrando en el brazo y otra se dobló el tobillo, pero no hay médicos todavía.
+          </div>
+          <div class="q-text">Vos empezás a colocar vendas y desinfectar. ¿Qué estás haciendo?</div>
+          <div class="options-grid">
+            <button class="option-btn" onclick="checkOptionL1(4, this, false)">A) "I am rescuing the shelter."</button>
+            <button class="option-btn" onclick="checkOptionL1(4, this, true)">B) "I am giving first aid."</button>
+            <button class="option-btn" onclick="checkOptionL1(4, this, false)">C) "I am missing the injured."</button>
+            <button class="option-btn" onclick="checkOptionL1(4, this, false)">D) "I am trapped in the village."</button>
+          </div>
+          <div class="q-actions">
+            <button class="btn-clue" onclick="toggleClue('l1-4')">💡 Pista en español</button>
+            <button class="audio-btn" onclick="speakText('I am giving first aid.')" title="Escuchar pronunciación">🔊</button>
+          </div>
+          <div class="clue-box" id="clue-l1-4">
+            🇦🇷 <strong>Pista para Bernie:</strong> La atención básica inicial con gasas, desinfectante y vendajes se llama <strong>first aid</strong> (primeros auxilios). Se dice: <em>"giving first aid"</em>.
+          </div>
         </div>
-        <div class="q-scenario">
-          ⛺ <strong>Situación:</strong> La escuela del barrio fue acondicionada con colchonetas para que duerman 150 personas sin hogar.
-        </div>
-        <div class="q-text">¿Cómo se le llama en inglés a ese lugar seguro para dormir?</div>
-        <div class="options-grid">
-          <button class="option-btn" onclick="checkOption(6, this, true)">A) "Emergency shelter"</button>
-          <button class="option-btn" onclick="checkOption(6, this, false)">B) "Urgent shortage"</button>
-          <button class="option-btn" onclick="checkOption(6, this, false)">C) "Bridge blocked"</button>
-          <button class="option-btn" onclick="checkOption(6, this, false)">D) "First aid injured"</button>
-        </div>
-        <div class="q-actions">
-          <button class="btn-clue" onclick="toggleClue(6)">💡 Pista en español</button>
-          <button class="audio-btn" onclick="speakText('Please go to the emergency shelter.')" title="Escuchar pronunciación">🔊</button>
-        </div>
-        <div class="clue-box" id="clue-6">
-          🇦🇷 <strong>Pista para Bernie:</strong> El albergue o refugio temporal se llama <strong>shelter</strong> (*shél-ter*). A las personas que perdieron su casa se las llama <em>displaced people</em>.
-        </div>
-      </div>
 
-      <!-- Question 7 -->
-      <div class="question-card" id="qcard-7">
-        <div class="q-number-tag">
-          <span>Pregunta 7 • Ayudando a un Turista</span>
-          <span class="feedback-msg" id="fb-7"></span>
+        <!-- L1 Q5 -->
+        <div class="question-card" id="qcard-l1-5">
+          <div class="q-number-tag">
+            <span>Pregunta 5 • Rescate</span>
+            <span class="feedback-msg" id="fb-l1-5"></span>
+          </div>
+          <div class="q-scenario">
+            🏠 <strong>Situación:</strong> La puerta de una vivienda se trabó con escombros. Adentro hay una familia que no puede salir por sus propios medios.
+          </div>
+          <div class="q-text">¿Cómo describís la situación de la familia?</div>
+          <div class="options-grid">
+            <button class="option-btn" onclick="checkOptionL1(5, this, false)">A) "The family is safe zone."</button>
+            <button class="option-btn" onclick="checkOptionL1(5, this, false)">B) "The family is distributing blankets."</button>
+            <button class="option-btn" onclick="checkOptionL1(5, this, true)">C) "The family is trapped inside."</button>
+            <button class="option-btn" onclick="checkOptionL1(5, this, false)">D) "The family is assessment."</button>
+          </div>
+          <div class="q-actions">
+            <button class="btn-clue" onclick="toggleClue('l1-5')">💡 Pista en español</button>
+            <button class="audio-btn" onclick="speakText('The family is trapped inside.')" title="Escuchar pronunciación">🔊</button>
+          </div>
+          <div class="clue-box" id="clue-l1-5">
+            🇦🇷 <strong>Pista para Bernie:</strong> Cuando alguien está encerrado sin poder salir, usamos la palabra <strong>trapped</strong> (*trapt* = atrapado/a).
+          </div>
         </div>
-        <div class="q-scenario">
-          🗺️ <strong>Situación:</strong> Un turista que habla inglés está asustado y quiere meterse a un hotel con grietas peligrosas a buscar su valija.
-        </div>
-        <div class="q-text">¿Qué frase clara y directa le decís en inglés?</div>
-        <div class="options-grid">
-          <button class="option-btn" onclick="checkOption(7, this, false)">A) "Yes, please enter and bring supplies."</button>
-          <button class="option-btn" onclick="checkOption(7, this, true)">B) "Do not enter. It is dangerous! Move to the safe zone."</button>
-          <button class="option-btn" onclick="checkOption(7, this, false)">C) "The bridge is not blocked for you."</button>
-          <button class="option-btn" onclick="checkOption(7, this, false)">D) "We have water shortage in hotel."</button>
-        </div>
-        <div class="q-actions">
-          <button class="btn-clue" onclick="toggleClue(7)">💡 Pista en español</button>
-          <button class="audio-btn" onclick="speakText('Do not enter. It is dangerous! Move to the safe zone.')" title="Escuchar pronunciación">🔊</button>
-        </div>
-        <div class="clue-box" id="clue-7">
-          🇦🇷 <strong>Pista para Bernie:</strong> En emergencias usá órdenes directas y cortas: <em>"Do not enter"</em> (no entre) + <em>"It is dangerous"</em> (es peligroso) + <em>"Move to the safe zone"</em> (vaya a la zona segura).
-        </div>
-      </div>
 
-      <!-- Question 8 -->
-      <div class="question-card" id="qcard-8">
-        <div class="q-number-tag">
-          <span>Pregunta 8 • Comunicación de Radio</span>
-          <span class="feedback-msg" id="fb-8"></span>
+        <!-- L1 Q6 -->
+        <div class="question-card" id="qcard-l1-6">
+          <div class="q-number-tag">
+            <span>Pregunta 6 • Destino de los Desplazados</span>
+            <span class="feedback-msg" id="fb-l1-6"></span>
+          </div>
+          <div class="q-scenario">
+            ⛺ <strong>Situación:</strong> La escuela del barrio fue acondicionada con colchonetas para que duerman 150 personas sin hogar.
+          </div>
+          <div class="q-text">¿Cómo se le llama en inglés a ese lugar seguro para dormir?</div>
+          <div class="options-grid">
+            <button class="option-btn" onclick="checkOptionL1(6, this, true)">A) "Emergency shelter"</button>
+            <button class="option-btn" onclick="checkOptionL1(6, this, false)">B) "Urgent shortage"</button>
+            <button class="option-btn" onclick="checkOptionL1(6, this, false)">C) "Bridge blocked"</button>
+            <button class="option-btn" onclick="checkOptionL1(6, this, false)">D) "First aid injured"</button>
+          </div>
+          <div class="q-actions">
+            <button class="btn-clue" onclick="toggleClue('l1-6')">💡 Pista en español</button>
+            <button class="audio-btn" onclick="speakText('Please go to the emergency shelter.')" title="Escuchar pronunciación">🔊</button>
+          </div>
+          <div class="clue-box" id="clue-l1-6">
+            🇦🇷 <strong>Pista para Bernie:</strong> El albergue o refugio temporal se llama <strong>shelter</strong> (*shél-ter*). A las personas que perdieron su casa se las llama <em>displaced people</em>.
+          </div>
         </div>
-        <div class="q-scenario">
-          📻 <strong>Situación:</strong> La base central por radio te dice: <em>"Truck with blankets arrives in 20 minutes."</em>
+
+        <!-- L1 Q7 -->
+        <div class="question-card" id="qcard-l1-7">
+          <div class="q-number-tag">
+            <span>Pregunta 7 • Ayudando a un Turista</span>
+            <span class="feedback-msg" id="fb-l1-7"></span>
+          </div>
+          <div class="q-scenario">
+            🗺️ <strong>Situación:</strong> Un turista que habla inglés está asustado y quiere meterse a un hotel con grietas peligrosas a buscar su valija.
+          </div>
+          <div class="q-text">¿Qué frase clara y directa le decís en inglés?</div>
+          <div class="options-grid">
+            <button class="option-btn" onclick="checkOptionL1(7, this, false)">A) "Yes, please enter and bring supplies."</button>
+            <button class="option-btn" onclick="checkOptionL1(7, this, true)">B) "Do not enter. It is dangerous! Move to the safe zone."</button>
+            <button class="option-btn" onclick="checkOptionL1(7, this, false)">C) "The bridge is not blocked for you."</button>
+            <button class="option-btn" onclick="checkOptionL1(7, this, false)">D) "We have water shortage in hotel."</button>
+          </div>
+          <div class="q-actions">
+            <button class="btn-clue" onclick="toggleClue('l1-7')">💡 Pista en español</button>
+            <button class="audio-btn" onclick="speakText('Do not enter. It is dangerous! Move to the safe zone.')" title="Escuchar pronunciación">🔊</button>
+          </div>
+          <div class="clue-box" id="clue-l1-7">
+            🇦🇷 <strong>Pista para Bernie:</strong> En emergencias usá órdenes directas y cortas: <em>"Do not enter"</em> (no entre) + <em>"It is dangerous"</em> (es peligroso) + <em>"Move to the safe zone"</em> (vaya a la zona segura).
+          </div>
         </div>
-        <div class="q-text">¿Cómo confirmás en inglés que entendiste el mensaje por radio?</div>
-        <div class="options-grid">
-          <button class="option-btn" onclick="checkOption(8, this, true)">A) "Copy that. Thank you."</button>
-          <button class="option-btn" onclick="checkOption(8, this, false)">B) "I am injured, copy."</button>
-          <button class="option-btn" onclick="checkOption(8, this, false)">C) "Trapped truck."</button>
-          <button class="option-btn" onclick="checkOption(8, this, false)">D) "Distribute missing."</button>
+
+        <!-- L1 Q8 -->
+        <div class="question-card" id="qcard-l1-8">
+          <div class="q-number-tag">
+            <span>Pregunta 8 • Comunicación de Radio</span>
+            <span class="feedback-msg" id="fb-l1-8"></span>
+          </div>
+          <div class="q-scenario">
+            📻 <strong>Situación:</strong> La base central por radio te dice: <em>"Truck with blankets arrives in 20 minutes."</em>
+          </div>
+          <div class="q-text">¿Cómo confirmás en inglés que entendiste el mensaje por radio?</div>
+          <div class="options-grid">
+            <button class="option-btn" onclick="checkOptionL1(8, this, true)">A) "Copy that. Thank you."</button>
+            <button class="option-btn" onclick="checkOptionL1(8, this, false)">B) "I am injured, copy."</button>
+            <button class="option-btn" onclick="checkOptionL1(8, this, false)">C) "Trapped truck."</button>
+            <button class="option-btn" onclick="checkOptionL1(8, this, false)">D) "Distribute missing."</button>
+          </div>
+          <div class="q-actions">
+            <button class="btn-clue" onclick="toggleClue('l1-8')">💡 Pista en español</button>
+            <button class="audio-btn" onclick="speakText('Copy that. Thank you.')" title="Escuchar pronunciación">🔊</button>
+          </div>
+          <div class="clue-box" id="clue-l1-8">
+            🇦🇷 <strong>Pista para Bernie:</strong> La forma estándar y profesional en todo el mundo para decir "Copiado / Entendido" por radio en inglés es: <strong>"Copy that"</strong>.
+          </div>
         </div>
-        <div class="q-actions">
-          <button class="btn-clue" onclick="toggleClue(8)">💡 Pista en español</button>
-          <button class="audio-btn" onclick="speakText('Copy that. Thank you.')" title="Escuchar pronunciación">🔊</button>
-        </div>
-        <div class="clue-box" id="clue-8">
-          🇦🇷 <strong>Pista para Bernie:</strong> La forma estándar y profesional en todo el mundo para decir "Copiado / Entendido" por radio en inglés es: <strong>"Copy that"</strong>.
-        </div>
+
       </div>
 
       <!-- Submit / Completion Box -->
@@ -827,12 +1100,226 @@
 
     </main>
 
+    <!-- ========================================== -->
     <!-- TAB 2: VOCABULARY & AUDIO -->
+    <!-- ========================================== -->
     <section id="tab-vocab" class="tab-content">
       
-      <div class="section-title">👥 Personas y Estado (People & Status)</div>
+      <!-- Lesson 2 Vocab Header -->
+      <div style="background: rgba(249, 115, 22, 0.15); border: 1px solid rgba(249, 115, 22, 0.3); border-radius: 12px; padding: 12px 16px; margin-bottom: 20px;">
+        <span style="color: var(--accent); font-weight: 800;">📍 VOCABULARIO LECCIÓN 2:</span>
+        <span style="color: #fff; font-size: 0.95rem;"> Evaluación rápida, Triaje y Logística de campo.</span>
+      </div>
+
+      <div class="section-title">🏥 Triaje Médico y Víctimas (Triage & Casualties)</div>
       <div class="vocab-grid">
         
+        <!-- Critical -->
+        <div class="vocab-card">
+          <div class="vocab-top">
+            <div>
+              <div class="vocab-word">Critical (Red)</div>
+              <div class="vocab-phonetic">/ KRÍ-ti-kal /</div>
+            </div>
+            <button class="audio-btn" onclick="speakText('Critical. We have two critical patients.')">🔊</button>
+          </div>
+          <div class="vocab-trans">Crítico / Prioridad Inmediata (Código Rojo)</div>
+          <div class="vocab-example">
+            <div class="vocab-example-en">"Two patients are critical. They need surgery."</div>
+            <div class="vocab-example-es">Dos pacientes están críticos. Necesitan cirugía.</div>
+          </div>
+        </div>
+
+        <!-- Unconscious -->
+        <div class="vocab-card">
+          <div class="vocab-top">
+            <div>
+              <div class="vocab-word">Unconscious</div>
+              <div class="vocab-phonetic">/ an-KÓN-shas /</div>
+            </div>
+            <button class="audio-btn" onclick="speakText('Unconscious. The woman is unconscious.')">🔊</button>
+          </div>
+          <div class="vocab-trans">Inconsciente / No responde</div>
+          <div class="vocab-example">
+            <div class="vocab-example-en">"The woman is unconscious but breathing."</div>
+            <div class="vocab-example-es">La mujer está inconsciente pero respira.</div>
+          </div>
+        </div>
+
+        <!-- Bleeding -->
+        <div class="vocab-card">
+          <div class="vocab-top">
+            <div>
+              <div class="vocab-word">Bleeding</div>
+              <div class="vocab-phonetic">/ BLÍ-ding /</div>
+            </div>
+            <button class="audio-btn" onclick="speakText('Bleeding. Severe bleeding from the arm.')">🔊</button>
+          </div>
+          <div class="vocab-trans">Sangrando / Hemorragia</div>
+          <div class="vocab-example">
+            <div class="vocab-example-en">"Severe bleeding from the arm. Apply pressure."</div>
+            <div class="vocab-example-es">Hemorragia grave en el brazo. Apliquen presión.</div>
+          </div>
+        </div>
+
+        <!-- Fracture -->
+        <div class="vocab-card">
+          <div class="vocab-top">
+            <div>
+              <div class="vocab-word">Fracture</div>
+              <div class="vocab-phonetic">/ FRÁK-cher /</div>
+            </div>
+            <button class="audio-btn" onclick="speakText('Fracture. Leg fracture.')">🔊</button>
+          </div>
+          <div class="vocab-trans">Fractura / Hueso quebrado</div>
+          <div class="vocab-example">
+            <div class="vocab-example-en">"He has a compound leg fracture."</div>
+            <div class="vocab-example-es">Tiene una fractura expuesta en la pierna.</div>
+          </div>
+        </div>
+
+        <!-- Walking Wounded -->
+        <div class="vocab-card">
+          <div class="vocab-top">
+            <div>
+              <div class="vocab-word">Walking wounded</div>
+              <div class="vocab-phonetic">/ WÓ-king WÚN-did /</div>
+            </div>
+            <button class="audio-btn" onclick="speakText('Walking wounded. Move walking wounded to Tent B.')">🔊</button>
+          </div>
+          <div class="vocab-trans">Heridos ambulatorios (Triaje Verde)</div>
+          <div class="vocab-example">
+            <div class="vocab-example-en">"Move the walking wounded to Tent B."</div>
+            <div class="vocab-example-es">Muevan a los heridos ambulatorios a la Carpa B.</div>
+          </div>
+        </div>
+
+        <!-- Medevac -->
+        <div class="vocab-card">
+          <div class="vocab-top">
+            <div>
+              <div class="vocab-word">Medevac</div>
+              <div class="vocab-phonetic">/ MÉ-di-vak /</div>
+            </div>
+            <button class="audio-btn" onclick="speakText('Medevac. Requesting immediate medevac.')">🔊</button>
+          </div>
+          <div class="vocab-trans">Evacuación médica urgente (aérea o terrestre)</div>
+          <div class="vocab-example">
+            <div class="vocab-example-en">"Requesting immediate medevac by helicopter."</div>
+            <div class="vocab-example-es">Solicitamos evacuación médica aérea inmediata.</div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="section-title">🚚 Daños, Accesos y Logística (Access & Logistics)</div>
+      <div class="vocab-grid">
+        
+        <!-- Impassable -->
+        <div class="vocab-card">
+          <div class="vocab-top">
+            <div>
+              <div class="vocab-word">Impassable</div>
+              <div class="vocab-phonetic">/ im-PÁ-sa-bl /</div>
+            </div>
+            <button class="audio-btn" onclick="speakText('Impassable. The road is impassable.')">🔊</button>
+          </div>
+          <div class="vocab-trans">Intransitable / Bloqueado</div>
+          <div class="vocab-example">
+            <div class="vocab-example-en">"North road is impassable due to a landslide."</div>
+            <div class="vocab-example-es">La ruta norte está intransitable por un derrumbe.</div>
+          </div>
+        </div>
+
+        <!-- Collapsed -->
+        <div class="vocab-card">
+          <div class="vocab-top">
+            <div>
+              <div class="vocab-word">Collapsed</div>
+              <div class="vocab-phonetic">/ ko-LÁPST /</div>
+            </div>
+            <button class="audio-btn" onclick="speakText('Collapsed. The bridge is collapsed.')">🔊</button>
+          </div>
+          <div class="vocab-trans">Colapsado / Derrumbado</div>
+          <div class="vocab-example">
+            <div class="vocab-example-en">"The bridge collapsed. No vehicles can pass."</div>
+            <div class="vocab-example-es">El puente colapsó. Ningún vehículo puede pasar.</div>
+          </div>
+        </div>
+
+        <!-- ETA -->
+        <div class="vocab-card">
+          <div class="vocab-top">
+            <div>
+              <div class="vocab-word">ETA</div>
+              <div class="vocab-phonetic">/ I - TI - EI /</div>
+            </div>
+            <button class="audio-btn" onclick="speakText('ETA. What is your ETA?')">🔊</button>
+          </div>
+          <div class="vocab-trans">Hora estimada de llegada (Estimated Time of Arrival)</div>
+          <div class="vocab-example">
+            <div class="vocab-example-en">"What is your ETA at the shelter?"</div>
+            <div class="vocab-example-es">¿Cuál es su hora estimada de llegada al albergue?</div>
+          </div>
+        </div>
+
+        <!-- Power Outage -->
+        <div class="vocab-card">
+          <div class="vocab-top">
+            <div>
+              <div class="vocab-word">Power outage</div>
+              <div class="vocab-phonetic">/ PÁU-er ÁU-tidch /</div>
+            </div>
+            <button class="audio-btn" onclick="speakText('Power outage. The hospital has a power outage.')">🔊</button>
+          </div>
+          <div class="vocab-trans">Corte de energía / Apagón eléctrico</div>
+          <div class="vocab-example">
+            <div class="vocab-example-en">"Total power outage. We are running on generators."</div>
+            <div class="vocab-example-es">Apagón total. Estamos funcionando con generadores.</div>
+          </div>
+        </div>
+
+        <!-- Distribution Point -->
+        <div class="vocab-card">
+          <div class="vocab-top">
+            <div>
+              <div class="vocab-word">Distribution Point</div>
+              <div class="vocab-phonetic">/ dis-tri-BYÚ-shon point /</div>
+            </div>
+            <button class="audio-btn" onclick="speakText('Distribution point. Distribution point active.')">🔊</button>
+          </div>
+          <div class="vocab-trans">Punto de distribución de víveres</div>
+          <div class="vocab-example">
+            <div class="vocab-example-en">"Distribution point active at the stadium."</div>
+            <div class="vocab-example-es">Punto de distribución activo en el estadio.</div>
+          </div>
+        </div>
+
+        <!-- Dispatch -->
+        <div class="vocab-card">
+          <div class="vocab-top">
+            <div>
+              <div class="vocab-word">Dispatch</div>
+              <div class="vocab-phonetic">/ dis-PÁTCH /</div>
+            </div>
+            <button class="audio-btn" onclick="speakText('Dispatch. Please dispatch two ambulances.')">🔊</button>
+          </div>
+          <div class="vocab-trans">Despachar / Enviar con urgencia</div>
+          <div class="vocab-example">
+            <div class="vocab-example-en">"Dispatch two water tankers immediately."</div>
+            <div class="vocab-example-es">Despachen dos camiones cisterna de inmediato.</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Lesson 1 Core Flashcards Review -->
+      <div style="background: rgba(56, 189, 248, 0.1); border: 1px solid rgba(56, 189, 248, 0.25); border-radius: 12px; padding: 12px 16px; margin: 30px 0 16px;">
+        <span style="color: var(--primary); font-weight: 800;">🔄 REPASO LECCIÓN 1:</span>
+        <span style="color: #fff; font-size: 0.95rem;"> Términos clave de supervivencia de la primera clase.</span>
+      </div>
+
+      <div class="vocab-grid">
         <!-- Survivor -->
         <div class="vocab-card">
           <div class="vocab-top">
@@ -846,38 +1333,6 @@
           <div class="vocab-example">
             <div class="vocab-example-en">"We found ten survivors in the building."</div>
             <div class="vocab-example-es">Encontramos diez sobrevivientes en el edificio.</div>
-          </div>
-        </div>
-
-        <!-- Injured -->
-        <div class="vocab-card">
-          <div class="vocab-top">
-            <div>
-              <div class="vocab-word">Injured</div>
-              <div class="vocab-phonetic">/ IN-djerd /</div>
-            </div>
-            <button class="audio-btn" onclick="speakText('Injured. Five people are injured.')">🔊</button>
-          </div>
-          <div class="vocab-trans">Herido / Lastimado</div>
-          <div class="vocab-example">
-            <div class="vocab-example-en">"Five people are injured. They need a doctor."</div>
-            <div class="vocab-example-es">Cinco personas están heridas. Necesitan un médico.</div>
-          </div>
-        </div>
-
-        <!-- Missing -->
-        <div class="vocab-card">
-          <div class="vocab-top">
-            <div>
-              <div class="vocab-word">Missing</div>
-              <div class="vocab-phonetic">/ MÍS-ing /</div>
-            </div>
-            <button class="audio-btn" onclick="speakText('Missing. Three people are still missing.')">🔊</button>
-          </div>
-          <div class="vocab-trans">Desaparecido / No localizado</div>
-          <div class="vocab-example">
-            <div class="vocab-example-en">"Three children are still missing."</div>
-            <div class="vocab-example-es">Tres niños todavía están desaparecidos.</div>
           </div>
         </div>
 
@@ -897,27 +1352,6 @@
           </div>
         </div>
 
-        <!-- Displaced -->
-        <div class="vocab-card">
-          <div class="vocab-top">
-            <div>
-              <div class="vocab-word">Displaced</div>
-              <div class="vocab-phonetic">/ dis-PLÉIST /</div>
-            </div>
-            <button class="audio-btn" onclick="speakText('Displaced. There are displaced people.')">🔊</button>
-          </div>
-          <div class="vocab-trans">Desplazado (sin casa tras el desastre)</div>
-          <div class="vocab-example">
-            <div class="vocab-example-en">"There are 300 displaced people at the school."</div>
-            <div class="vocab-example-es">Hay 300 personas desplazadas en la escuela.</div>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="section-title">🏕️ Lugares y Suministros (Places & Supplies)</div>
-      <div class="vocab-grid">
-        
         <!-- Shelter -->
         <div class="vocab-card">
           <div class="vocab-top">
@@ -945,120 +1379,20 @@
           </div>
           <div class="vocab-trans">Escasez / Falta de suministros</div>
           <div class="vocab-example">
-            <div class="vocab-example-en">"We have a shortage of clean water and food."</div>
-            <div class="vocab-example-es">Tenemos escasez de agua limpia y comida.</div>
+            <div class="vocab-example-en">"We have a shortage of clean water."</div>
+            <div class="vocab-example-es">Tenemos escasez de agua limpia.</div>
           </div>
         </div>
-
-        <!-- Safe Zone -->
-        <div class="vocab-card">
-          <div class="vocab-top">
-            <div>
-              <div class="vocab-word">Safe zone</div>
-              <div class="vocab-phonetic">/ SÉIF-zóun /</div>
-            </div>
-            <button class="audio-btn" onclick="speakText('Safe zone. Move to the safe zone.')">🔊</button>
-          </div>
-          <div class="vocab-trans">Zona segura</div>
-          <div class="vocab-example">
-            <div class="vocab-example-en">"Move everyone to the safe zone immediately."</div>
-            <div class="vocab-example-es">Muevan a todos a la zona segura de inmediato.</div>
-          </div>
-        </div>
-
-        <!-- First Aid -->
-        <div class="vocab-card">
-          <div class="vocab-top">
-            <div>
-              <div class="vocab-word">First aid</div>
-              <div class="vocab-phonetic">/ FERST-éid /</div>
-            </div>
-            <button class="audio-btn" onclick="speakText('First aid. She is giving first aid.')">🔊</button>
-          </div>
-          <div class="vocab-trans">Primeros auxilios</div>
-          <div class="vocab-example">
-            <div class="vocab-example-en">"She is giving first aid to the survivor."</div>
-            <div class="vocab-example-es">Ella le está dando primeros auxilios al sobreviviente.</div>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="section-title">⚡ Acciones de Emergencia (Actions)</div>
-      <div class="vocab-grid">
-        
-        <!-- Evacuate -->
-        <div class="vocab-card">
-          <div class="vocab-top">
-            <div>
-              <div class="vocab-word">Evacuate</div>
-              <div class="vocab-phonetic">/ i-VÁK-yu-eit /</div>
-            </div>
-            <button class="audio-btn" onclick="speakText('Evacuate. We must evacuate now.')">🔊</button>
-          </div>
-          <div class="vocab-trans">Evacuar</div>
-          <div class="vocab-example">
-            <div class="vocab-example-en">"We must evacuate the area right now."</div>
-            <div class="vocab-example-es">Debemos evacuar el área ahora mismo.</div>
-          </div>
-        </div>
-
-        <!-- Assess -->
-        <div class="vocab-card">
-          <div class="vocab-top">
-            <div>
-              <div class="vocab-word">Assess</div>
-              <div class="vocab-phonetic">/ a-SÉS /</div>
-            </div>
-            <button class="audio-btn" onclick="speakText('Assess. First we assess the damage.')">🔊</button>
-          </div>
-          <div class="vocab-trans">Evaluar / Valorar la situación</div>
-          <div class="vocab-example">
-            <div class="vocab-example-en">"First, the team will assess the damage."</div>
-            <div class="vocab-example-es">Primero el equipo va a evaluar los daños.</div>
-          </div>
-        </div>
-
-        <!-- Distribute -->
-        <div class="vocab-card">
-          <div class="vocab-top">
-            <div>
-              <div class="vocab-word">Distribute</div>
-              <div class="vocab-phonetic">/ dis-TRÍB-yut /</div>
-            </div>
-            <button class="audio-btn" onclick="speakText('Distribute. We distribute water and blankets.')">🔊</button>
-          </div>
-          <div class="vocab-trans">Distribuir / Repartir</div>
-          <div class="vocab-example">
-            <div class="vocab-example-en">"We distribute water and blankets at the park."</div>
-            <div class="vocab-example-es">Distribuimos agua y frazadas en el parque.</div>
-          </div>
-        </div>
-
-        <!-- Urgent -->
-        <div class="vocab-card">
-          <div class="vocab-top">
-            <div>
-              <div class="vocab-word">Urgent</div>
-              <div class="vocab-phonetic">/ ÉR-djent /</div>
-            </div>
-            <button class="audio-btn" onclick="speakText('Urgent. This is urgent. Send help.')">🔊</button>
-          </div>
-          <div class="vocab-trans">Urgente</div>
-          <div class="vocab-example">
-            <div class="vocab-example-en">"This is urgent! Send an ambulance."</div>
-            <div class="vocab-example-es">¡Esto es urgente! Envíen una ambulancia.</div>
-          </div>
-        </div>
-
       </div>
 
     </section>
 
+    <!-- ========================================== -->
     <!-- TAB 3: FIELD CHEAT SHEET -->
+    <!-- ========================================== -->
     <section id="tab-fieldsheet" class="tab-content">
       
-      <div class="section-title">📻 Frases Clave para Radio y Campo</div>
+      <div class="section-title">📻 Frases Clave para Radio y SitRep</div>
       
       <div class="ref-table-wrap">
         <table class="ref-table">
@@ -1070,21 +1404,38 @@
             </tr>
           </thead>
           <tbody>
+            <!-- L2 additions -->
             <tr>
-              <td><span class="ref-es">"Tenemos una escasez crítica de agua."</span></td>
-              <td><span class="ref-en">"We have a critical shortage of water."</span></td>
-              <td><button class="audio-btn" onclick="speakText('We have a critical shortage of water.')">🔊</button></td>
+              <td><span class="ref-es">"Solicitamos evacuación médica inmediata para 2 pacientes."</span></td>
+              <td><span class="ref-en">"Requesting immediate medevac for two patients."</span></td>
+              <td><button class="audio-btn" onclick="speakText('Requesting immediate medevac for two patients.')">🔊</button></td>
             </tr>
             <tr>
-              <td><span class="ref-es">"Hay 10 personas heridas en la escuela."</span></td>
-              <td><span class="ref-en">"Ten people are injured at the school."</span></td>
-              <td><button class="audio-btn" onclick="speakText('Ten people are injured at the school.')">🔊</button></td>
+              <td><span class="ref-es">"¿Cuál es su hora estimada de llegada (ETA) al albergue?"</span></td>
+              <td><span class="ref-en">"What is your ETA at the shelter?"</span></td>
+              <td><button class="audio-btn" onclick="speakText('What is your ETA at the shelter?')">🔊</button></td>
             </tr>
             <tr>
-              <td><span class="ref-es">"El puente principal está inundado / bloqueado."</span></td>
-              <td><span class="ref-en">"The main bridge is flooded."</span></td>
-              <td><button class="audio-btn" onclick="speakText('The main bridge is flooded.')">🔊</button></td>
+              <td><span class="ref-es">"La ruta principal está intransitable. Transitable solo 4x4."</span></td>
+              <td><span class="ref-en">"The main road is impassable. Passable for 4x4 only."</span></td>
+              <td><button class="audio-btn" onclick="speakText('The main road is impassable. Passable for 4x4 only.')">🔊</button></td>
             </tr>
+            <tr>
+              <td><span class="ref-es">"El paciente está crítico e inconsciente con hemorragia."</span></td>
+              <td><span class="ref-en">"The patient is critical and unconscious with bleeding."</span></td>
+              <td><button class="audio-btn" onclick="speakText('The patient is critical and unconscious with bleeding.')">🔊</button></td>
+            </tr>
+            <tr>
+              <td><span class="ref-es">"Por favor despachen dos ambulancias al Sector 4."</span></td>
+              <td><span class="ref-en">"Please dispatch two ambulances to Sector 4."</span></td>
+              <td><button class="audio-btn" onclick="speakText('Please dispatch two ambulances to Sector 4.')">🔊</button></td>
+            </tr>
+            <tr>
+              <td><span class="ref-es">"El albergue está al límite de su capacidad (500 personas)."</span></td>
+              <td><span class="ref-en">"The shelter is at maximum capacity (500 people)."</span></td>
+              <td><button class="audio-btn" onclick="speakText('The shelter is at maximum capacity.')">🔊</button></td>
+            </tr>
+            <!-- L1 essentials -->
             <tr>
               <td><span class="ref-es">"Copiado / Entendido (por radio)."</span></td>
               <td><span class="ref-en">"Copy that."</span></td>
@@ -1094,6 +1445,11 @@
               <td><span class="ref-es">"Repita, por favor (no se escuchó bien)."</span></td>
               <td><span class="ref-en">"Say again, please."</span></td>
               <td><button class="audio-btn" onclick="speakText('Say again, please.')">🔊</button></td>
+            </tr>
+            <tr>
+              <td><span class="ref-es">"Tenemos una escasez crítica de agua potable."</span></td>
+              <td><span class="ref-en">"We have a critical shortage of clean water."</span></td>
+              <td><button class="audio-btn" onclick="speakText('We have a critical shortage of clean water.')">🔊</button></td>
             </tr>
             <tr>
               <td><span class="ref-es">"Por favor diríjanse a la zona segura."</span></td>
@@ -1124,7 +1480,12 @@
   </footer>
 
   <script>
-    // Tab Switching
+    let currentLesson = 2;
+    const userAnswersL1 = {};
+    const userAnswersL2 = {};
+    const totalQuestions = 8;
+
+    // Switch Tab
     function switchTab(tabId) {
       document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
       document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
@@ -1137,9 +1498,33 @@
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
+    // Switch Lesson
+    function selectLesson(lessonNum) {
+      currentLesson = lessonNum;
+      
+      document.getElementById('pill-l1').classList.toggle('active', lessonNum === 1);
+      document.getElementById('pill-l2').classList.toggle('active', lessonNum === 2);
+      
+      const l1Container = document.getElementById('lesson-1-questions');
+      const l2Container = document.getElementById('lesson-2-questions');
+      const hwTitle = document.getElementById('hw-title');
+
+      if (lessonNum === 1) {
+        l1Container.style.display = 'block';
+        l2Container.style.display = 'none';
+        hwTitle.innerText = 'Tu progreso en la tarea — Lección 1 (Emergencias)';
+      } else {
+        l1Container.style.display = 'none';
+        l2Container.style.display = 'block';
+        hwTitle.innerText = 'Tu progreso en la tarea — Lección 2 (Triaje y Logística)';
+      }
+
+      updateScore();
+    }
+
     // Toggle Clue in Argentine Spanish
-    function toggleClue(num) {
-      const clueBox = document.getElementById('clue-' + num);
+    function toggleClue(id) {
+      const clueBox = document.getElementById('clue-' + id);
       if (clueBox) {
         clueBox.classList.toggle('open');
       }
@@ -1151,20 +1536,17 @@
         window.speechSynthesis.cancel();
         const utterance = new SpeechSynthesisUtterance(text);
         utterance.lang = 'en-US';
-        utterance.rate = 0.85; // Slightly slower for low English learners
+        utterance.rate = 0.85; // slightly slower for language learners
         window.speechSynthesis.speak(utterance);
       } else {
         alert('Tu navegador no soporta audio automático.');
       }
     }
 
-    // State & Score Tracking
-    const userAnswers = {};
-    const totalQuestions = 8;
-
-    function checkOption(qNum, btn, isCorrect) {
-      const card = document.getElementById('qcard-' + qNum);
-      const fb = document.getElementById('fb-' + qNum);
+    // Check Option for Lesson 2
+    function checkOptionL2(qNum, btn, isCorrect) {
+      const card = document.getElementById('qcard-l2-' + qNum);
+      const fb = document.getElementById('fb-l2-' + qNum);
       const options = card.querySelectorAll('.option-btn');
 
       options.forEach(b => {
@@ -1175,14 +1557,46 @@
       btn.classList.add('selected');
 
       if (isCorrect) {
-        userAnswers[qNum] = true;
+        userAnswersL2[qNum] = true;
         card.classList.remove('incorrect');
         card.classList.add('correct');
         btn.classList.add('correct-choice');
         fb.className = 'feedback-msg show-correct';
         fb.innerHTML = '✅ ¡Excelente!';
       } else {
-        userAnswers[qNum] = false;
+        userAnswersL2[qNum] = false;
+        card.classList.remove('correct');
+        card.classList.add('incorrect');
+        btn.classList.add('wrong-choice');
+        fb.className = 'feedback-msg show-wrong';
+        fb.innerHTML = '⚠️ Casi... ¡Probá de nuevo!';
+      }
+
+      updateScore();
+    }
+
+    // Check Option for Lesson 1
+    function checkOptionL1(qNum, btn, isCorrect) {
+      const card = document.getElementById('qcard-l1-' + qNum);
+      const fb = document.getElementById('fb-l1-' + qNum);
+      const options = card.querySelectorAll('.option-btn');
+
+      options.forEach(b => {
+        b.classList.remove('selected', 'wrong-choice', 'correct-choice');
+        b.disabled = false;
+      });
+
+      btn.classList.add('selected');
+
+      if (isCorrect) {
+        userAnswersL1[qNum] = true;
+        card.classList.remove('incorrect');
+        card.classList.add('correct');
+        btn.classList.add('correct-choice');
+        fb.className = 'feedback-msg show-correct';
+        fb.innerHTML = '✅ ¡Excelente!';
+      } else {
+        userAnswersL1[qNum] = false;
         card.classList.remove('correct');
         card.classList.add('incorrect');
         btn.classList.add('wrong-choice');
@@ -1195,24 +1609,29 @@
 
     function updateScore() {
       let correctCount = 0;
+      const targetAnswers = (currentLesson === 1) ? userAnswersL1 : userAnswersL2;
       for (let i = 1; i <= totalQuestions; i++) {
-        if (userAnswers[i] === true) correctCount++;
+        if (targetAnswers[i] === true) correctCount++;
       }
       const scoreDisplay = document.getElementById('score-display');
       scoreDisplay.innerText = `${correctCount} / ${totalQuestions}`;
       
       if (correctCount === totalQuestions) {
         scoreDisplay.style.color = '#10b981';
+      } else {
+        scoreDisplay.style.color = '#38bdf8';
       }
     }
 
-    // Copy Results
+    // Copy Results for Lewis
     function copyResults() {
       let correctCount = 0;
+      const targetAnswers = (currentLesson === 1) ? userAnswersL1 : userAnswersL2;
       for (let i = 1; i <= totalQuestions; i++) {
-        if (userAnswers[i] === true) correctCount++;
+        if (targetAnswers[i] === true) correctCount++;
       }
-      const text = `Hola Lewis! Completé la tarea de inglés de ayuda en desastres en la web. Mi puntuación: ${correctCount} / ${totalQuestions}. ¡Muchas gracias!`;
+      const lessonTitle = (currentLesson === 1) ? 'Lección 1 (Emergencias y Suministros)' : 'Lección 2 (Triaje, Logística y SitRep)';
+      const text = `Hola Lewis! Completé la tarea de ${lessonTitle} en la web. Mi puntuación: ${correctCount} / ${totalQuestions}. ¡Muchas gracias!`;
       
       if (navigator.clipboard) {
         navigator.clipboard.writeText(text).then(() => {
