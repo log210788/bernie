@@ -651,7 +651,8 @@
     <div class="lesson-selector-wrap">
       <div class="lesson-selector-label">Seleccioná la lección:</div>
       <div class="lesson-pills">
-        <button class="lesson-pill active" id="pill-l2" onclick="selectLesson(2)">🚑 Lección 2: Triaje, Logística y SitRep</button>
+        <button class="lesson-pill active" id="pill-l3" onclick="selectLesson(3)">⚠️ Lección 3: Seguridad y Búsqueda de Víctimas</button>
+        <button class="lesson-pill" id="pill-l2" onclick="selectLesson(2)">🚑 Lección 2: Triaje, Logística y SitRep</button>
         <button class="lesson-pill" id="pill-l1" onclick="selectLesson(1)">🚨 Lección 1: Emergencias y Suministros</button>
       </div>
     </div>
@@ -671,16 +672,223 @@
       <!-- Score Progress Bar -->
       <div class="hw-score-card">
         <div>
-          <div class="hw-score-title" id="hw-title">Tu progreso en la tarea — Lección 2</div>
+          <div class="hw-score-title" id="hw-title">Tu progreso en la tarea — Lección 3 (Seguridad y Búsqueda de Víctimas)</div>
           <div class="hw-score-subtitle">Completá las 8 preguntas operativas. Si te trabás, ¡tocá el botón amarillo para ver la pista en español!</div>
         </div>
         <div class="score-meter" id="score-display">0 / 8</div>
       </div>
 
       <!-- ====================================== -->
-      <!-- LESSON 2 QUESTIONS CONTAINER -->
+      <!-- LESSON 3 QUESTIONS CONTAINER (ACTIVE) -->
       <!-- ====================================== -->
-      <div id="lesson-2-questions">
+      <div id="lesson-3-questions">
+
+        <!-- L3 Q1 -->
+        <div class="question-card" id="qcard-l3-1">
+          <div class="q-number-tag">
+            <span>Pregunta 1 • Control de Perímetro</span>
+            <span class="feedback-msg" id="fb-l3-1"></span>
+          </div>
+          <div class="q-scenario">
+            ⚠️ <strong>Situación:</strong> Un grupo de vecinos y curiosos se acerca peligrosamente a la vereda de un edificio agrietado con riesgo inminente de derrumbe.
+          </div>
+          <div class="q-text">¿Qué orden clara e imperativa gritás para que retrocedan y despejen el área?</div>
+          <div class="options-grid">
+            <button class="option-btn" onclick="checkOptionL3(1, this, false)">A) "Could you please sleep here?"</button>
+            <button class="option-btn" onclick="checkOptionL3(1, this, true)">B) "Step back! Keep clear of the building!"</button>
+            <button class="option-btn" onclick="checkOptionL3(1, this, false)">C) "Triage minor to the road!"</button>
+            <button class="option-btn" onclick="checkOptionL3(1, this, false)">D) "The bridge is impassable!"</button>
+          </div>
+          <div class="q-actions">
+            <button class="btn-clue" onclick="toggleClue('l3-1')">💡 Pista en español</button>
+            <button class="audio-btn" onclick="speakText('Step back! Keep clear of the building!')" title="Escuchar pronunciación">🔊</button>
+          </div>
+          <div class="clue-box" id="clue-l3-1">
+            🇦🇷 <strong>Pista para Bernie:</strong> En emergencias operativas se usan comandos directos sin rodeos: <strong>Step back!</strong> (*¡Atrás! / ¡Retrocedan!*) y <strong>Keep clear of the building!</strong> (*¡Manténganse lejos del edificio!*).
+          </div>
+        </div>
+
+        <!-- L3 Q2 -->
+        <div class="question-card" id="qcard-l3-2">
+          <div class="q-number-tag">
+            <span>Pregunta 2 • Estructura Peligrosa</span>
+            <span class="feedback-msg" id="fb-l3-2"></span>
+          </div>
+          <div class="q-scenario">
+            🛑 <strong>Situación:</strong> Dos personas intentan entrar a buscar pertenencias a una casa que tiene muros deformados y vigas rajadas.
+          </div>
+          <div class="q-text">¿Cómo les prohibís el paso advirtiéndoles que la estructura no es segura?</div>
+          <div class="options-grid">
+            <button class="option-btn" onclick="checkOptionL3(2, this, true)">A) "Do not enter! The structure is unstable / dangerous."</button>
+            <button class="option-btn" onclick="checkOptionL3(2, this, false)">B) "Do not walk with clean water."</button>
+            <button class="option-btn" onclick="checkOptionL3(2, this, false)">C) "ETA is two ambulances."</button>
+            <button class="option-btn" onclick="checkOptionL3(2, this, false)">D) "Make noise if you are a safe zone."</button>
+          </div>
+          <div class="q-actions">
+            <button class="btn-clue" onclick="toggleClue('l3-2')">💡 Pista en español</button>
+            <button class="audio-btn" onclick="speakText('Do not enter! The structure is unstable and dangerous.')" title="Escuchar pronunciación">🔊</button>
+          </div>
+          <div class="clue-box" id="clue-l3-2">
+            🇦🇷 <strong>Pista para Bernie:</strong> <strong>"Do not enter!"</strong> es el comando universal de prohibición de ingreso. Para explicar el riesgo usá <strong>"The structure is unstable"</strong> (la estructura está inestable) o <strong>"dangerous"</strong>.
+          </div>
+        </div>
+
+        <!-- L3 Q3 -->
+        <div class="question-card" id="qcard-l3-3">
+          <div class="q-number-tag">
+            <span>Pregunta 3 • Evacuación a Zona Abierta</span>
+            <span class="feedback-msg" id="fb-l3-3"></span>
+          </div>
+          <div class="q-scenario">
+            🏃 <strong>Situación:</strong> Acabás de sacar a varios sobrevivientes del edificio. Necesitás que se alejen de inmediato hacia la plaza abierta sin detenerse.
+          </div>
+          <div class="q-text">¿Qué instrucción enérgica les das?</div>
+          <div class="options-grid">
+            <button class="option-btn" onclick="checkOptionL3(3, this, false)">A) "Medevac the shelter tomorrow."</button>
+            <button class="option-btn" onclick="checkOptionL3(3, this, true)">B) "Move to the safe zone immediately!"</button>
+            <button class="option-btn" onclick="checkOptionL3(3, this, false)">C) "Power outage in the kitchen."</button>
+            <button class="option-btn" onclick="checkOptionL3(3, this, false)">D) "Dispatch the building owner."</button>
+          </div>
+          <div class="q-actions">
+            <button class="btn-clue" onclick="toggleClue('l3-3')">💡 Pista en español</button>
+            <button class="audio-btn" onclick="speakText('Move to the safe zone immediately!')" title="Escuchar pronunciación">🔊</button>
+          </div>
+          <div class="clue-box" id="clue-l3-3">
+            🇦🇷 <strong>Pista para Bernie:</strong> Como vimos en la clase, la <strong>safe zone</strong> es el área abierta protegida sin peligro de derrumbe. La orden directa es: <strong>"Move to the safe zone immediately!"</strong>
+          </div>
+        </div>
+
+        <!-- L3 Q4 -->
+        <div class="question-card" id="qcard-l3-4">
+          <div class="q-number-tag">
+            <span>Pregunta 4 • Desprendimiento de Mampostería</span>
+            <span class="feedback-msg" id="fb-l3-4"></span>
+          </div>
+          <div class="q-scenario">
+            🧱 <strong>Situación:</strong> Una réplica sísmica hace que comiencen a desprenderse cornisas, cascotes y vidrios desde los pisos superiores.
+          </div>
+          <div class="q-text">¿Qué grito de alerta das para advertir a los socorristas y civiles?</div>
+          <div class="options-grid">
+            <button class="option-btn" onclick="checkOptionL3(4, this, false)">A) "Watch out for drinking water!"</button>
+            <button class="option-btn" onclick="checkOptionL3(4, this, true)">B) "Watch out for falling debris!"</button>
+            <button class="option-btn" onclick="checkOptionL3(4, this, false)">C) "Step back to the fracture!"</button>
+            <button class="option-btn" onclick="checkOptionL3(4, this, false)">D) "Say again the power!"</button>
+          </div>
+          <div class="q-actions">
+            <button class="btn-clue" onclick="toggleClue('l3-4')">💡 Pista en español</button>
+            <button class="audio-btn" onclick="speakText('Watch out for falling debris!')" title="Escuchar pronunciación">🔊</button>
+          </div>
+          <div class="clue-box" id="clue-l3-4">
+            🇦🇷 <strong>Pista para Bernie:</strong> <strong>"Watch out!"</strong> significa *¡Cuidado!*, y los escombros se dicen <strong>debris</strong> (*de-BRÍI*, acordate que la "s" final nunca suena en inglés).
+          </div>
+        </div>
+
+        <!-- L3 Q5 -->
+        <div class="question-card" id="qcard-l3-5">
+          <div class="q-number-tag">
+            <span>Pregunta 5 • Seguridad de Suministros Críticos</span>
+            <span class="feedback-msg" id="fb-l3-5"></span>
+          </div>
+          <div class="q-scenario">
+            ⚡ <strong>Situación:</strong> Hay olor a gas en el subsuelo y cables eléctricos caídos sobre el agua de la vereda con riesgo de incendio o electrocución.
+          </div>
+          <div class="q-text">¿Qué orden urgente das a la cuadrilla de intervención?</div>
+          <div class="options-grid">
+            <button class="option-btn" onclick="checkOptionL3(5, this, true)">A) "Turn off the gas and power!"</button>
+            <button class="option-btn" onclick="checkOptionL3(5, this, false)">B) "Turn on the safe zone!"</button>
+            <button class="option-btn" onclick="checkOptionL3(5, this, false)">C) "Clear the generator capacity!"</button>
+            <button class="option-btn" onclick="checkOptionL3(5, this, false)">D) "Unconscious the supply trucks!"</button>
+          </div>
+          <div class="q-actions">
+            <button class="btn-clue" onclick="toggleClue('l3-5')">💡 Pista en español</button>
+            <button class="audio-btn" onclick="speakText('Turn off the gas and power!')" title="Escuchar pronunciación">🔊</button>
+          </div>
+          <div class="clue-box" id="clue-l3-5">
+            🇦🇷 <strong>Pista para Bernie:</strong> Para cortar suministros en inglés se usa <strong>turn off</strong>: <em>"Turn off the gas"</em> (corten el gas) y <em>"turn off the power"</em> (corten la electricidad).
+          </div>
+        </div>
+
+        <!-- L3 Q6 -->
+        <div class="question-card" id="qcard-l3-6">
+          <div class="q-number-tag">
+            <span>Pregunta 6 • Censo Rápido de Víctimas</span>
+            <span class="feedback-msg" id="fb-l3-6"></span>
+          </div>
+          <div class="q-scenario">
+            👥 <strong>Situación:</strong> Llegás al colapso y encontrás al encargado del edificio. Necesitás saber de inmediato cuántas personas estaban adentro y si hay atrapados.
+          </div>
+          <div class="q-text">¿Qué preguntas precisas le hacés?</div>
+          <div class="options-grid">
+            <button class="option-btn" onclick="checkOptionL3(6, this, true)">A) "Is anyone trapped inside? How many people were in the building?"</button>
+            <button class="option-btn" onclick="checkOptionL3(6, this, false)">B) "What is your ETA? Can you medevac?"</button>
+            <button class="option-btn" onclick="checkOptionL3(6, this, false)">C) "Are you a distribution point? Do you have a blackout?"</button>
+            <button class="option-btn" onclick="checkOptionL3(6, this, false)">D) "Step back! Turn off the whistle!"</button>
+          </div>
+          <div class="q-actions">
+            <button class="btn-clue" onclick="toggleClue('l3-6')">💡 Pista en español</button>
+            <button class="audio-btn" onclick="speakText('Is anyone trapped inside? How many people were in the building?')" title="Escuchar pronunciación">🔊</button>
+          </div>
+          <div class="clue-box" id="clue-l3-6">
+            🇦🇷 <strong>Pista para Bernie:</strong> <strong>"Is anyone trapped inside?"</strong> (¿Hay alguien atrapado adentro?) y <strong>"How many people were in the building?"</strong> (¿Cuántas personas había en el edificio?) son las dos preguntas de oro en el triage inicial.
+          </div>
+        </div>
+
+        <!-- L3 Q7 -->
+        <div class="question-card" id="qcard-l3-7">
+          <div class="q-number-tag">
+            <span>Pregunta 7 • Búsqueda Acústica en Escombros</span>
+            <span class="feedback-msg" id="fb-l3-7"></span>
+          </div>
+          <div class="q-scenario">
+            🤫 <strong>Situación:</strong> Los motores están apagados. Pedís silencio absoluto para escuchar golpes o silbatos entre los escombros y llamás a posibles víctimas.
+          </div>
+          <div class="q-text">¿Qué orden de silencio das y qué le gritás a los atrapados?</div>
+          <div class="options-grid">
+            <button class="option-btn" onclick="checkOptionL3(7, this, false)">A) "Everyone speak louder! We have a shortage of noise!"</button>
+            <button class="option-btn" onclick="checkOptionL3(7, this, true)">B) "Everyone quiet! Can anyone hear me? Make noise if you can!"</button>
+            <button class="option-btn" onclick="checkOptionL3(7, this, false)">C) "Everyone evacuate to the compound fracture!"</button>
+            <button class="option-btn" onclick="checkOptionL3(7, this, false)">D) "Everyone dispatch the 4x4 trucks!"</button>
+          </div>
+          <div class="q-actions">
+            <button class="btn-clue" onclick="toggleClue('l3-7')">💡 Pista en español</button>
+            <button class="audio-btn" onclick="speakText('Everyone quiet! Can anyone hear me? Make noise if you can!')" title="Escuchar pronunciación">🔊</button>
+          </div>
+          <div class="clue-box" id="clue-l3-7">
+            🇦🇷 <strong>Pista para Bernie:</strong> Para exigir silencio total: <strong>"Everyone quiet!"</strong>. Para pedir que respondan: <strong>"Can anyone hear me? Make noise if you can!"</strong> (*¡Hagan ruido si pueden!*).
+          </div>
+        </div>
+
+        <!-- L3 Q8 -->
+        <div class="question-card" id="qcard-l3-8">
+          <div class="q-number-tag">
+            <span>Pregunta 8 • Contención y Evaluación de la Víctima</span>
+            <span class="feedback-msg" id="fb-l3-8"></span>
+          </div>
+          <div class="q-scenario">
+            ❤️ <strong>Situación:</strong> Un sobreviviente responde desde abajo de una losa. Está muy asustado pero consciente. Necesitás tranquilizarlo y saber si puede caminar.
+          </div>
+          <div class="q-text">¿Qué frases de contención y triaje le decís?</div>
+          <div class="options-grid">
+            <button class="option-btn" onclick="checkOptionL3(8, this, true)">A) "Help is on the way. Stay calm, do not move. Who is injured? Can you walk?"</button>
+            <button class="option-btn" onclick="checkOptionL3(8, this, false)">B) "You are impassable. The road is full."</button>
+            <button class="option-btn" onclick="checkOptionL3(8, this, false)">C) "Clear the shelter. We don't have time."</button>
+            <button class="option-btn" onclick="checkOptionL3(8, this, false)">D) "Turn off the whistle and walk wounded."</button>
+          </div>
+          <div class="q-actions">
+            <button class="btn-clue" onclick="toggleClue('l3-8')">💡 Pista en español</button>
+            <button class="audio-btn" onclick="speakText('Help is on the way. Stay calm, do not move. Who is injured? Can you walk?')" title="Escuchar pronunciación">🔊</button>
+          </div>
+          <div class="clue-box" id="clue-l3-8">
+            🇦🇷 <strong>Pista para Bernie:</strong> La contención psicológica evita el shock: <strong>"Help is on the way. Stay calm, do not move."</strong> Y la pregunta clave de triaje verde/rojo: <strong>"Can you walk?"</strong> (*¿Puede caminar?*).
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ====================================== -->
+      <!-- LESSON 2 QUESTIONS CONTAINER (PREVIOUS) -->
+      <!-- ====================================== -->
+      <div id="lesson-2-questions" style="display: none;">
 
         <!-- L2 Q1 -->
         <div class="question-card" id="qcard-l2-1">
@@ -1105,9 +1313,217 @@
     <!-- ========================================== -->
     <section id="tab-vocab" class="tab-content">
       
+      <!-- Lesson 3 Vocab Header -->
+      <div style="background: rgba(245, 158, 11, 0.15); border: 1px solid rgba(245, 158, 11, 0.4); border-radius: 12px; padding: 12px 16px; margin-bottom: 20px;">
+        <span style="color: var(--warning); font-weight: 800;">📍 VOCABULARIO LECCIÓN 3:</span>
+        <span style="color: #fff; font-size: 0.95rem;"> Seguridad de multitudes, Control de perímetro y Búsqueda de víctimas.</span>
+      </div>
+
+      <div class="section-title">⚠️ Control de Perímetro y Multitudes (Perimeter & Crowd Safety)</div>
+      <div class="vocab-grid">
+
+        <!-- Step Back -->
+        <div class="vocab-card">
+          <div class="vocab-top">
+            <div>
+              <div class="vocab-word">Step back!</div>
+              <div class="vocab-phonetic">/ STEP BAK /</div>
+            </div>
+            <button class="audio-btn" onclick="speakText('Step back! Keep clear of the building!')">🔊</button>
+          </div>
+          <div class="vocab-trans">¡Atrás! / ¡Retrocedan!</div>
+          <div class="vocab-example">
+            <div class="vocab-example-en">"Step back! Keep clear of the building!"</div>
+            <div class="vocab-example-es">¡Atrás! Manténganse lejos del edificio.</div>
+          </div>
+        </div>
+
+        <!-- Keep clear -->
+        <div class="vocab-card">
+          <div class="vocab-top">
+            <div>
+              <div class="vocab-word">Keep clear</div>
+              <div class="vocab-phonetic">/ KIIP KLÍAR /</div>
+            </div>
+            <button class="audio-btn" onclick="speakText('Keep clear of the building.')">🔊</button>
+          </div>
+          <div class="vocab-trans">Mantenerse alejado / Mantener despejado</div>
+          <div class="vocab-example">
+            <div class="vocab-example-en">"Keep clear of the entrance and stairs."</div>
+            <div class="vocab-example-es">Mantengan despejada la entrada y las escaleras.</div>
+          </div>
+        </div>
+
+        <!-- Falling Debris -->
+        <div class="vocab-card">
+          <div class="vocab-top">
+            <div>
+              <div class="vocab-word">Falling debris</div>
+              <div class="vocab-phonetic">/ FÓ-ling de-BRÍI / (s muda)</div>
+            </div>
+            <button class="audio-btn" onclick="speakText('Watch out for falling debris!')">🔊</button>
+          </div>
+          <div class="vocab-trans">Escombros que caen / Cascotes</div>
+          <div class="vocab-example">
+            <div class="vocab-example-en">"Watch out for falling debris! Wear helmets."</div>
+            <div class="vocab-example-es">¡Cuidado con los escombros que caen! Usen cascos.</div>
+          </div>
+        </div>
+
+        <!-- Unstable structure -->
+        <div class="vocab-card">
+          <div class="vocab-top">
+            <div>
+              <div class="vocab-word">Unstable structure</div>
+              <div class="vocab-phonetic">/ an-STÉI-bl STRÁK-cher /</div>
+            </div>
+            <button class="audio-btn" onclick="speakText('Do not enter. The structure is unstable.')">🔊</button>
+          </div>
+          <div class="vocab-trans">Estructura inestable / Peligro de derrumbe</div>
+          <div class="vocab-example">
+            <div class="vocab-example-en">"Do not enter! The structure is unstable."</div>
+            <div class="vocab-example-es">¡No entren! La estructura está inestable.</div>
+          </div>
+        </div>
+
+        <!-- Turn off the gas / power -->
+        <div class="vocab-card">
+          <div class="vocab-top">
+            <div>
+              <div class="vocab-word">Turn off the gas / power</div>
+              <div class="vocab-phonetic">/ TERN OFF the GAS / PÁU-er /</div>
+            </div>
+            <button class="audio-btn" onclick="speakText('Turn off the gas and power immediately.')">🔊</button>
+          </div>
+          <div class="vocab-trans">Cortar el gas / la electricidad</div>
+          <div class="vocab-example">
+            <div class="vocab-example-en">"Turn off the gas and power immediately."</div>
+            <div class="vocab-example-es">Corten el gas y la electricidad de inmediato.</div>
+          </div>
+        </div>
+
+        <!-- Clear the building -->
+        <div class="vocab-card">
+          <div class="vocab-top">
+            <div>
+              <div class="vocab-word">Clear the building!</div>
+              <div class="vocab-phonetic">/ KLÍAR the BÍL-ding /</div>
+            </div>
+            <button class="audio-btn" onclick="speakText('Clear the building! Everyone out now!')">🔊</button>
+          </div>
+          <div class="vocab-trans">¡Desalojen el edificio! / ¡Todos afuera!</div>
+          <div class="vocab-example">
+            <div class="vocab-example-en">"Clear the building! Everyone out now!"</div>
+            <div class="vocab-example-es">¡Desalojen el edificio! ¡Todos afuera ahora!</div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="section-title">🔍 Localización y Contención de Víctimas (Locating Victims & Reassurance)</div>
+      <div class="vocab-grid">
+
+        <!-- Is anyone trapped inside? -->
+        <div class="vocab-card">
+          <div class="vocab-top">
+            <div>
+              <div class="vocab-word">Trapped inside</div>
+              <div class="vocab-phonetic">/ TRAPT in-SÁID /</div>
+            </div>
+            <button class="audio-btn" onclick="speakText('Is anyone trapped inside?')">🔊</button>
+          </div>
+          <div class="vocab-trans">Atrapado adentro</div>
+          <div class="vocab-example">
+            <div class="vocab-example-en">"Is anyone trapped inside the building?"</div>
+            <div class="vocab-example-es">¿Hay alguien atrapado adentro del edificio?</div>
+          </div>
+        </div>
+
+        <!-- Make noise -->
+        <div class="vocab-card">
+          <div class="vocab-top">
+            <div>
+              <div class="vocab-word">Make noise</div>
+              <div class="vocab-phonetic">/ MEIK NOIS /</div>
+            </div>
+            <button class="audio-btn" onclick="speakText('Can anyone hear me? Make noise if you can!')">🔊</button>
+          </div>
+          <div class="vocab-trans">Hacer ruido / Golpear para avisar</div>
+          <div class="vocab-example">
+            <div class="vocab-example-en">"Can anyone hear me? Make noise if you can!"</div>
+            <div class="vocab-example-es">¿Alguien me escucha? ¡Hagan ruido si pueden!</div>
+          </div>
+        </div>
+
+        <!-- Stay calm and breathe -->
+        <div class="vocab-card">
+          <div class="vocab-top">
+            <div>
+              <div class="vocab-word">Stay calm and breathe</div>
+              <div class="vocab-phonetic">/ STEI KAAM and BRIITH /</div>
+            </div>
+            <button class="audio-btn" onclick="speakText('Help is on the way. Stay calm, do not move, and breathe.')">🔊</button>
+          </div>
+          <div class="vocab-trans">Mantener la calma y respirar</div>
+          <div class="vocab-example">
+            <div class="vocab-example-en">"Help is on the way. Stay calm and breathe."</div>
+            <div class="vocab-example-es">La ayuda está en camino. Mantengan la calma y respiren.</div>
+          </div>
+        </div>
+
+        <!-- Can you walk? -->
+        <div class="vocab-card">
+          <div class="vocab-top">
+            <div>
+              <div class="vocab-word">Can you walk?</div>
+              <div class="vocab-phonetic">/ kan yu WOK /</div>
+            </div>
+            <button class="audio-btn" onclick="speakText('Who is injured? Can you walk?')">🔊</button>
+          </div>
+          <div class="vocab-trans">¿Podés caminar? (Evaluación de triaje)</div>
+          <div class="vocab-example">
+            <div class="vocab-example-en">"Who is injured? Can you walk?"</div>
+            <div class="vocab-example-es">¿Quién está herido? ¿Puede caminar?</div>
+          </div>
+        </div>
+
+        <!-- Everyone quiet -->
+        <div class="vocab-card">
+          <div class="vocab-top">
+            <div>
+              <div class="vocab-word">Everyone quiet!</div>
+              <div class="vocab-phonetic">/ ÉV-ri-wan KWÁI-et /</div>
+            </div>
+            <button class="audio-btn" onclick="speakText('Everyone quiet! We need to listen!')">🔊</button>
+          </div>
+          <div class="vocab-trans">¡Silencio todos! / ¡Hagan silencio!</div>
+          <div class="vocab-example">
+            <div class="vocab-example-en">"Everyone quiet! We need to listen!"</div>
+            <div class="vocab-example-es">¡Silencio todos! ¡Tenemos que escuchar!</div>
+          </div>
+        </div>
+
+        <!-- Whistle -->
+        <div class="vocab-card">
+          <div class="vocab-top">
+            <div>
+              <div class="vocab-word">Whistle</div>
+              <div class="vocab-phonetic">/ WÍ-sl / (t muda)</div>
+            </div>
+            <button class="audio-btn" onclick="speakText('I have a whistle in my emergency kit.')">🔊</button>
+          </div>
+          <div class="vocab-trans">Silbato de emergencia</div>
+          <div class="vocab-example">
+            <div class="vocab-example-en">"Blow your whistle three times if you hear me."</div>
+            <div class="vocab-example-es">Tocá el silbato tres veces si me escuchás.</div>
+          </div>
+        </div>
+
+      </div>
+
       <!-- Lesson 2 Vocab Header -->
-      <div style="background: rgba(249, 115, 22, 0.15); border: 1px solid rgba(249, 115, 22, 0.3); border-radius: 12px; padding: 12px 16px; margin-bottom: 20px;">
-        <span style="color: var(--accent); font-weight: 800;">📍 VOCABULARIO LECCIÓN 2:</span>
+      <div style="background: rgba(249, 115, 22, 0.15); border: 1px solid rgba(249, 115, 22, 0.3); border-radius: 12px; padding: 12px 16px; margin: 30px 0 20px;">
+        <span style="color: var(--accent); font-weight: 800;">📍 REPASO LECCIÓN 2:</span>
         <span style="color: #fff; font-size: 0.95rem;"> Evaluación rápida, Triaje y Logística de campo.</span>
       </div>
 
@@ -1404,7 +1820,83 @@
             </tr>
           </thead>
           <tbody>
+            <!-- L3 additions: Crowd Safety & Locating Victims -->
+            <tr style="background: rgba(245, 158, 11, 0.08);">
+              <td colspan="3" style="padding: 10px 18px; font-weight: 800; color: var(--warning); border-bottom: 1px solid var(--card-border);">
+                ⚠️ LECCIÓN 3: CONTROL DE PERÍMETRO Y MULTITUDES
+              </td>
+            </tr>
+            <tr>
+              <td><span class="ref-es">"¡Atrás! Manténganse lejos del edificio."</span></td>
+              <td><span class="ref-en">"Step back! Keep clear of the building!"</span></td>
+              <td><button class="audio-btn" onclick="speakText('Step back! Keep clear of the building!')">🔊</button></td>
+            </tr>
+            <tr>
+              <td><span class="ref-es">"¡No entren! La estructura está inestable / peligrosa."</span></td>
+              <td><span class="ref-en">"Do not enter! The structure is unstable / dangerous."</span></td>
+              <td><button class="audio-btn" onclick="speakText('Do not enter! The structure is unstable.')">🔊</button></td>
+            </tr>
+            <tr>
+              <td><span class="ref-es">"¡Vayan a la zona segura de inmediato!"</span></td>
+              <td><span class="ref-en">"Move to the safe zone immediately!"</span></td>
+              <td><button class="audio-btn" onclick="speakText('Move to the safe zone immediately!')">🔊</button></td>
+            </tr>
+            <tr>
+              <td><span class="ref-es">"¡Cuidado con los escombros que caen!"</span></td>
+              <td><span class="ref-en">"Watch out for falling debris!"</span></td>
+              <td><button class="audio-btn" onclick="speakText('Watch out for falling debris!')">🔊</button></td>
+            </tr>
+            <tr>
+              <td><span class="ref-es">"¡Corten el gas y la electricidad!"</span></td>
+              <td><span class="ref-en">"Turn off the gas and power!"</span></td>
+              <td><button class="audio-btn" onclick="speakText('Turn off the gas and power!')">🔊</button></td>
+            </tr>
+            <tr>
+              <td><span class="ref-es">"¡Desalojen el edificio! ¡Todos afuera ahora!"</span></td>
+              <td><span class="ref-en">"Clear the building! Everyone out now!"</span></td>
+              <td><button class="audio-btn" onclick="speakText('Clear the building! Everyone out now!')">🔊</button></td>
+            </tr>
+            <tr style="background: rgba(56, 189, 248, 0.08);">
+              <td colspan="3" style="padding: 10px 18px; font-weight: 800; color: var(--primary); border-bottom: 1px solid var(--card-border);">
+                🔍 LECCIÓN 3: BÚSQUEDA Y CONTENCIÓN DE VÍCTIMAS
+              </td>
+            </tr>
+            <tr>
+              <td><span class="ref-es">"¿Hay alguien atrapado adentro?"</span></td>
+              <td><span class="ref-en">"Is anyone trapped inside?"</span></td>
+              <td><button class="audio-btn" onclick="speakText('Is anyone trapped inside?')">🔊</button></td>
+            </tr>
+            <tr>
+              <td><span class="ref-es">"¿Cuántas personas había en el edificio?"</span></td>
+              <td><span class="ref-en">"How many people were in the building?"</span></td>
+              <td><button class="audio-btn" onclick="speakText('How many people were in the building?')">🔊</button></td>
+            </tr>
+            <tr>
+              <td><span class="ref-es">"¿Alguien me escucha? ¡Hagan ruido si pueden!"</span></td>
+              <td><span class="ref-en">"Can anyone hear me? Make noise if you can!"</span></td>
+              <td><button class="audio-btn" onclick="speakText('Can anyone hear me? Make noise if you can!')">🔊</button></td>
+            </tr>
+            <tr>
+              <td><span class="ref-es">"La ayuda está en camino. Mantengan la calma, no se muevan."</span></td>
+              <td><span class="ref-en">"Help is on the way. Stay calm, do not move."</span></td>
+              <td><button class="audio-btn" onclick="speakText('Help is on the way. Stay calm, do not move.')">🔊</button></td>
+            </tr>
+            <tr>
+              <td><span class="ref-es">"¿Quién está herido? ¿Puede caminar?"</span></td>
+              <td><span class="ref-en">"Who is injured? Can you walk?"</span></td>
+              <td><button class="audio-btn" onclick="speakText('Who is injured? Can you walk?')">🔊</button></td>
+            </tr>
+            <tr>
+              <td><span class="ref-es">"¡Silencio todos! ¡Tenemos que escuchar!"</span></td>
+              <td><span class="ref-en">"Everyone quiet! We need to listen!"</span></td>
+              <td><button class="audio-btn" onclick="speakText('Everyone quiet! We need to listen!')">🔊</button></td>
+            </tr>
             <!-- L2 additions -->
+            <tr style="background: rgba(249, 115, 22, 0.08);">
+              <td colspan="3" style="padding: 10px 18px; font-weight: 800; color: var(--accent); border-bottom: 1px solid var(--card-border);">
+                🚑 LECCIÓN 2: TRIAJE Y LOGÍSTICA
+              </td>
+            </tr>
             <tr>
               <td><span class="ref-es">"Solicitamos evacuación médica inmediata para 2 pacientes."</span></td>
               <td><span class="ref-en">"Requesting immediate medevac for two patients."</span></td>
@@ -1436,6 +1928,11 @@
               <td><button class="audio-btn" onclick="speakText('The shelter is at maximum capacity.')">🔊</button></td>
             </tr>
             <!-- L1 essentials -->
+            <tr style="background: rgba(239, 68, 68, 0.08);">
+              <td colspan="3" style="padding: 10px 18px; font-weight: 800; color: #f87171; border-bottom: 1px solid var(--card-border);">
+                🚨 LECCIÓN 1: EMERGENCIAS BÁSICAS
+              </td>
+            </tr>
             <tr>
               <td><span class="ref-es">"Copiado / Entendido (por radio)."</span></td>
               <td><span class="ref-en">"Copy that."</span></td>
@@ -1480,9 +1977,10 @@
   </footer>
 
   <script>
-    let currentLesson = 2;
+    let currentLesson = 3;
     const userAnswersL1 = {};
     const userAnswersL2 = {};
+    const userAnswersL3 = {};
     const totalQuestions = 8;
 
     // Switch Tab
@@ -1504,19 +2002,28 @@
       
       document.getElementById('pill-l1').classList.toggle('active', lessonNum === 1);
       document.getElementById('pill-l2').classList.toggle('active', lessonNum === 2);
+      document.getElementById('pill-l3').classList.toggle('active', lessonNum === 3);
       
       const l1Container = document.getElementById('lesson-1-questions');
       const l2Container = document.getElementById('lesson-2-questions');
+      const l3Container = document.getElementById('lesson-3-questions');
       const hwTitle = document.getElementById('hw-title');
 
       if (lessonNum === 1) {
         l1Container.style.display = 'block';
         l2Container.style.display = 'none';
+        l3Container.style.display = 'none';
         hwTitle.innerText = 'Tu progreso en la tarea — Lección 1 (Emergencias)';
-      } else {
+      } else if (lessonNum === 2) {
         l1Container.style.display = 'none';
         l2Container.style.display = 'block';
+        l3Container.style.display = 'none';
         hwTitle.innerText = 'Tu progreso en la tarea — Lección 2 (Triaje y Logística)';
+      } else {
+        l1Container.style.display = 'none';
+        l2Container.style.display = 'none';
+        l3Container.style.display = 'block';
+        hwTitle.innerText = 'Tu progreso en la tarea — Lección 3 (Seguridad y Búsqueda de Víctimas)';
       }
 
       updateScore();
@@ -1541,6 +2048,38 @@
       } else {
         alert('Tu navegador no soporta audio automático.');
       }
+    }
+
+    // Check Option for Lesson 3
+    function checkOptionL3(qNum, btn, isCorrect) {
+      const card = document.getElementById('qcard-l3-' + qNum);
+      const fb = document.getElementById('fb-l3-' + qNum);
+      const options = card.querySelectorAll('.option-btn');
+
+      options.forEach(b => {
+        b.classList.remove('selected', 'wrong-choice', 'correct-choice');
+        b.disabled = false;
+      });
+
+      btn.classList.add('selected');
+
+      if (isCorrect) {
+        userAnswersL3[qNum] = true;
+        card.classList.remove('incorrect');
+        card.classList.add('correct');
+        btn.classList.add('correct-choice');
+        fb.className = 'feedback-msg show-correct';
+        fb.innerHTML = '✅ ¡Excelente!';
+      } else {
+        userAnswersL3[qNum] = false;
+        card.classList.remove('correct');
+        card.classList.add('incorrect');
+        btn.classList.add('wrong-choice');
+        fb.className = 'feedback-msg show-wrong';
+        fb.innerHTML = '⚠️ Casi... ¡Probá de nuevo!';
+      }
+
+      updateScore();
     }
 
     // Check Option for Lesson 2
@@ -1609,7 +2148,9 @@
 
     function updateScore() {
       let correctCount = 0;
-      const targetAnswers = (currentLesson === 1) ? userAnswersL1 : userAnswersL2;
+      let targetAnswers = userAnswersL3;
+      if (currentLesson === 1) targetAnswers = userAnswersL1;
+      else if (currentLesson === 2) targetAnswers = userAnswersL2;
       for (let i = 1; i <= totalQuestions; i++) {
         if (targetAnswers[i] === true) correctCount++;
       }
@@ -1626,11 +2167,18 @@
     // Copy Results for Lewis
     function copyResults() {
       let correctCount = 0;
-      const targetAnswers = (currentLesson === 1) ? userAnswersL1 : userAnswersL2;
+      let targetAnswers = userAnswersL3;
+      let lessonTitle = 'Lección 3 (Seguridad y Búsqueda de Víctimas)';
+      if (currentLesson === 1) {
+        targetAnswers = userAnswersL1;
+        lessonTitle = 'Lección 1 (Emergencias y Suministros)';
+      } else if (currentLesson === 2) {
+        targetAnswers = userAnswersL2;
+        lessonTitle = 'Lección 2 (Triaje, Logística y SitRep)';
+      }
       for (let i = 1; i <= totalQuestions; i++) {
         if (targetAnswers[i] === true) correctCount++;
       }
-      const lessonTitle = (currentLesson === 1) ? 'Lección 1 (Emergencias y Suministros)' : 'Lección 2 (Triaje, Logística y SitRep)';
       const text = `Hola Lewis! Completé la tarea de ${lessonTitle} en la web. Mi puntuación: ${correctCount} / ${totalQuestions}. ¡Muchas gracias!`;
       
       if (navigator.clipboard) {

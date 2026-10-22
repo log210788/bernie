@@ -73,11 +73,33 @@ Guarda este archivo en tu teléfono o imprimilo para consultas rápidas en el te
 
 ---
 
-### 🗣️ 5. Instrucciones Directas al Público (Crowd Instructions)
+### ⚠️ 5. Control de Multitudes y Perímetro (Crowd Safety & Perimeter Control)
 
-* **"Please move to the safe zone."** *(Por favor, muévanse a la zona segura.)*
-* **"Do not enter the building. It is dangerous."** *(No entren al edificio. Es peligroso.)*
-* **"Please wait in line for supplies."** *(Por favor, esperen en fila para los suministros.)*
-* **"Is anyone injured or trapped?"** *(¿Hay alguien herido o atrapado?)*
-* **"Help is on the way."** *(La ayuda está en camino.)*
-* **"Move to high ground immediately!"** *(¡Vayan a zonas altas de inmediato!)*
+Comandos firmes, claros y en voz alta para evitar accidentes con civiles y sobrevivientes:
+
+| Comando en Inglés | Español | Pronunciación |
+| :--- | :--- | :--- |
+| **"Step back! Keep clear of the building!"** | ¡Atrás! Manténganse lejos del edificio | *STEP BAK! KIIP KLÍAR ov the BÍL-ding!* |
+| **"Do not enter! The structure is unstable / dangerous."** | ¡No entren! La estructura está inestable / peligrosa | *DU NOT ÉN-ter! The STRÁK-cher iz an-STÉI-bl / DÉIN-dje-ras* |
+| **"Move to the safe zone immediately!"** | ¡Vayan a la zona segura de inmediato! | *MUUV tu the SÉIF zoun i-MÍ-diat-li!* |
+| **"Watch out for falling debris!"** | ¡Cuidado con los escombros que caen! | *WOTCH ÁUT for FÓ-ling de-BRÍI!* *(la S en debris es muda)* |
+| **"Turn off the gas / power!"** | ¡Corten el gas / la electricidad! | *TERN OFF the GAS / PÁU-er!* |
+| **"Clear the building!"** | ¡Desalojen el edificio! / ¡Todos afuera! | *KLÍAR the BÍL-ding!* |
+| **"Everyone quiet! Listen!"** | ¡Silencio todos! ¡Escuchen! | *ÉV-ri-wan KWÁI-et! LÍ-sn!* |
+
+---
+
+### 🔍 6. Búsqueda y Localización de Víctimas (Locating Victims & Rapid Assessment)
+
+Preguntas directas y frases de contención para personas atrapadas bajo escombros:
+
+| Pregunta / Frase en Inglés | Español | Pronunciación |
+| :--- | :--- | :--- |
+| **"Is anyone trapped inside?"** | ¿Hay alguien atrapado adentro? | *iz ÉN-i-wan TRAPT in-SÁID?* |
+| **"How many people were in the building?"** | ¿Cuántas personas había en el edificio? | *HAU MÉ-ni PÍI-pl wer in the BÍL-ding?* |
+| **"Can anyone hear me? Make noise if you can!"** | ¿Alguien me escucha? ¡Hagan ruido si pueden! | *kan ÉN-i-wan HÍAR mi? MEIK NOIS if yu KAN!* |
+| **"Help is on the way. Stay calm, do not move."** | La ayuda está en camino. Mantengan la calma, no se muevan. | *HELP iz on the WEI. STEI KAAM, DU NOT MUUV* |
+| **"Who is injured? Can you walk?"** | ¿Quién está herido? ¿Puede caminar? | *HUU iz ÍN-djerd? kan yu WOK?* |
+| **"Describe where you are! What do you see?"** | ¡Describí dónde estás! ¿Qué ves? | *dis-KRÁIB hwer yu AR! hwot du yu SII?* |
+| **"Stay calm and breathe."** | Mantené la calma y respirá. | *STEI KAAM and BRIITH* |
+
