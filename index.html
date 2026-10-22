@@ -360,78 +360,97 @@
         <div class="lg:col-span-4 grid grid-cols-2 gap-3">
           <div onclick="switchTab('transcript')" class="cursor-pointer p-4 rounded-2xl bg-parchment-50/95 border border-parchment-300 hover:border-autumn-400 transition shadow-sm group">
             <div class="text-[11px] font-mono font-semibold uppercase text-autumn-700 flex items-center justify-between">
-              <span>Section 1</span>
+              <span>Sección 1 • Section 1</span>
               <i data-lucide="scroll-text" class="w-4 h-4 group-hover:scale-110 transition"></i>
             </div>
-            <div class="font-serif font-bold text-slatewarm-900 text-lg mt-0.5">Full Transcript</div>
-            <p class="text-[11px] text-stone-600 mt-0.5">00:00 to 53:22 with audio & inline vocab</p>
+            <div class="font-serif font-bold text-slatewarm-900 text-lg mt-0.5">Transcripción Completa</div>
+            <p class="text-[11px] text-stone-600 mt-0.5">00:00–53:22 con audio y vocabulario interactivo</p>
           </div>
 
           <div onclick="switchTab('vocab')" class="cursor-pointer p-4 rounded-2xl bg-sage-50/95 border border-sage-200 hover:border-sage-400 transition shadow-sm group">
             <div class="text-[11px] font-mono font-semibold uppercase text-sage-700 flex items-center justify-between">
-              <span>Section 2</span>
+              <span>Sección 2 • Section 2</span>
               <i data-lucide="book-marked" class="w-4 h-4 group-hover:scale-110 transition"></i>
             </div>
-            <div class="font-serif font-bold text-slatewarm-900 text-lg mt-0.5">48 Lexicon Items</div>
-            <p class="text-[11px] text-stone-600 mt-0.5">Field terms, phonetics & Spanish cognates</p>
+            <div class="font-serif font-bold text-slatewarm-900 text-lg mt-0.5">48 Términos Clave</div>
+            <p class="text-[11px] text-stone-600 mt-0.5">Diccionario con fonética y traducción al español</p>
           </div>
 
           <div onclick="switchTab('fixes')" class="cursor-pointer p-4 rounded-2xl bg-autumn-50/95 border border-autumn-200 hover:border-autumn-400 transition shadow-sm group">
             <div class="text-[11px] font-mono font-semibold uppercase text-autumn-700 flex items-center justify-between">
-              <span>Section 3</span>
+              <span>Sección 3 • Section 3</span>
               <i data-lucide="sparkles" class="w-4 h-4 group-hover:scale-110 transition"></i>
             </div>
-            <div class="font-serif font-bold text-slatewarm-900 text-lg mt-0.5">Strengths & Fixes</div>
-            <p class="text-[11px] text-stone-600 mt-0.5">6 celebrated moments + ASR cleaning</p>
+            <div class="font-serif font-bold text-slatewarm-900 text-lg mt-0.5">Aciertos y Correcciones</div>
+            <p class="text-[11px] text-stone-600 mt-0.5">Tus 6 aciertos naturales + limpieza del note-taker</p>
           </div>
 
           <div onclick="switchTab('practice')" class="cursor-pointer p-4 rounded-2xl bg-parchment-50/95 border border-parchment-300 hover:border-sage-400 transition shadow-sm group">
             <div class="text-[11px] font-mono font-semibold uppercase text-sage-700 flex items-center justify-between">
-              <span>Section 4</span>
-              <i data-lucide="coffee" class="w-4 h-4 group-hover:scale-110 transition"></i>
+              <span>Sección 4 • Section 4</span>
+              <i data-lucide="swords" class="w-4 h-4 group-hover:scale-110 transition"></i>
             </div>
-            <div class="font-serif font-bold text-slatewarm-900 text-lg mt-0.5">Field Practice</div>
-            <p class="text-[11px] text-stone-600 mt-0.5">Flashcards & interactive situation quiz</p>
+            <div class="font-serif font-bold text-slatewarm-900 text-lg mt-0.5">Roleplay y Práctica</div>
+            <p class="text-[11px] text-stone-600 mt-0.5">Simulaciones de rol interactivas y quiz de campo</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- 5-TAB NAVIGATION BAR -->
+    <!-- 5-TAB NAVIGATION BAR WITH SPANISH TRANSLATIONS -->
     <nav class="sanctuary-card rounded-2xl p-2 flex flex-wrap items-center justify-between gap-2 no-print">
       <div class="flex flex-wrap items-center gap-1.5 w-full sm:w-auto">
-        <button onclick="switchTab('transcript')" id="tab-btn-transcript" class="tab-btn flex-1 sm:flex-initial px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition flex items-center justify-center gap-2 bg-sage-700 text-white shadow-sm">
-          <i data-lucide="message-square-quote" class="w-4 h-4"></i>
-          <span>1. Conversation Transcript</span>
-          <span class="px-2 py-0.5 text-[10px] rounded-full bg-white/20 text-white font-mono">00:00–53:22</span>
+        
+        <!-- TAB 1 -->
+        <button onclick="switchTab('transcript')" id="tab-btn-transcript" class="tab-btn flex-1 sm:flex-initial px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition flex items-center justify-center gap-2 bg-sage-700 text-white shadow-sm">
+          <i data-lucide="message-square-quote" class="w-4 h-4 shrink-0"></i>
+          <span class="text-left leading-tight">
+            <span class="block">1. Conversation Transcript</span>
+            <span class="block text-[10px] font-normal opacity-90 font-sans">Transcripción Completa (00:00–53:22)</span>
+          </span>
         </button>
 
-        <button onclick="switchTab('vocab')" id="tab-btn-vocab" class="tab-btn flex-1 sm:flex-initial px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition flex items-center justify-center gap-2 text-stone-700 hover:bg-parchment-100">
-          <i data-lucide="book-marked" class="w-4 h-4 text-autumn-600"></i>
-          <span>2. Vocabulary Dictionary</span>
-          <span class="px-2 py-0.5 text-[10px] rounded-full bg-autumn-100 text-autumn-800 font-mono">48 Terms</span>
+        <!-- TAB 2 -->
+        <button onclick="switchTab('vocab')" id="tab-btn-vocab" class="tab-btn flex-1 sm:flex-initial px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition flex items-center justify-center gap-2 text-stone-700 hover:bg-parchment-100">
+          <i data-lucide="book-marked" class="w-4 h-4 text-autumn-600 shrink-0"></i>
+          <span class="text-left leading-tight">
+            <span class="block">2. Vocabulary Dictionary</span>
+            <span class="block text-[10px] font-normal opacity-90 font-sans">Diccionario de Campo (48 Términos)</span>
+          </span>
         </button>
 
-        <button onclick="switchTab('fixes')" id="tab-btn-fixes" class="tab-btn flex-1 sm:flex-initial px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition flex items-center justify-center gap-2 text-stone-700 hover:bg-parchment-100">
-          <i data-lucide="sparkles" class="w-4 h-4 text-sage-600"></i>
-          <span>3. Note-Taker Fixes & Gentle Polishes</span>
+        <!-- TAB 3 -->
+        <button onclick="switchTab('fixes')" id="tab-btn-fixes" class="tab-btn flex-1 sm:flex-initial px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition flex items-center justify-center gap-2 text-stone-700 hover:bg-parchment-100">
+          <i data-lucide="sparkles" class="w-4 h-4 text-sage-600 shrink-0"></i>
+          <span class="text-left leading-tight">
+            <span class="block">3. Strengths & Note-Taker Fixes</span>
+            <span class="block text-[10px] font-normal opacity-90 font-sans">Tus Aciertos y Correcciones</span>
+          </span>
         </button>
 
-        <button onclick="switchTab('places')" id="tab-btn-places" class="tab-btn flex-1 sm:flex-initial px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition flex items-center justify-center gap-2 text-stone-700 hover:bg-parchment-100">
-          <i data-lucide="shield" class="w-4 h-4 text-autumn-600"></i>
-          <span>4. Tactical Field Protocols</span>
+        <!-- TAB 4 -->
+        <button onclick="switchTab('places')" id="tab-btn-places" class="tab-btn flex-1 sm:flex-initial px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition flex items-center justify-center gap-2 text-stone-700 hover:bg-parchment-100">
+          <i data-lucide="shield" class="w-4 h-4 text-autumn-600 shrink-0"></i>
+          <span class="text-left leading-tight">
+            <span class="block">4. Tactical Protocols</span>
+            <span class="block text-[10px] font-normal opacity-90 font-sans">Protocolos Operativos</span>
+          </span>
         </button>
 
-        <button onclick="switchTab('practice')" id="tab-btn-practice" class="tab-btn flex-1 sm:flex-initial px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition flex items-center justify-center gap-2 text-stone-700 hover:bg-parchment-100">
-          <i data-lucide="coffee" class="w-4 h-4 text-sage-600"></i>
-          <span>5. Peaceful Practice Sanctuary</span>
+        <!-- TAB 5 -->
+        <button onclick="switchTab('practice')" id="tab-btn-practice" class="tab-btn flex-1 sm:flex-initial px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition flex items-center justify-center gap-2 text-stone-700 hover:bg-parchment-100">
+          <i data-lucide="swords" class="w-4 h-4 text-sage-600 shrink-0"></i>
+          <span class="text-left leading-tight">
+            <span class="block">5. Roleplay & Practice</span>
+            <span class="block text-[10px] font-normal opacity-90 font-sans">Simulaciones de Rol y Práctica</span>
+          </span>
         </button>
       </div>
 
       <div class="hidden sm:block">
         <button onclick="copyLessonSummary()" class="px-3.5 py-2 rounded-xl bg-autumn-600 hover:bg-autumn-700 text-white font-semibold text-xs flex items-center gap-1.5 shadow-sm transition">
           <i data-lucide="share-2" class="w-3.5 h-3.5"></i>
-          <span>Copy Summary for Preply</span>
+          <span>Copiar Resumen para Preply</span>
         </button>
       </div>
     </nav>
@@ -445,61 +464,61 @@
         <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 border-b border-[#e6decb] pb-4">
           <div>
             <div class="flex items-center gap-2">
-              <span class="text-xs font-mono uppercase tracking-widest text-sage-700 font-semibold">Forensic Transcript (Cleaned & Tagged)</span>
-              <span class="px-2 py-0.5 text-[11px] rounded-full bg-autumn-100 text-autumn-800 font-medium">Lesson 03 • 53 Mins</span>
+              <span class="text-xs font-mono uppercase tracking-widest text-sage-700 font-semibold">Transcripción Forense • Forensic Transcript</span>
+              <span class="px-2 py-0.5 text-[11px] rounded-full bg-autumn-100 text-autumn-800 font-medium">Clase 03 • 53 Mins</span>
             </div>
             <h2 class="font-serif text-2xl sm:text-3xl font-bold text-slatewarm-900 mt-0.5">
               "Ground Zero Command: Crowd Safety & Locating Victims"
             </h2>
             <p class="text-xs sm:text-sm text-stone-600 mt-1">
-              Hover over any <span class="vocab-mark">highlighted phrase</span> to preview its pronunciation and meaning, or click to inspect it in the right-hand spotlight. Note-taker mishearings (like hearing <em>"Bernie"</em> as <em>"Benny"</em>) are marked with <span class="asr-fix-pill">✨ Fixed</span> badges!
+              Pasá el cursor sobre cualquier <span class="vocab-mark">frase resaltada</span> para escuchar su pronunciación y traducción en español, o hacé clic para verla en el panel derecho. Los errores de desgrabación automática están señalizados con <span class="asr-fix-pill">✨ Corregido</span>.
             </p>
           </div>
 
           <div class="flex flex-wrap items-center gap-2 shrink-0">
             <div class="relative">
               <i data-lucide="search" class="w-4 h-4 text-stone-400 absolute left-3 top-1/2 -translate-y-1/2"></i>
-              <input id="transcript-search" type="text" oninput="filterTranscript()" placeholder="Search dialogue or timestamp..." class="pl-9 pr-3 py-1.5 rounded-xl bg-white border border-[#dfd0b5] text-xs text-stone-800 focus:outline-none focus:border-sage-600 w-48" />
+              <input id="transcript-search" type="text" oninput="filterTranscript()" placeholder="Buscar en el diálogo o minuto..." class="pl-9 pr-3 py-1.5 rounded-xl bg-white border border-[#dfd0b5] text-xs text-stone-800 focus:outline-none focus:border-sage-600 w-52" />
             </div>
 
             <select id="speaker-filter" onchange="filterTranscript()" class="px-3 py-1.5 rounded-xl bg-white border border-[#dfd0b5] text-xs font-medium text-stone-700">
-              <option value="all">Both Speakers</option>
-              <option value="Bernie">Bernie Only</option>
-              <option value="Louie">Louie Only</option>
+              <option value="all">Ambos interlocutores (Both)</option>
+              <option value="Bernie">Solo Bernie 🇦🇷</option>
+              <option value="Louie">Solo Louie 🍂</option>
             </select>
 
             <button onclick="toggleVocabHighlights()" id="btn-toggle-highlights" class="px-3 py-1.5 rounded-xl bg-autumn-100 text-autumn-800 border border-autumn-300 text-xs font-semibold flex items-center gap-1.5">
               <i data-lucide="highlighter" class="w-3.5 h-3.5"></i>
-              <span>Highlights: On</span>
+              <span>Destacados: Sí</span>
             </button>
 
             <button onclick="toggleAsrBadges()" id="btn-toggle-asr" class="px-3 py-1.5 rounded-xl bg-sage-100 text-sage-800 border border-sage-300 text-xs font-semibold flex items-center gap-1.5">
               <i data-lucide="check-check" class="w-3.5 h-3.5"></i>
-              <span>Note-Taker Fixes: Visible</span>
+              <span>Correcciones ASR: Sí</span>
             </button>
           </div>
         </div>
 
         <!-- 6 Chapters Quick Navigation -->
         <div class="flex flex-wrap items-center gap-1.5 pt-1">
-          <span class="text-[11px] font-mono uppercase tracking-wider text-stone-500 mr-1">Chapters:</span>
+          <span class="text-[11px] font-mono uppercase tracking-wider text-stone-500 mr-1">Capítulos:</span>
           <button onclick="scrollToChapter('chap-1')" class="px-2.5 py-1 rounded-lg bg-parchment-100 hover:bg-autumn-100 text-stone-700 text-xs font-medium transition border border-parchment-200">
-            00:00 • I. Warm-Up & Field Recall
+            00:00 • I. Entrada en calor y trabajo humanitario
           </button>
           <button onclick="scrollToChapter('chap-2')" class="px-2.5 py-1 rounded-lg bg-parchment-100 hover:bg-autumn-100 text-stone-700 text-xs font-medium transition border border-parchment-200">
-            09:16 • II. Damage & Collapsed Structures
+            09:16 • II. Daños y estructuras colapsadas
           </button>
           <button onclick="scrollToChapter('chap-3')" class="px-2.5 py-1 rounded-lg bg-parchment-100 hover:bg-autumn-100 text-stone-700 text-xs font-medium transition border border-parchment-200">
-            27:01 • III. Blackouts & Perimeter Control
+            27:01 • III. Apagones y control de perímetro
           </button>
           <button onclick="scrollToChapter('chap-4')" class="px-2.5 py-1 rounded-lg bg-parchment-100 hover:bg-autumn-100 text-stone-700 text-xs font-medium transition border border-parchment-200">
-            36:16 • IV. Locating Trapped Victims
+            36:16 • IV. Búsqueda y víctimas atrapadas
           </button>
           <button onclick="scrollToChapter('chap-5')" class="px-2.5 py-1 rounded-lg bg-parchment-100 hover:bg-autumn-100 text-stone-700 text-xs font-medium transition border border-parchment-200">
-            45:16 • V. Owner Interview & Falling Debris
+            45:16 • V. Entrevista al encargado y escombros
           </button>
           <button onclick="scrollToChapter('chap-6')" class="px-2.5 py-1 rounded-lg bg-parchment-100 hover:bg-autumn-100 text-stone-700 text-xs font-medium transition border border-parchment-200">
-            50:46 • VI. Field Review & Paula
+            50:46 • VI. Cierre de clase y práctica
           </button>
         </div>
       </div>
@@ -518,7 +537,7 @@
             <div class="flex items-center justify-between gap-2">
               <span class="text-[11px] font-mono uppercase tracking-widest text-autumn-700 font-semibold flex items-center gap-1.5">
                 <i data-lucide="sparkle" class="w-3.5 h-3.5"></i>
-                Vocabulary Spotlight
+                Foco de Vocabulario • Spotlight
               </span>
               <span id="insp-time" class="px-2.5 py-0.5 rounded-full bg-parchment-100 border border-parchment-300 font-mono text-xs text-stone-700">
                 🕒 31:32
@@ -528,7 +547,7 @@
             <div>
               <div class="flex items-center justify-between gap-2">
                 <h3 id="insp-word" class="font-serif text-2xl sm:text-3xl font-bold text-slatewarm-900">Step back!</h3>
-                <button id="insp-audio-btn" onclick="speakWord('Step back! Keep clear of the building!')" class="p-2.5 rounded-xl bg-sage-100 hover:bg-sage-200 text-sage-800 transition shrink-0" title="Listen in clear English">
+                <button id="insp-audio-btn" onclick="speakWord('Step back! Keep clear of the building!')" class="p-2.5 rounded-xl bg-sage-100 hover:bg-sage-200 text-sage-800 transition shrink-0" title="Escuchar en inglés nativo">
                   <i data-lucide="volume-2" class="w-4 h-4"></i>
                 </button>
               </div>
@@ -540,14 +559,14 @@
             </div>
 
             <div class="p-3.5 rounded-2xl bg-parchment-50 border border-parchment-200 space-y-1.5">
-              <div class="text-[11px] font-mono uppercase tracking-wider text-stone-500">Operational Meaning & Tone</div>
+              <div class="text-[11px] font-mono uppercase tracking-wider text-stone-500">Significado Operativo y Tono</div>
               <p id="insp-def" class="text-xs sm:text-sm text-slatewarm-800 leading-relaxed">
                 A short, firm command shouted to bystanders and survivors to physically move away from a dangerous structural collapse radius.
               </p>
             </div>
 
             <div class="p-3.5 rounded-2xl bg-sage-50/80 border border-sage-200 space-y-1.5">
-              <div class="text-[11px] font-mono uppercase tracking-wider text-sage-700">Exact Lesson Turn</div>
+              <div class="text-[11px] font-mono uppercase tracking-wider text-sage-700">Frase Exacta en la Clase</div>
               <p id="insp-quote" class="text-xs italic text-stone-700 leading-relaxed">
                 Louie (31:32): "We can say: Move to the safe zone immediately. Step back and keep clear of the building."
               </p>
@@ -563,10 +582,10 @@
           <div class="sanctuary-card rounded-3xl p-5 space-y-3">
             <div class="flex items-center gap-2 text-sage-800 font-serif font-bold text-lg">
               <i data-lucide="radio" class="w-5 h-5 text-autumn-600"></i>
-              <span>Lewis's Tactical Field Tip</span>
+              <span>Consejo Táctico de Lewis</span>
             </div>
             <p class="text-xs text-stone-600 leading-relaxed">
-              When dealing with bystanders crowding around rubble, never use polite question tags like <em>"Could you please move?"</em>. People in shock only respond to direct, short verbs: <strong>"Step back!"</strong> and <strong>"Clear the building!"</strong>
+              Al tratar con curiosos que se agolpan sobre los escombros, nunca uses fórmulas amables como <em>"Could you please move?"</em>. La gente en shock solo responde a verbos directos y firmes: <strong>"Step back!"</strong> y <strong>"Clear the building!"</strong>
             </p>
           </div>
         </aside>
@@ -581,24 +600,24 @@
       <div class="sanctuary-card rounded-3xl p-6 sm:p-8 space-y-5">
         <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 border-b border-[#e6decb] pb-5">
           <div>
-            <span class="text-xs font-mono uppercase tracking-widest text-autumn-700 font-semibold">Timestamped Lexicon • 48 Curated Terms</span>
+            <span class="text-xs font-mono uppercase tracking-widest text-autumn-700 font-semibold">Glosario con Marcas de Tiempo • 48 Términos Operativos</span>
             <h2 class="font-serif text-2xl sm:text-3xl font-bold text-slatewarm-900 mt-1">
-              Disaster Relief, Crowd Control & Search Vocabulary
+              Vocabulario de Rescate, Control de Multitudes y Búsqueda
             </h2>
             <p class="text-xs sm:text-sm text-stone-600 mt-1">
-              Click <strong>"Jump to Transcript"</strong> on any item to jump directly to that exact turn with a golden highlight pulse!
+              Hacé clic en <strong>"Ver en el Diálogo"</strong> en cualquier término para saltar a ese momento exacto con animación dorada.
             </p>
           </div>
 
           <div class="flex flex-wrap items-center gap-2">
-            <input id="vocab-search" type="text" oninput="renderVocabGrid()" placeholder="Search word, meaning, timestamp..." class="px-3 py-2 rounded-xl bg-white border border-[#dfd0b5] text-xs text-stone-800 w-52" />
+            <input id="vocab-search" type="text" oninput="renderVocabGrid()" placeholder="Buscar término, significado o minuto..." class="px-3 py-2 rounded-xl bg-white border border-[#dfd0b5] text-xs text-stone-800 w-56" />
             <select id="vocab-cat-filter" onchange="renderVocabGrid()" class="px-3 py-2 rounded-xl bg-white border border-[#dfd0b5] text-xs font-medium text-stone-700">
-              <option value="all">All Operational Categories</option>
-              <option value="crowd">⚠️ Crowd Safety & Perimeter</option>
-              <option value="search">🔍 Search & Locating Victims</option>
-              <option value="psych">🧠 Psychological Reassurance</option>
-              <option value="damage">🏢 Damage & Hazards</option>
-              <option value="logistics">🚚 Logistics & Safe Zones</option>
+              <option value="all">Todas las Categorías Operativas</option>
+              <option value="crowd">⚠️ Seguridad de Multitud y Perímetro (Crowd Safety)</option>
+              <option value="search">🔍 Búsqueda y Ubicación de Víctimas (Search & Victims)</option>
+              <option value="psych">🧠 Contención Psicológica (Psychological Support)</option>
+              <option value="damage">🏢 Daños y Peligros Estructurales (Damage & Hazards)</option>
+              <option value="logistics">🚚 Logística y Zonas Seguras (Logistics & Safe Zones)</option>
             </select>
           </div>
         </div>
@@ -620,13 +639,13 @@
         <div>
           <span class="text-xs font-mono uppercase tracking-widest text-sage-700 font-semibold flex items-center gap-2">
             <i data-lucide="award" class="w-4 h-4 text-autumn-600"></i>
-            Confidence Builder • Bernie's Natural Strengths
+            Tus Fortalezas Naturales • Bernie's Natural Strengths
           </span>
           <h2 class="font-serif text-2xl sm:text-3xl font-bold text-slatewarm-900 mt-1">
-            6 Natural Expressions You Used Brilliantly Today
+            6 Expresiones que Usaste de Forma Brillante Hoy
           </h2>
           <p class="text-xs sm:text-sm text-stone-600 mt-1">
-            Notice how your tactical instincts guided your English! These phrases demonstrate leadership, psychological insight, and rapid decision-making:
+            Tu instinto operativo de liderazgo guio tu inglés con gran precisión. Estas intervenciones demostraron calma, empatía y autoridad táctica:
           </p>
         </div>
 
@@ -640,13 +659,13 @@
         <div>
           <span class="text-xs font-mono uppercase tracking-widest text-autumn-700 font-semibold flex items-center gap-2">
             <i data-lucide="sparkles" class="w-4 h-4 text-autumn-600"></i>
-            Refining Your Voice • Supportive Upgrades
+            Pulidos y Matices Tácticos • Supportive Upgrades
           </span>
           <h2 class="font-serif text-2xl sm:text-3xl font-bold text-slatewarm-900 mt-1">
-            6 Gentle Phrasing Polishes
+            6 Pulidos de Frases para Hablar con Mayor Seguridad
           </h2>
           <p class="text-xs sm:text-sm text-stone-600 mt-1">
-            Minor structural polishes to help you speak with the exact cadence of international UN and Red Cross field teams:
+            Ajustes finos para hablar con la cadencia exacta de los equipos internacionales de Naciones Unidas, Cruz Roja y Protección Civil:
           </p>
         </div>
 
@@ -660,13 +679,13 @@
         <div>
           <span class="text-xs font-mono uppercase tracking-widest text-stone-500 font-semibold flex items-center gap-2">
             <i data-lucide="check-check" class="w-4 h-4 text-sage-600"></i>
-            Automated Speech-to-Text Corrections
+            Correcciones del Desgrabador Automático • AI Note-Taker Fixes
           </span>
           <h2 class="font-serif text-2xl sm:text-3xl font-bold text-slatewarm-900 mt-1">
-            Sorting Out the AI Note-Taker's Spelling Mishearings
+            Resolución Forense de Errores del Grabador de Audio
           </h2>
           <p class="text-xs sm:text-sm text-stone-600 mt-1">
-            Automated note-takers often confuse South American accents or emergency terminology. We forensically resolved every error so your permanent notes are accurate:
+            Las grabadoras automáticas suelen confundir términos técnicos de emergencias y acentos (por ejemplo, registrar "Benny" en vez de "Bernie"). Acá dejamos cada frase aclarada para tus notas permanentes:
           </p>
         </div>
 
@@ -682,12 +701,12 @@
     <section id="tab-panel-places" class="tab-panel hidden space-y-7">
       <div class="sanctuary-card rounded-3xl p-6 sm:p-8 space-y-5">
         <div>
-          <span class="text-xs font-mono uppercase tracking-widest text-autumn-700 font-semibold">Incident Command Principles</span>
+          <span class="text-xs font-mono uppercase tracking-widest text-autumn-700 font-semibold">Principios de Comando de Incidentes • Incident Command</span>
           <h2 class="font-serif text-2xl sm:text-3xl font-bold text-slatewarm-900 mt-1">
-            4 Tactical Field Protocols from Today's Lesson
+            4 Protocolos Operativos de Terreno
           </h2>
           <p class="text-xs sm:text-sm text-stone-600 mt-1">
-            Editorial breakdowns of why international search teams communicate the way they do:
+            Explicación operativa de por qué los equipos internacionales de rescate (USAR, Cruz Roja, OCHA) se comunican de esta manera:
           </p>
         </div>
 
@@ -697,16 +716,16 @@
           <div class="sanctuary-subcard rounded-2xl p-6 space-y-3 border-t-4 border-t-autumn-500">
             <div class="flex items-center gap-2 text-autumn-700 font-mono text-xs font-bold uppercase">
               <i data-lucide="alert-triangle" class="w-4 h-4"></i>
-              <span>Protocol 1 • Perimeter Safety</span>
+              <span>Protocolo 1 • Seguridad de Perímetro (Perimeter Safety)</span>
             </div>
             <h3 class="font-serif text-xl sm:text-2xl font-bold text-slatewarm-900">
-              The Urgent Imperative: Why Courtesy Can Be Dangerous
+              El Imperativo Urgente: Por Qué la Cortesía Excesiva Puede Ser Peligrosa
             </h3>
             <p class="text-xs sm:text-sm text-stone-600 leading-relaxed">
-              In regular English conversation, polite softening (<em>"Would you mind stepping back please?"</em>) is prized. But on a disaster perimeter with cracked masonry, politeness registers as low urgency. Bystanders assume there is time to argue. 
+              En inglés cotidiano, se valora suavizar con cortesía (<em>"Would you mind stepping back please?"</em>). Pero en un perímetro de catástrofe con mampostería a punto de caer, la cortesía transmite baja urgencia y la gente tiende a discutir o demorarse.
             </p>
             <p class="text-xs sm:text-sm text-stone-600 leading-relaxed">
-              International teams use the <strong>loud imperative</strong>: verb first, no padding: <span class="font-semibold text-slatewarm-800">"Step back! Keep clear of the building!"</span>. It snaps survivors out of shock and triggers immediate compliance.
+              Los equipos internacionales utilizan el <strong>imperativo firme y directo</strong>: verbo primero, sin relleno: <span class="font-semibold text-slatewarm-800">"Step back! Keep clear of the building!"</span>. Corta el estado de shock de los sobrevivientes y genera obediencia inmediata.
             </p>
           </div>
 
@@ -714,16 +733,16 @@
           <div class="sanctuary-subcard rounded-2xl p-6 space-y-3 border-t-4 border-t-sage-600">
             <div class="flex items-center gap-2 text-sage-700 font-mono text-xs font-bold uppercase">
               <i data-lucide="volume-x" class="w-4 h-4"></i>
-              <span>Protocol 2 • Acoustic Search</span>
+              <span>Protocolo 2 • Búsqueda Acústica (Acoustic Search)</span>
             </div>
             <h3 class="font-serif text-xl sm:text-2xl font-bold text-slatewarm-900">
-              The Silence Discipline: Detecting Tapping in the Rubble
+              La Disciplina del Silencio: Cómo Detectar Golpes en los Escombros
             </h3>
             <p class="text-xs sm:text-sm text-stone-600 leading-relaxed">
-              Trapped survivors frequently have dry throats from dust or broken ribs that prevent loud screaming. Their only way to communicate is tapping with a stone or pipe, or blowing a whistle from an emergency kit.
+              Las personas atrapadas suelen tener la garganta llena de polvo o costillas fracturadas que impiden gritar fuerte. Su única vía de auxilio suele ser golpear con una piedra o caño, o soplar un silbato de emergencia (*emergency whistle*).
             </p>
             <p class="text-xs sm:text-sm text-stone-600 leading-relaxed">
-              Before calling out, order total perimeter silence: <span class="font-semibold text-slatewarm-800">"Everyone quiet! We need to listen!"</span>. Then shout: <span class="font-semibold text-slatewarm-800">"Can anyone hear me? Make noise if you can!"</span>, followed by 30 seconds of absolute stillness.
+              Antes de llamar, se exige silencio total: <span class="font-semibold text-slatewarm-800">"Everyone quiet! We need to listen!"</span>. Luego se grita: <span class="font-semibold text-slatewarm-800">"Can anyone hear me? Make noise if you can!"</span>, seguido de 30 segundos de inmovilidad y silencio absoluto.
             </p>
           </div>
 
@@ -731,16 +750,16 @@
           <div class="sanctuary-subcard rounded-2xl p-6 space-y-3 border-t-4 border-t-autumn-600">
             <div class="flex items-center gap-2 text-autumn-700 font-mono text-xs font-bold uppercase">
               <i data-lucide="map" class="w-4 h-4"></i>
-              <span>Protocol 3 • Logistics Clarity</span>
+              <span>Protocolo 3 • Claridad Logística (Logistics Clarity)</span>
             </div>
             <h3 class="font-serif text-xl sm:text-2xl font-bold text-slatewarm-900">
-              Safe Zone vs. Shelter: Clearing Up the Field Distinction
+              Zona Segura vs. Albergue: La Diferencia Crucial en el Terreno
             </h3>
             <p class="text-xs sm:text-sm text-stone-600 leading-relaxed">
-              As Louie and Bernie discussed today, confusing these two terms causes chaos for arriving convoys. 
+              Como aclararon Louie y Bernie en clase, confundir estos dos conceptos genera descontrol al coordinar convoyes y evacuar sobrevivientes.
             </p>
             <p class="text-xs sm:text-sm text-stone-600 leading-relaxed">
-              A <strong>Safe Zone</strong> (*zona segura*) is an immediate, open outdoor gathering point (a stadium pitch or public park) free of secondary collapse hazards. A <strong>Shelter</strong> (*albergue / refugio*) is a long-term covered facility equipped with cots, latrines, clean water, and food rations where displaced families will sleep.
+              Una <strong>Safe Zone</strong> (*zona segura*) es un punto de reunión al aire libre (cancha de fútbol, plaza abierta) libre de peligros de colapso secundario. Un <strong>Shelter</strong> (*albergue / refugio*) es una instalación techada de mediano plazo equipada con camas, letrinas, agua potable y comida donde pernoctarán las familias evacuadas.
             </p>
           </div>
 
@@ -748,16 +767,16 @@
           <div class="sanctuary-subcard rounded-2xl p-6 space-y-3 border-t-4 border-t-sage-500">
             <div class="flex items-center gap-2 text-sage-700 font-mono text-xs font-bold uppercase">
               <i data-lucide="heart-pulse" class="w-4 h-4"></i>
-              <span>Protocol 4 • Psychological First Aid</span>
+              <span>Protocolo 4 • Primeros Auxilios Psicológicos (Psychological Support)</span>
             </div>
             <h3 class="font-serif text-xl sm:text-2xl font-bold text-slatewarm-900">
-              Verbal Grounding: Preventing Panic in Pinned Victims
+              Contención Verbal: Cómo Prevenir el Pánico en Personas Atrapadas
             </h3>
             <p class="text-xs sm:text-sm text-stone-600 leading-relaxed">
-              Bernie made an exceptional point in today's class: talking continuously to trapped victims prevents nervous breakdowns. When pinned in total darkness, silence feels like abandonment.
+              Bernie remarcó un punto excelente en clase: hablar continuamente con la persona atrapada previene un colapso nervioso. En la oscuridad total de los escombros, el silencio se experimenta como abandono.
             </p>
             <p class="text-xs sm:text-sm text-stone-600 leading-relaxed">
-              Use the reassuring verbal triad: <span class="font-semibold text-slatewarm-800">"Help is on the way. Stay calm, do not move, and breathe."</span> Ask them what they see (light, pipes, room color) to give search dogs and fiber-optic cameras a target vector while maintaining emotional contact.
+              Utilizá la tríada tranquilizadora: <span class="font-semibold text-slatewarm-800">"Help is on the way. Stay calm, do not move, and breathe."</span> Pediles que describan qué ven (luz, caños, color de pared) para guiar a los perros y cámaras de fibra óptica mientras sostenés el vínculo emocional.
             </p>
           </div>
 
@@ -770,18 +789,62 @@
     <!-- =================================================================== -->
     <section id="tab-panel-practice" class="tab-panel hidden space-y-7">
       
+      <!-- =================================================================== -->
+      <!-- INTERACTIVE FIELD ROLEPLAY SIMULATOR                                -->
+      <!-- =================================================================== -->
+      <div id="roleplay-simulator-section" class="sanctuary-card rounded-3xl p-6 sm:p-8 space-y-6 border-t-4 border-t-autumn-500">
+        <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 border-b border-[#e6decb] pb-5">
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="text-xs font-mono uppercase tracking-widest text-autumn-700 font-semibold flex items-center gap-1.5">
+                <i data-lucide="radio" class="w-4 h-4 text-autumn-600"></i>
+                Simulador Interactivo de Roleplay • Field Voice Simulator
+              </span>
+              <span class="px-2 py-0.5 text-[11px] rounded-full bg-sage-100 text-sage-800 font-semibold">3 Misiones Operativas</span>
+            </div>
+            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-slatewarm-900 mt-1">
+              Simulaciones de Roleplay en Vivo para Bernie
+            </h2>
+            <p class="text-xs sm:text-sm text-stone-600 mt-1">
+              Practicá tus respuestas en voz alta simulando una emergencia en terreno. Escuchá lo que dice Lewis (o el familiar/víctima) con audio nativo y comprobá cómo pronunciar cada frase con firmeza de mando.
+            </p>
+          </div>
+
+          <!-- Mission Selector Tabs -->
+          <div class="flex flex-wrap items-center gap-2 shrink-0">
+            <button id="rp-tab-0" onclick="selectRoleplayMission(0)" class="px-3 py-2 rounded-xl text-xs font-semibold border transition flex items-center gap-1.5 bg-autumn-600 text-white shadow-sm border-autumn-600">
+              <i data-lucide="alert-triangle" class="w-3.5 h-3.5"></i>
+              <span>Misión 1: Perímetro</span>
+            </button>
+            <button id="rp-tab-1" onclick="selectRoleplayMission(1)" class="px-3 py-2 rounded-xl text-xs font-semibold border transition flex items-center gap-1.5 bg-parchment-100 hover:bg-parchment-200 text-stone-700 border-parchment-300">
+              <i data-lucide="volume-x" class="w-3.5 h-3.5"></i>
+              <span>Misión 2: Búsqueda</span>
+            </button>
+            <button id="rp-tab-2" onclick="selectRoleplayMission(2)" class="px-3 py-2 rounded-xl text-xs font-semibold border transition flex items-center gap-1.5 bg-parchment-100 hover:bg-parchment-200 text-stone-700 border-parchment-300">
+              <i data-lucide="clipboard-list" class="w-3.5 h-3.5"></i>
+              <span>Misión 3: Encargado</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Roleplay Mission Container -->
+        <div id="roleplay-mission-container" class="space-y-6">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+
       <!-- Interactive Flashcard Deck -->
       <div class="sanctuary-card rounded-3xl p-6 sm:p-8 space-y-5">
         <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-[#e6decb] pb-4">
           <div>
-            <span class="text-xs font-mono uppercase tracking-widest text-autumn-700 font-semibold">Active Recall Flashcards</span>
+            <span class="text-xs font-mono uppercase tracking-widest text-autumn-700 font-semibold">Tarjetas de Memoria Activa • Active Recall</span>
             <h2 class="font-serif text-2xl sm:text-3xl font-bold text-slatewarm-900 mt-1">
-              Field Command & Vocabulary Deck
+              Mazo de Comandos y Vocabulario de Terreno
             </h2>
-            <p class="text-xs text-stone-600 mt-0.5">Click the card to flip between command, phonetics, and Argentine Spanish operational context.</p>
+            <p class="text-xs text-stone-600 mt-0.5">Hacé clic en la tarjeta para darla vuelta y ver la pronunciación fonética y significado en español.</p>
           </div>
           <div class="flex items-center gap-2">
-            <span id="fc-counter" class="font-mono text-xs font-semibold px-2.5 py-1 rounded-full bg-parchment-100 border border-parchment-300 text-stone-700">Card 1 of 8</span>
+            <span id="fc-counter" class="font-mono text-xs font-semibold px-2.5 py-1 rounded-full bg-parchment-100 border border-parchment-300 text-stone-700">Tarjeta 1 de 8</span>
           </div>
         </div>
 
@@ -791,13 +854,13 @@
             <div class="flex items-center justify-between text-xs font-mono text-stone-400">
               <span id="fc-badge">00:00 • B2 Command</span>
               <span class="text-autumn-600 flex items-center gap-1 group-hover:scale-105 transition">
-                <i data-lucide="rotate-cw" class="w-3.5 h-3.5"></i> Flip Card
+                <i data-lucide="rotate-cw" class="w-3.5 h-3.5"></i> Dar Vuelta (Flip)
               </span>
             </div>
 
             <div class="my-auto py-4 space-y-2">
               <h3 id="fc-front-title" class="font-serif text-3xl sm:text-4xl font-bold text-slatewarm-900">Step back!</h3>
-              <p id="fc-sub" class="text-xs sm:text-sm font-mono text-stone-500">/step bæk/ — Click card to flip</p>
+              <p id="fc-sub" class="text-xs sm:text-sm font-mono text-stone-500">/step bæk/ — Hacé clic para ver el dorso</p>
               
               <div id="fc-back-details" class="hidden space-y-3 pt-3 border-t border-parchment-200 text-left">
                 <div class="text-xs text-stone-700" id="fc-def">A loud command to push bystanders and curious onlookers away from falling debris.</div>
@@ -806,19 +869,19 @@
               </div>
             </div>
 
-            <div class="text-[11px] font-mono text-stone-400">Tap to flip • Practice pronunciation out loud</div>
+            <div class="text-[11px] font-mono text-stone-400">Tocá para girar • Practicá la pronunciación en voz alta</div>
           </div>
 
           <!-- Controls -->
           <div class="flex items-center justify-center gap-3 pt-4">
             <button onclick="prevFlashcard()" class="px-4 py-2 rounded-xl bg-parchment-100 hover:bg-parchment-200 text-stone-700 text-xs font-semibold flex items-center gap-1.5 transition">
-              <i data-lucide="chevron-left" class="w-4 h-4"></i> Previous
+              <i data-lucide="chevron-left" class="w-4 h-4"></i> Anterior
             </button>
-            <button onclick="speakCurrentFlashcard()" class="p-2.5 rounded-xl bg-sage-600 hover:bg-sage-700 text-white transition shadow-sm" title="Listen to pronunciation">
+            <button onclick="speakCurrentFlashcard()" class="p-2.5 rounded-xl bg-sage-600 hover:bg-sage-700 text-white transition shadow-sm" title="Escuchar pronunciación nativa">
               <i data-lucide="volume-2" class="w-4 h-4"></i>
             </button>
             <button onclick="nextFlashcard()" class="px-4 py-2 rounded-xl bg-autumn-600 hover:bg-autumn-700 text-white text-xs font-semibold flex items-center gap-1.5 transition shadow-sm">
-              Next <i data-lucide="chevron-right" class="w-4 h-4"></i>
+              Siguiente <i data-lucide="chevron-right" class="w-4 h-4"></i>
             </button>
           </div>
         </div>
@@ -828,14 +891,14 @@
       <div class="sanctuary-card rounded-3xl p-6 sm:p-8 space-y-5">
         <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-[#e6decb] pb-4">
           <div>
-            <span class="text-xs font-mono uppercase tracking-widest text-sage-700 font-semibold">Interactive Field Quiz</span>
+            <span class="text-xs font-mono uppercase tracking-widest text-sage-700 font-semibold">Cuestionario de Terreno • Field Quiz</span>
             <h2 class="font-serif text-2xl sm:text-3xl font-bold text-slatewarm-900 mt-1">
-              Field Decision Scenarios
+              Escenarios de Decisión Operativa
             </h2>
-            <p class="text-xs text-stone-600 mt-0.5">Test your immediate command choices in rapid ground-zero scenarios.</p>
+            <p class="text-xs text-stone-600 mt-0.5">Poné a prueba tus reflejos eligiendo el comando o respuesta adecuada en situaciones reales.</p>
           </div>
           <span id="quiz-score-badge" class="font-mono text-xs font-bold px-3 py-1 rounded-full bg-sage-100 text-sage-800 border border-sage-300">
-            0 / 6 Completed
+            0 / 6 Completados
           </span>
         </div>
 
@@ -848,30 +911,30 @@
       <div class="sanctuary-card rounded-3xl p-6 sm:p-8 space-y-4 border-l-8 border-l-autumn-600">
         <div class="flex items-center gap-2 text-autumn-700 font-mono text-xs font-bold uppercase">
           <i data-lucide="compass" class="w-4 h-4"></i>
-          <span>Preparation for Next Lesson with Louie</span>
+          <span>Preparación para la Próxima Clase con Louie</span>
         </div>
         <h3 class="font-serif text-2xl sm:text-3xl font-bold text-slatewarm-900">
-          3 Roleplay Missions to Practice Aloud
+          3 Misiones Operativas para Practicar en Voz Alta
         </h3>
         <p class="text-xs sm:text-sm text-stone-600 leading-relaxed">
-          In our next lesson, we will run live voice roleplay simulations. Practice saying these 3 scenarios out loud before we meet:
+          En nuestra próxima clase por Preply, haremos simulaciones habladas completas de estos 3 escenarios. Podés repasarlos arriba con el nuevo simulador interactivo:
         </p>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2 text-xs">
           <div class="p-4 rounded-2xl bg-white border border-[#dfd0b5] space-y-2">
-            <span class="font-mono font-bold text-autumn-700 uppercase">Mission 1</span>
-            <div class="font-serif font-bold text-base text-slatewarm-900">The Secondary Collapse</div>
-            <p class="text-stone-600 leading-relaxed">A crowd of 20 neighbors gathers near a cracking wall. Practice shouting: <em>"Step back! Keep clear of the building! Move to the safe zone immediately!"</em></p>
+            <span class="font-mono font-bold text-autumn-700 uppercase">Misión 1 • Perímetro</span>
+            <div class="font-serif font-bold text-base text-slatewarm-900">El Derrumbe Secundario</div>
+            <p class="text-stone-600 leading-relaxed">Una multitud de vecinos se agolpa cerca de un muro agrietado. Practicá gritar: <em>"Step back! Keep clear of the building! Move to the safe zone immediately!"</em></p>
           </div>
           <div class="p-4 rounded-2xl bg-white border border-[#dfd0b5] space-y-2">
-            <span class="font-mono font-bold text-sage-700 uppercase">Mission 2</span>
-            <div class="font-serif font-bold text-base text-slatewarm-900">The Acoustic Search</div>
-            <p class="text-stone-600 leading-relaxed">Cut the generator noise. Demand: <em>"Everyone quiet!"</em> Call into the rubble: <em>"Can anyone hear me? Make noise if you can!"</em></p>
+            <span class="font-mono font-bold text-sage-700 uppercase">Misión 2 • Búsqueda</span>
+            <div class="font-serif font-bold text-base text-slatewarm-900">La Búsqueda Acústica</div>
+            <p class="text-stone-600 leading-relaxed">Cortá el ruido de los generadores. Exigí: <em>"Everyone quiet!"</em> Llamá a los escombros: <em>"Can anyone hear me? Make noise if you can!"</em></p>
           </div>
           <div class="p-4 rounded-2xl bg-white border border-[#dfd0b5] space-y-2">
-            <span class="font-mono font-bold text-autumn-700 uppercase">Mission 3</span>
-            <div class="font-serif font-bold text-base text-slatewarm-900">The Manager Debrief</div>
-            <p class="text-stone-600 leading-relaxed">Question the owner on the sidewalk: <em>"How many people were in the building? Is anyone trapped inside? Turn off the gas and power!"</em></p>
+            <span class="font-mono font-bold text-autumn-700 uppercase">Misión 3 • Encargado</span>
+            <div class="font-serif font-bold text-base text-slatewarm-900">Entrevista y Corte de Gas</div>
+            <p class="text-stone-600 leading-relaxed">Interrogá al encargado en la vereda: <em>"How many people were in the building? Is anyone trapped inside? Turn off the gas and power!"</em></p>
           </div>
         </div>
       </div>
@@ -1946,7 +2009,202 @@
     ];
 
     // -------------------------------------------------------------------------
-    // 4. FLASHCARD & QUIZ DATA
+    // 4. INTERACTIVE ROLEPLAY MISSIONS DATA
+    // -------------------------------------------------------------------------
+    const ROLEPLAY_MISSIONS = [
+      {
+        id: 0,
+        badge: "Misión 1 • Control de Perímetro",
+        titleEn: "Perimeter Control & Secondary Collapse Danger",
+        titleEs: "Control de Perímetro y Peligro de Derrumbe Secundario",
+        bernieRoleEn: "Bernie — Ground Operations Lead securing a collapsed 3-story bakery after an aftershock.",
+        bernieRoleEs: "Bernie — Jefa de Operaciones asegurando una panadería colapsada de 3 pisos tras una réplica.",
+        partnerRoleEn: "Lewis — Panicked brother trying to push past police tape into the rubble.",
+        partnerRoleEs: "Lewis — Hermano en pánico intentando cruzar la cinta perimetral para meterse a los escombros.",
+        briefingEn: "The walls are visibly leaning. Bricks and mortar are falling. You smell gas near the meter. Halt Lewis immediately, keep the crowd clear, and isolate utilities.",
+        briefingEs: "Las paredes están inclinadas con rajaduras vivas. Caen ladrillos y cascotes. Se percibe olor a gas. Frená a Lewis con voz de mando firme, alejá a los curiosos y ordená el corte de servicios.",
+        turns: [
+          {
+            partnerName: "Lewis (Panicked Brother)",
+            partnerRole: "Familiar desesperado en el cordón",
+            partnerEn: "My brother is inside! Let me through, I need to get him out right now!",
+            partnerEs: "¡Mi hermano está adentro! ¡Déjenme pasar, tengo que sacarlo ya mismo!",
+            promptEn: "Halt him immediately with a loud, firm imperative. Do not hesitate or say 'please'.",
+            promptEs: "Frenalo en seco con una orden fuerte y directa. No titubees ni uses fórmulas de cortesía.",
+            targetEn: "Step back! Keep clear of the building!",
+            targetIpa: "/step bæk! kiːp klɪər əv ðə ˈbɪl.dɪŋ/",
+            targetEs: "¡Atrás! ¡Aléjese del edificio!",
+            tacticalTip: "En situaciones de shock, la cortesía se percibe como falta de peligro. Un imperativo corto y rotundo salva vidas."
+          },
+          {
+            partnerName: "Lewis (Panicked Brother)",
+            partnerRole: "Familiar desesperado",
+            partnerEn: "Why can't I go in? The front entrance is right there, look!",
+            partnerEs: "¿Por qué no me dejan entrar? ¡La puerta de entrada está ahí nomás!",
+            promptEn: "Explain the imminent structural danger and warn him about falling masonry.",
+            promptEs: "Explicá el peligro inminente de la estructura y advertile sobre los cascotes que caen.",
+            targetEn: "Do not enter! The structure is unstable. Watch out for falling debris!",
+            targetIpa: "/duː nɒt ˈen.tər! ðə ˈstrʌk.tʃər ɪz ʌnˈsteɪ.bəl. wɒtʃ aʊt fər ˈfɔː.lɪŋ dəˈbriː/",
+            targetEs: "¡No entre! La estructura está inestable. ¡Cuidado con los escombros que caen!",
+            tacticalTip: "Recordá que la 's' de 'debris' (/dəˈbriː/) es completamente muda."
+          },
+          {
+            partnerName: "Lewis (Panicked Brother)",
+            partnerRole: "Familiar comenzando a acatar",
+            partnerEn: "Okay, okay! But where do you want us to go? The street is completely blocked!",
+            partnerEs: "¡Bueno, está bien! Pero ¿a dónde quieren que vayamos? ¡La calle está llena de escombros!",
+            promptEn: "Direct him and the crowd to the designated open assembly point right now.",
+            promptEs: "Dirigilo a él y a los vecinos al área abierta despejada de inmediato.",
+            targetEn: "Move to the safe zone immediately!",
+            targetIpa: "/muːv tə ðə seɪf zəʊn ɪˈmiː.di.ət.li/",
+            targetEs: "¡Vayan a la zona segura de inmediato!",
+            tacticalTip: "Usamos 'safe zone' para el área abierta exterior. 'Immediately' no da lugar a demoras."
+          },
+          {
+            partnerName: "Rescue Colleague (Compañero de equipo)",
+            partnerRole: "Rescatista alertando sobre servicios",
+            partnerEn: "Bernie, I smell gas near the basement valve and severed electrical wires are sparking in the puddle!",
+            partnerEs: "¡Bernie, hay olor a gas cerca de la válvula del sótano y cables chispeando en el agua!",
+            promptEn: "Issue the definitive utility cut order to protect rescuers and bystanders.",
+            promptEs: "Dá la orden terminante de corte de servicios para proteger al personal y evitar explosiones.",
+            targetEn: "Turn off the gas and power!",
+            targetIpa: "/tɜːn ɒf ðə ɡæs ænd ˈpaʊ.ər/",
+            targetEs: "¡Corten el gas y la electricidad!",
+            tacticalTip: "Acción prioritaria en todo protocolo de colapso para prevenir fuegos secundarios y electrocución."
+          }
+        ]
+      },
+      {
+        id: 1,
+        badge: "Misión 2 • Búsqueda Acústica",
+        titleEn: "Acoustic Search & Rubble Voice Contact",
+        titleEs: "Búsqueda Acústica y Contacto con Víctima en Escombros",
+        bernieRoleEn: "Bernie — Search & Rescue Lead conducting an acoustic silence cycle on the rubble pile.",
+        bernieRoleEs: "Bernie — Líder de Búsqueda y Rescate dirigiendo el ciclo de silencio acústico sobre los escombros.",
+        partnerRoleEn: "Lewis — Trapped survivor buried beneath drywall, unable to scream loudly.",
+        partnerRoleEs: "Lewis — Sobreviviente sepultado bajo paneles de yeso, con dificultad para gritar fuerte.",
+        briefingEn: "Engines and generators have just stopped. You need absolute silence around the perimeter to hear faint taps or whistles, establish verbal grounding, and evaluate injuries.",
+        briefingEs: "Se acaban de apagar generadores y motores. Necesitás silencio perimetral total para detectar golpecitos o silbatos, dar contención psicológica y evaluar lesiones.",
+        turns: [
+          {
+            partnerName: "Bystanders & Team",
+            partnerRole: "Murmullos en el perímetro",
+            partnerEn: "(Crowd murmuring, people talking and shouting questions near the tape)",
+            partnerEs: "(Murmullos de la multitud, gente hablando y haciendo preguntas cerca del cordón)",
+            promptEn: "Command 100% perimeter silence so your team can listen for tapping in the debris.",
+            promptEs: "Exigí silencio absoluto en el perímetro para que el equipo pueda escuchar golpes leves.",
+            targetEn: "Everyone quiet! We need to listen!",
+            targetIpa: "/ˈev.ri.wʌn ˈkwaɪ.ət! wiː niːd tə ˈlɪs.ən/",
+            targetEs: "¡Silencio todos! ¡Necesitamos escuchar!",
+            tacticalTip: "La disciplina del silencio es sagrada: 30 segundos sin respirar ni pisar escombros."
+          },
+          {
+            partnerName: "Silence across the pile",
+            partnerRole: "Escombros en calma",
+            partnerEn: "(Absolute silence across the pile...)",
+            partnerEs: "(Silencio total sobre el derrumbe...)",
+            promptEn: "Call out into the void and tell any trapped victim to make noise with whatever they have.",
+            promptEs: "Gritá hacia los huecos del colapso e indicá que hagan cualquier tipo de ruido.",
+            targetEn: "Can anyone hear me? Make noise if you can!",
+            targetIpa: "/kæn ˈen.i.wʌn hɪər miː? meɪk nɔɪz ɪf juː kæn/",
+            targetEs: "¿Alguien me escucha? ¡Hagan ruido si pueden!",
+            tacticalTip: "Las víctimas con polvo o costillas rotas no pueden gritar; suelen golpear un caño o piedra."
+          },
+          {
+            partnerName: "Lewis (Trapped Survivor)",
+            partnerRole: "Voz débil desde un hueco",
+            partnerEn: "(tap... tap... tap...) Help! I'm down here under a concrete slab! I can't move my leg!",
+            partnerEs: "(tap... tap... tap...) ¡Ayuda! ¡Estoy acá abajo bajo una losa! ¡No puedo mover la pierna!",
+            promptEn: "Reassure him immediately with the calming triad so he does not panic or hyperventilate.",
+            promptEs: "Tranquilizalo de inmediato con la tríada de contención para que no entre en pánico.",
+            targetEn: "Help is on the way. Stay calm, do not move.",
+            targetIpa: "/help ɪz ɒn ðə weɪ. steɪ kɑːm, duː nɒt muːv/",
+            targetEs: "La ayuda está en camino. Mantenga la calma, no se mueva.",
+            tacticalTip: "La regla de oro de Bernie en clase: hablar continuamente evita el colapso psicológico."
+          },
+          {
+            partnerName: "Lewis (Trapped Survivor)",
+            partnerRole: "Víctima asustada",
+            partnerEn: "It's so dark and dusty in here, please don't leave me!",
+            partnerEs: "¡Está todo oscuro y lleno de polvo acá adentro, por favor no me dejen!",
+            promptEn: "Assess injuries, check if he can walk, and instruct him to regulate his breathing.",
+            promptEs: "Evaluá lesiones, preguntá si puede caminar e indicale que respire con calma.",
+            targetEn: "Who is injured? Can you walk? Stay calm and breathe.",
+            targetIpa: "/huː ɪz ˈɪn.dʒəd? kæn juː wɔːk? steɪ kɑːm ænd briːð/",
+            targetEs: "¿Quién está herido? ¿Puede caminar? Mantenga la calma y respire.",
+            tacticalTip: "Averiguar si hay más personas en el mismo hueco y mantener contacto vocal constante."
+          }
+        ]
+      },
+      {
+        id: 2,
+        badge: "Misión 3 • Entrevista al Encargado",
+        titleEn: "Superintendent Rapid Debrief & Utilities",
+        titleEs: "Entrevista Rápida al Encargado y Corte de Suministros",
+        bernieRoleEn: "Bernie — Incident Coordinator arriving at a partially collapsed community center.",
+        bernieRoleEs: "Bernie — Coordinadora de Incidente llegando a un centro comunitario colapsado.",
+        partnerRoleEn: "Lewis — Agitated building superintendent standing in the street.",
+        partnerRoleEs: "Lewis — Encargado del edificio, visiblemente alterado sobre la vereda.",
+        briefingEn: "The ceiling of the main hall collapsed. The building manager is in shock. You need rapid occupant counts, victim locations, injury status, and immediate utility shutoff.",
+        briefingEs: "El techo del salón principal colapsó. El encargado está en shock. Necesitás conteo rápido de personas, ubicación de víctimas, estado de heridos y corte de gas/luz.",
+        turns: [
+          {
+            partnerName: "Lewis (Building Superintendent)",
+            partnerRole: "Encargado en shock",
+            partnerEn: "I'm the building manager! The ceiling of the main assembly hall just collapsed during our staff meeting!",
+            partnerEs: "¡Soy el encargado del edificio! ¡El techo del salón principal se vino abajo durante la reunión!",
+            promptEn: "Ask immediately for head count of occupants who were in the building.",
+            promptEs: "Preguntá de inmediato cuántas personas había en el inmueble al momento del derrumbe.",
+            targetEn: "How many people were in the building?",
+            targetIpa: "/haʊ ˈmen.i ˈpiː.pəl wɜːr ɪn ðə ˈbɪl.dɪŋ/",
+            targetEs: "¿Cuántas personas había en el edificio?",
+            tacticalTip: "Dato crítico inicial para dimensionar la operación y solicitar dotaciones de ambulancias."
+          },
+          {
+            partnerName: "Lewis (Building Superintendent)",
+            partnerRole: "Encargado calculando",
+            partnerEn: "There were about twenty-five people having coffee, but several managed to run out!",
+            partnerEs: "¡Había como 25 personas tomando café, pero varias lograron salir corriendo!",
+            promptEn: "Determine precisely who is trapped inside and where they were positioned.",
+            promptEs: "Averiguá con precisión si alguien quedó atrapado adentro y en qué sector.",
+            targetEn: "Is anyone trapped inside? Where were they located?",
+            targetIpa: "/ɪz ˈen.i.wʌn træpt ɪnˈsaɪd? weər wɜːr ðeɪ ləʊˈkeɪ.tɪd/",
+            targetEs: "¿Hay alguien atrapado adentro? ¿Dónde estaban ubicados?",
+            tacticalTip: "La ubicación exacta ahorra horas de apuntalamiento a los rescatistas."
+          },
+          {
+            partnerName: "Lewis (Building Superintendent)",
+            partnerRole: "Encargado señalando la parte trasera",
+            partnerEn: "Yes! At least three kitchen assistants are trapped behind the collapsed pantry wall!",
+            partnerEs: "¡Sí! ¡Al menos tres cocineros quedaron atrapados detrás de la pared de la despensa!",
+            promptEn: "Inquire about injuries and verify whether any of them can walk or crawl out.",
+            promptEs: "Consultá sobre heridos y averiguá si alguno puede caminar o salir por sus propios medios.",
+            targetEn: "Who is injured? Can they walk?",
+            targetIpa: "/huː ɪz ˈɪn.dʒəd? kæn ðeɪ wɔːk/",
+            targetEs: "¿Quién está herido? ¿Pueden caminar?",
+            tacticalTip: "Distingue entre víctimas ambulatorias y personas con aplastamiento o inmovilización."
+          },
+          {
+            partnerName: "Lewis (Building Superintendent)",
+            partnerRole: "Encargado alertando sobre olor",
+            partnerEn: "One of them yelled through the wall that hot water pipes broke and there's a strong smell of natural gas!",
+            partnerEs: "¡Uno de ellos gritó por la pared que se rompieron caños y hay un fuerte olor a gas natural!",
+            promptEn: "Order immediate utility shutoff and move everyone away to the safe zone.",
+            promptEs: "Ordená el corte inmediato de gas y luz y evacuá a todos a la zona segura.",
+            targetEn: "Turn off the gas and power immediately! Move to the safe zone!",
+            targetIpa: "/tɜːn ɒf ðə ɡæs ænd ˈpaʊ.ər ɪˈmiː.di.ət.li! muːv tə ðə seɪf zəʊn/",
+            targetEs: "¡Corten el gas y la electricidad de inmediato! ¡Vayan a la zona segura!",
+            tacticalTip: "Eliminar vectores de ignición antes de que las chispas provoquen una deflagración en el derrumbe."
+          }
+        ]
+      }
+    ];
+
+    let currentRoleplayMission = 0;
+    let currentRoleplayTurn = 0;
+
+    // -------------------------------------------------------------------------
+    // 5. FLASHCARD & QUIZ DATA
     // -------------------------------------------------------------------------
     const FLASHCARD_KEYS = [
       "step-back", "keep-clear", "falling-debris", "clear-the-building",
@@ -2238,12 +2496,211 @@
       lucide.createIcons();
     }
 
+    // -------------------------------------------------------------------------
+    // 6. ROLEPLAY SIMULATOR FUNCTIONS
+    // -------------------------------------------------------------------------
+    function selectRoleplayMission(idx) {
+      currentRoleplayMission = idx;
+      currentRoleplayTurn = 0;
+      [0, 1, 2].forEach(i => {
+        const btn = document.getElementById(`rp-tab-${i}`);
+        if (!btn) return;
+        if (i === idx) {
+          btn.className = 'px-3 py-2 rounded-xl text-xs font-semibold border transition flex items-center gap-1.5 bg-autumn-600 text-white shadow-sm border-autumn-600';
+        } else {
+          btn.className = 'px-3 py-2 rounded-xl text-xs font-semibold border transition flex items-center gap-1.5 bg-parchment-100 hover:bg-parchment-200 text-stone-700 border-parchment-300';
+        }
+      });
+      renderRoleplay();
+    }
+
+    function renderRoleplay() {
+      const container = document.getElementById('roleplay-mission-container');
+      if (!container) return;
+      const mission = ROLEPLAY_MISSIONS[currentRoleplayMission];
+      const turn = mission.turns[currentRoleplayTurn];
+      const totalTurns = mission.turns.length;
+
+      container.innerHTML = `
+        <!-- Mission Briefing Banner -->
+        <div class="sanctuary-subcard rounded-2xl p-5 space-y-3 border-l-4 border-l-autumn-500 bg-white/95">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-parchment-200 pb-2.5">
+            <div>
+              <span class="text-[11px] font-mono uppercase tracking-widest text-autumn-700 font-bold">${mission.badge}</span>
+              <h3 class="font-serif text-xl sm:text-2xl font-bold text-slatewarm-900">${mission.titleEs}</h3>
+              <span class="text-xs text-stone-500 font-mono">${mission.titleEn}</span>
+            </div>
+            <div class="flex items-center gap-1.5">
+              ${mission.turns.map((_, tIdx) => `
+                <button onclick="goToRoleplayTurn(${tIdx})" class="w-7 h-7 rounded-lg text-xs font-mono font-bold flex items-center justify-center transition ${tIdx === currentRoleplayTurn ? 'bg-autumn-600 text-white shadow-sm' : (tIdx < currentRoleplayTurn ? 'bg-sage-600 text-white' : 'bg-parchment-100 text-stone-600 border border-parchment-300')}">
+                  ${tIdx + 1}
+                </button>
+              `).join('')}
+            </div>
+          </div>
+
+          <!-- Roles and Situation Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs pt-1">
+            <div class="p-3 rounded-xl bg-sage-50/80 border border-sage-200 space-y-1">
+              <span class="font-bold text-sage-900 block font-serif">🇦🇷 Tu Rol (Bernie):</span>
+              <p class="text-stone-700">${mission.bernieRoleEs}</p>
+              <p class="text-[11px] text-stone-500 italic">${mission.bernieRoleEn}</p>
+            </div>
+            <div class="p-3 rounded-xl bg-autumn-50/80 border border-autumn-200 space-y-1">
+              <span class="font-bold text-autumn-900 block font-serif">🍂 Interlocutor (Lewis / Simulación):</span>
+              <p class="text-stone-700">${mission.partnerRoleEs}</p>
+              <p class="text-[11px] text-stone-500 italic">${mission.partnerRoleEn}</p>
+            </div>
+          </div>
+
+          <div class="p-3 rounded-xl bg-parchment-50 border border-parchment-200 text-xs text-stone-700 space-y-1">
+            <span class="font-bold text-stone-800">📋 Situación y Advertencia Operativa:</span>
+            <p class="text-stone-600 leading-relaxed">${mission.briefingEs}</p>
+          </div>
+        </div>
+
+        <!-- Dialogue Turn Simulation -->
+        <div class="space-y-4 pt-1">
+          <div class="flex items-center justify-between text-xs font-mono text-stone-500 px-1">
+            <span>Intercambio ${currentRoleplayTurn + 1} de ${totalTurns}</span>
+            <span class="text-autumn-700 font-semibold">Turn ${currentRoleplayTurn + 1} of ${totalTurns}</span>
+          </div>
+
+          <!-- 1. Lewis / Partner Said -->
+          <div class="rounded-2xl p-5 bg-[#fbf9f5] border-l-4 border-l-autumn-500 border border-[#dfd0b5] space-y-2.5 shadow-sm">
+            <div class="flex items-center justify-between gap-2">
+              <div class="flex items-center gap-2">
+                <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-autumn-100 text-autumn-800 border border-autumn-200">
+                  🍂 ${turn.partnerName}
+                </span>
+                <span class="text-[11px] text-stone-500 font-mono">${turn.partnerRole}</span>
+              </div>
+              <button onclick="speakWord('${turn.partnerEn.replace(/'/g, "\\'")}')" class="px-2.5 py-1 rounded-xl bg-autumn-100 hover:bg-autumn-200 text-autumn-800 font-semibold text-xs flex items-center gap-1.5 transition">
+                <i data-lucide="volume-2" class="w-3.5 h-3.5"></i>
+                <span>Escuchar</span>
+              </button>
+            </div>
+            <div class="font-serif text-base sm:text-lg font-bold text-slatewarm-900">
+              "${turn.partnerEn}"
+            </div>
+            <p class="text-xs text-stone-600 italic bg-white/70 p-2.5 rounded-xl border border-parchment-200">
+              Traducción: "${turn.partnerEs}"
+            </p>
+          </div>
+
+          <!-- 2. Bernie's Challenge & Recommended Response -->
+          <div class="rounded-2xl p-5 bg-[#f4f7f4] border-l-4 border-l-sage-600 border border-[#cddcd2] space-y-3.5 shadow-sm">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+              <div class="flex items-center gap-2">
+                <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-sage-100 text-sage-800 border border-sage-200">
+                  🇦🇷 Tu Turno (Bernie)
+                </span>
+                <span class="text-xs font-semibold text-sage-900">¡Decí tu respuesta en voz alta!</span>
+              </div>
+              <button onclick="speakWord('${turn.targetEn.replace(/'/g, "\\'")}')" class="px-3 py-1 rounded-xl bg-sage-700 hover:bg-sage-800 text-white font-semibold text-xs flex items-center gap-1.5 shadow-sm transition">
+                <i data-lucide="volume-2" class="w-3.5 h-3.5"></i>
+                <span>Escuchar Pronunciación</span>
+              </button>
+            </div>
+
+            <!-- Challenge prompt -->
+            <div class="p-3 rounded-xl bg-white/80 border border-sage-200 space-y-1">
+              <span class="text-[11px] font-mono uppercase tracking-wider text-sage-800 font-bold">🎯 Tu Desafío Operativo:</span>
+              <p class="text-xs text-slatewarm-900 font-medium">${turn.promptEs}</p>
+              <p class="text-[11px] text-stone-500 italic">${turn.promptEn}</p>
+            </div>
+
+            <!-- Target English Response Card -->
+            <div class="p-4 rounded-xl bg-white border-2 border-sage-400 space-y-2">
+              <div class="flex items-center justify-between">
+                <span class="text-[11px] font-mono text-stone-500 uppercase">Frase recomendada para decir en voz alta:</span>
+                <span class="text-xs font-mono text-sage-700 font-bold">${turn.targetIpa}</span>
+              </div>
+              <div class="font-serif text-xl sm:text-2xl font-bold tracking-tight text-sage-900">
+                "${turn.targetEn}"
+              </div>
+              <div class="flex items-center justify-between pt-1 border-t border-parchment-200 text-xs">
+                <span class="font-bold text-autumn-800">${turn.targetEs}</span>
+              </div>
+            </div>
+
+            <!-- Tactical Tip from Lewis -->
+            <div class="p-3 rounded-xl bg-parchment-100/90 border border-parchment-300 text-xs text-stone-700 flex items-start gap-2">
+              <i data-lucide="shield-alert" class="w-4 h-4 text-autumn-600 shrink-0 mt-0.5"></i>
+              <div>
+                <span class="font-bold text-slatewarm-900">Consejo Táctico de Lewis:</span> ${turn.tacticalTip}
+              </div>
+            </div>
+          </div>
+
+          <!-- Navigation Controls -->
+          <div class="flex items-center justify-between pt-2">
+            <button onclick="prevRoleplayTurn()" class="px-4 py-2 rounded-xl bg-parchment-100 hover:bg-parchment-200 text-stone-700 text-xs font-semibold flex items-center gap-1.5 transition ${currentRoleplayTurn === 0 ? 'opacity-40 pointer-events-none' : ''}">
+              <i data-lucide="chevron-left" class="w-4 h-4"></i> Paso Anterior
+            </button>
+
+            <button onclick="speakRoleplayExchange()" class="px-3.5 py-2 rounded-xl bg-parchment-100 hover:bg-sage-100 text-sage-900 text-xs font-semibold flex items-center gap-1.5 transition border border-parchment-300">
+              <i data-lucide="play" class="w-3.5 h-3.5 text-sage-700"></i>
+              <span>Repetir Intercambio</span>
+            </button>
+
+            ${currentRoleplayTurn < totalTurns - 1 ? `
+              <button onclick="nextRoleplayTurn()" class="px-5 py-2 rounded-xl bg-autumn-600 hover:bg-autumn-700 text-white text-xs font-semibold flex items-center gap-1.5 transition shadow-sm">
+                Siguiente Paso <i data-lucide="chevron-right" class="w-4 h-4"></i>
+              </button>
+            ` : `
+              <button onclick="completeRoleplayMission()" class="px-5 py-2 rounded-xl bg-sage-700 hover:bg-sage-800 text-white text-xs font-semibold flex items-center gap-1.5 transition shadow-sm">
+                ¡Misión Completada! 🎉
+              </button>
+            `}
+          </div>
+        </div>
+      `;
+      lucide.createIcons();
+    }
+
+    function nextRoleplayTurn() {
+      const mission = ROLEPLAY_MISSIONS[currentRoleplayMission];
+      if (currentRoleplayTurn < mission.turns.length - 1) {
+        currentRoleplayTurn++;
+        renderRoleplay();
+      }
+    }
+    function prevRoleplayTurn() {
+      if (currentRoleplayTurn > 0) {
+        currentRoleplayTurn--;
+        renderRoleplay();
+      }
+    }
+    function goToRoleplayTurn(idx) {
+      currentRoleplayTurn = idx;
+      renderRoleplay();
+    }
+    function completeRoleplayMission() {
+      if (typeof confetti === 'function') {
+        confetti({ particleCount: 70, spread: 80, origin: { y: 0.65 }, colors: ['#be6f38', '#5b826f', '#e2b086'] });
+      }
+      alert(`¡Felicitaciones Bernie! Completaste la ${ROLEPLAY_MISSIONS[currentRoleplayMission].badge}. ¡Excelente práctica de voz de mando en inglés!`);
+      if (currentRoleplayMission < ROLEPLAY_MISSIONS.length - 1) {
+        selectRoleplayMission(currentRoleplayMission + 1);
+      } else {
+        selectRoleplayMission(0);
+      }
+    }
+    function speakRoleplayExchange() {
+      const turn = ROLEPLAY_MISSIONS[currentRoleplayMission].turns[currentRoleplayTurn];
+      speakWord(turn.partnerEn);
+      setTimeout(() => {
+        speakWord(turn.targetEn);
+      }, 2500);
+    }
+
     function renderFlashcard() {
       const key = FLASHCARD_KEYS[currentCardIndex];
       const item = VOCAB_DB[key];
       if (!item) return;
 
-      document.getElementById('fc-counter').textContent = `Card ${currentCardIndex + 1} of ${FLASHCARD_KEYS.length}`;
+      document.getElementById('fc-counter').textContent = `Tarjeta ${currentCardIndex + 1} de ${FLASHCARD_KEYS.length}`;
       document.getElementById('fc-badge').textContent = `${item.time} • ${item.level}`;
 
       const titleEl = document.getElementById('fc-front-title');
@@ -2252,11 +2709,11 @@
 
       if (!isCardFlipped) {
         titleEl.textContent = item.word;
-        subEl.textContent = `${item.ipa} — Click card to flip and reveal meaning`;
+        subEl.textContent = `${item.ipa} — Hacé clic en la tarjeta para ver significado y contexto`;
         backEl.classList.add('hidden');
       } else {
         titleEl.textContent = item.word;
-        subEl.textContent = `${item.ipa} • Pronunciation & Details`;
+        subEl.textContent = `${item.ipa} • Pronunciación y Detalles`;
         document.getElementById('fc-def').textContent = item.def;
         document.getElementById('fc-quote').textContent = item.quote;
         document.getElementById('fc-es').textContent = item.es;
@@ -2297,7 +2754,7 @@
 
       if (oIdx === q.correct && !quizAnswered.has(qIdx)) {
         quizAnswered.add(qIdx);
-        document.getElementById('quiz-score-badge').textContent = `${quizAnswered.size} / ${QUIZ_QUESTIONS.length} Completed`;
+        document.getElementById('quiz-score-badge').textContent = `${quizAnswered.size} / ${QUIZ_QUESTIONS.length} Completados`;
         if (quizAnswered.size === QUIZ_QUESTIONS.length && typeof confetti === 'function') {
           confetti({ particleCount: 65, spread: 70, origin: { y: 0.7 }, colors: ['#be6f38', '#5b826f', '#e2b086'] });
         }
@@ -2484,6 +2941,7 @@
       renderTranscript();
       renderVocabGrid();
       renderFixes();
+      renderRoleplay();
       renderFlashcard();
       renderQuiz();
       inspectVocab('step-back');
