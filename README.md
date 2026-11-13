@@ -35,5 +35,12 @@ This repository contains the personalized **Peaceful Interactive Transcript & Vo
 - [`lesson-01-emergency-disaster-relief.md`](./lesson-01-emergency-disaster-relief.md): Lesson 1 notes & exercises.
 - [`lesson-02-triage-logistics-sitrep.md`](./lesson-02-triage-logistics-sitrep.md): Lesson 2 notes & exercises.
 - [`lesson-03-crowd-safety-locating-victims.md`](./lesson-03-crowd-safety-locating-victims.md): Lesson 3 notes & exercises.
+- [`lesson-04-heavy-rescue-structural-markings-extrication.md`](./lesson-04-heavy-rescue-structural-markings-extrication.md): Lesson 4 notes & exercises (USAR 2x2m marking cross, heavy rescue, ETA).
+- [`lesson-04-visual-vocabulary-guide.md`](./lesson-04-visual-vocabulary-guide.md): Lesson 4 visual companion guide with equipment schematics.
+- [`lesson-05-field-decisions-would-vs-should.md`](./lesson-05-field-decisions-would-vs-should.md): Lesson 5 notes & tactical dilemma scenarios ("What Would You Do?" vs "What Should We Do?").
+- [`lesson-06-speaking-mastery-field-simulations-fluency.md`](./lesson-06-speaking-mastery-field-simulations-fluency.md): Lesson 6 speaking intensive — 80% STT fluency drills, 3 Argentine accent hacks, 30-second SitRep challenges, live radio simulations & dilemma debates.
+- [`odd-one-out-game.md`](./odd-one-out-game.md): "Odd One Out" vocabulary game sets & Spanish explanation for quick-fire warmups.
+- [`mental-health-psychological-first-aid-guide.md`](./mental-health-psychological-first-aid-guide.md): Comprehensive guide to Survivor Mental Health, Verbal Grounding & Psychological First Aid (WHO PFA framework).
 - [`transcripts/`](./transcripts/): Raw conversation transcripts from automated note-takers.
 - [`push.bat`](./push.bat): One-click deployment script to GitHub Pages.
+

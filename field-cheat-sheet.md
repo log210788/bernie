@@ -103,3 +103,23 @@ Preguntas directas y frases de contención para personas atrapadas bajo escombro
 | **"Describe where you are! What do you see?"** | ¡Describí dónde estás! ¿Qué ves? | *dis-KRÁIB hwer yu AR! hwot du yu SII?* |
 | **"Stay calm and breathe."** | Mantené la calma y respirá. | *STEI KAAM and BRIITH* |
 
+---
+
+### 🏗️ 7. Rescate Pesado, Marcado INSARAG y Extracción (Heavy Rescue & USAR Extrication)
+
+Fórmulas técnicas para coordinar equipos de rescate pesado, leer marcas de colapso y extraer sobrevivientes:
+
+| Frase / Término en Inglés | Español | Pronunciación |
+| :--- | :--- | :--- |
+| **"Requesting heavy rescue!"** | ¡Solicito equipo de rescate pesado! | *ri-KWÉST-ing HÉ-vi RÉS-kyu!* |
+| **"What is the ETA on heavy rescue?"** | ¿Cuál es la hora estimada de llegada del rescate pesado? | *WOT iz the I-TI-EI on HÉ-vi RÉS-kyu?* |
+| **"The structure is marked as searched."** | La estructura está marcada como revisada. | *the STRÁK-cher iz MARKT az SERCHT* |
+| **"Hazards identified: confirmed gas leak / live power."** | Peligros: fuga de gas confirmada / cables vivos | *HÁ-zards ai-DÉN-ti-faid: kon-FERMD GAS LIIK / LAIV PÁU-er* |
+| **"Risk of secondary collapse."** | Riesgo de colapso secundario. | *RISK ov SÉ-kon-de-ri ko-LÁPS* |
+| **"Structural timber shoring needed."** | Se necesita apuntalamiento estructural de madera. | *STRÁK-cher-al TÍM-ber SHÓ-ring NÍI-did* |
+| **"Hydraulic cutters and spreaders"** | Tijeras y expansores hidráulicos ("quijadas") | *hai-DRÓ-lik KÁ-ters and SPRÉ-ders* |
+| **"Heavy lifting airbags"** | Cojines neumáticos para levantar losas | *HÉ-vi LÍF-ting ÉAR-bags* |
+| **"You will hear loud cutting noises. Stay calm."** | Vas a escuchar ruidos fuertes de corte. Mantené la calma. | *yu wil HÍAR LAUD KÁ-ting NÓI-siz. STEI KAAM* |
+| **"Can you wiggle your toes? Can you feel your feet?"** | ¿Podés mover los dedos de los pies? ¿Sentís los pies? | *kan yu WÍ-gl yor TÓUS? kan yu FIIL yor FIIT?* |
+| **"Secure on the spine board with C-collar."** | Aseguren en tabla espinal con collarín cervical. | *se-KYÚAR on the SPAIN BORD with SII-KÓ-lar* |
+| **"Victim extricated. Transfer to triage tent."** | Víctima extraída. Traslado a carpa de triaje. | *VÍK-tim ÉKS-tri-kei-tid. TRANS-fer tu tri-ÁZH tent* |

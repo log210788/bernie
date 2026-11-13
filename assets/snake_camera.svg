@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="camBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090d16"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="monitorGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="screenGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#064e3b"/>
+      <stop offset="50%" stop-color="#065f46"/>
+      <stop offset="100%" stop-color="#022c22"/>
+    </linearGradient>
+    <filter id="lightCone">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="8"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="600" fill="url(#camBg)"/>
+
+  <!-- Header Card -->
+  <rect x="30" y="20" width="740" height="60" rx="12" fill="#1e293b" stroke="#10b981" stroke-width="2"/>
+  <text x="50" y="50" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="20" font-weight="700" fill="#f8fafc">SEARCH CAMERA / SNAKE CAMERA (VOID PROBE)</text>
+  <text x="50" y="68" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="13" font-weight="500" fill="#94a3b8">Cámara de Búsqueda Articulada • Visual &amp; Audio Void Assessment</text>
+  <rect x="630" y="34" width="125" height="32" rx="8" fill="#10b981"/>
+  <text x="692" y="55" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="12" font-weight="800" fill="#0f172a" text-anchor="middle">OPTICAL USAR</text>
+
+  <!-- Left: Handheld Operator Control Monitor -->
+  <rect x="60" y="140" width="240" height="340" rx="20" fill="url(#monitorGrad)" stroke="#334155" stroke-width="3"/>
+  <!-- Rugged Rubber Bumpers on corners -->
+  <rect x="52" y="140" width="16" height="50" rx="6" fill="#f59e0b"/>
+  <rect x="292" y="140" width="16" height="50" rx="6" fill="#f59e0b"/>
+  <rect x="52" y="430" width="16" height="50" rx="6" fill="#f59e0b"/>
+  <rect x="292" y="430" width="16" height="50" rx="6" fill="#f59e0b"/>
+
+  <!-- Color TFT Display Screen (Night-Vision / IR Green Feed) -->
+  <rect x="80" y="165" width="200" height="170" rx="8" fill="url(#screenGrad)" stroke="#10b981" stroke-width="2"/>
+  <!-- Target Reticle & Live Video Graphic on screen -->
+  <circle cx="180" cy="240" r="45" fill="none" stroke="#34d399" stroke-width="1.5" stroke-dasharray="6,4"/>
+  <line x1="180" y1="185" x2="180" y2="295" stroke="#34d399" stroke-width="1" stroke-opacity="0.6"/>
+  <line x1="125" y1="240" x2="235" y2="240" stroke="#34d399" stroke-width="1" stroke-opacity="0.6"/>
+  <circle cx="180" cy="240" r="5" fill="#ef4444"/>
+  <!-- Silhouette of Trapped Hand in Rubble -->
+  <path d="M 175,230 Q 170,210 180,210 Q 190,210 185,230" fill="#a7f3d0"/>
+  <path d="M 160,235 Q 150,218 160,218 Q 170,218 168,235" fill="#a7f3d0"/>
+  <path d="M 195,235 Q 205,220 195,220 Q 188,220 185,235" fill="#a7f3d0"/>
+  <text x="180" y="320" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#34d399" text-anchor="middle">LIVE: SURVIVOR VISIBLE</text>
+  <text x="90" y="182" font-family="'JetBrains Mono', monospace" font-size="9" fill="#34d399">REC ● 00:14:22</text>
+  <text x="240" y="182" font-family="'JetBrains Mono', monospace" font-size="9" fill="#34d399">BATT 94%</text>
+
+  <!-- Control Buttons on Unit -->
+  <!-- 2-Way Audio Intercom Button (PTT) -->
+  <rect x="85" y="355" width="90" height="36" rx="8" fill="#10b981" stroke="#059669" stroke-width="1.5"/>
+  <text x="130" y="377" font-family="'Plus Jakarta Sans', sans-serif" font-size="10.5" font-weight="800" fill="#022c22" text-anchor="middle">MIC / TALK</text>
+  <!-- Probe Articulation Joystick -->
+  <circle cx="235" cy="373" r="18" fill="#334155" stroke="#64748b" stroke-width="2"/>
+  <circle cx="235" cy="373" r="8" fill="#0f172a"/>
+  <!-- Status LEDs -->
+  <circle cx="105" cy="410" r="5" fill="#22c55e"/>
+  <circle cx="130" cy="410" r="5" fill="#38bdf8"/>
+  <circle cx="155" cy="410" r="5" fill="#eab308"/>
+  <text x="220" y="415" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="700" fill="#94a3b8">SPEAKER VOL</text>
+
+  <!-- Flexible Armored Cable Snaking Through Concrete -->
+  <!-- Wall Section -->
+  <rect x="360" y="120" width="80" height="380" fill="#475569" stroke="#334155" stroke-width="2"/>
+  <line x1="360" y1="180" x2="440" y2="180" stroke="#1e293b" stroke-width="2"/>
+  <line x1="360" y1="280" x2="440" y2="280" stroke="#1e293b" stroke-width="2"/>
+  <line x1="360" y1="380" x2="440" y2="380" stroke="#1e293b" stroke-width="2"/>
+  <text x="400" y="150" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="700" fill="#94a3b8" text-anchor="middle" transform="rotate(-90, 400, 150)">CONCRETE WALL</text>
+
+  <!-- Drilled Hole in Concrete (50mm borehole) -->
+  <circle cx="400" cy="270" r="18" fill="#0f172a" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="3,3"/>
+
+  <!-- Armored Gooseneck Cable -->
+  <path d="M 180,480 C 180,540 330,320 400,270 C 470,220 520,310 600,260" fill="none" stroke="#475569" stroke-width="12" stroke-linecap="round"/>
+  <path d="M 180,480 C 180,540 330,320 400,270 C 470,220 520,310 600,260" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="6,6"/>
+
+  <!-- Motorized Camera Head at the Tip -->
+  <rect x="600" y="245" width="45" height="30" rx="8" fill="#1e293b" stroke="#38bdf8" stroke-width="2"/>
+  <!-- Camera Lens -->
+  <circle cx="640" cy="260" r="9" fill="#0284c7" stroke="#38bdf8" stroke-width="1.5"/>
+  <circle cx="640" cy="260" r="4" fill="#38bdf8"/>
+  <!-- 4 White LED Spotlights around Lens -->
+  <circle cx="632" cy="252" r="2.5" fill="#fff"/>
+  <circle cx="648" cy="252" r="2.5" fill="#fff"/>
+  <circle cx="632" cy="268" r="2.5" fill="#fff"/>
+  <circle cx="648" cy="268" r="2.5" fill="#fff"/>
+
+  <!-- LED Light Cone illuminating the void -->
+  <polygon points="645,260 760,200 760,320" fill="#38bdf8" fill-opacity="0.15" filter="url(#lightCone)"/>
+  <polygon points="645,260 760,210 760,310" fill="#f8fafc" fill-opacity="0.25"/>
+
+  <!-- Trapped Void Rubble Background -->
+  <polygon points="680,310 770,360 690,420" fill="#334155"/>
+  <polygon points="710,180 770,140 780,220" fill="#334155"/>
+  <text x="700" y="380" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="700" fill="#64748b">COLLAPSED VOID</text>
+
+  <!-- Labels & Callouts -->
+  <rect x="470" y="130" width="170" height="42" rx="6" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="555" y="148" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="700" fill="#38bdf8" text-anchor="middle">INFRARED CAMERA HEAD</text>
+  <text x="555" y="162" font-family="'Plus Jakarta Sans', sans-serif" font-size="9.5" fill="#cbd5e1" text-anchor="middle">360° Articulation + 2-Way Audio</text>
+
+  <!-- Bottom Key Phrases Banner -->
+  <rect x="30" y="525" width="740" height="50" rx="8" fill="#1e293b" stroke="#334155"/>
+  <text x="400" y="547" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="600" fill="#f8fafc" text-anchor="middle">
+    🎙️ <tspan fill="#10b981" font-weight="800">Operational Command:</tspan> "Feed the search camera into the gap — establish voice contact before cutting!"
+  </text>
+  <text x="400" y="563" font-family="'Plus Jakarta Sans', sans-serif" font-size="10.5" fill="#94a3b8" text-anchor="middle">
+    Allows rescuers to confirm victim consciousness and check for crush syndrome risks without invasive drilling.
+  </text>
+</svg>

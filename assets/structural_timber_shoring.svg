@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="concreteGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#64748b"/>
+      <stop offset="50%" stop-color="#475569"/>
+      <stop offset="100%" stop-color="#334155"/>
+    </linearGradient>
+    <linearGradient id="woodGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#d97706"/>
+      <stop offset="50%" stop-color="#b45309"/>
+      <stop offset="100%" stop-color="#92400e"/>
+    </linearGradient>
+    <linearGradient id="woodCrib" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#b45309"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="8" stdDeviation="6" flood-color="#000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="600" fill="url(#bgGrad)"/>
+  
+  <!-- Header Card -->
+  <rect x="30" y="25" width="740" height="60" rx="12" fill="#1e293b" stroke="#f59e0b" stroke-width="2"/>
+  <text x="50" y="55" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="20" font-weight="700" fill="#f8fafc">STRUCTURAL TIMBER SHORING &amp; BOX CRIBBING</text>
+  <text x="50" y="73" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="13" font-weight="500" fill="#cbd5e1">Apuntalamiento Estructural de Madera • USAR Load-Bearing Stabilization</text>
+  <rect x="630" y="38" width="125" height="32" rx="8" fill="#f59e0b"/>
+  <text x="692" y="59" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="12" font-weight="800" fill="#0f172a" text-anchor="middle">TACTICAL USAR</text>
+
+  <!-- Top Collapsed Concrete Ceiling -->
+  <path d="M 50,110 L 750,110 L 750,175 Q 600,195 450,180 Q 300,165 180,185 L 50,175 Z" fill="url(#concreteGrad)" filter="url(#shadow)"/>
+  <!-- Concrete Cracks -->
+  <path d="M 220,110 L 235,135 L 225,155 L 245,175" stroke="#ef4444" stroke-width="2.5" fill="none"/>
+  <path d="M 480,110 L 495,130 L 485,150 L 510,180" stroke="#ef4444" stroke-width="3" fill="none"/>
+  <text x="255" y="145" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="700" fill="#fca5a5">CRACKED CONCRETE SLAB (UNSTABLE)</text>
+  <text x="620" y="150" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="800" fill="#ef4444">LOAD: 15+ TONS</text>
+
+  <!-- Left: Vertical T-Shore Post System -->
+  <!-- Top Header Plate (Horizontal wood) -->
+  <rect x="90" y="175" width="280" height="24" rx="3" fill="url(#woodGrad)" stroke="#78350f" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="230" y="191" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="700" fill="#fef3c7" text-anchor="middle">HEADER PLATE (SOLERA SUPERIOR)</text>
+
+  <!-- Vertical Posts (Two 4x4 or 6x6 posts) -->
+  <rect x="130" y="199" width="34" height="250" rx="3" fill="url(#woodGrad)" stroke="#78350f" stroke-width="1.5"/>
+  <rect x="290" y="199" width="34" height="250" rx="3" fill="url(#woodGrad)" stroke="#78350f" stroke-width="1.5"/>
+
+  <!-- Diagonal Bracing (Cross-brace) -->
+  <line x1="147" y1="230" x2="307" y2="410" stroke="#d97706" stroke-width="14" stroke-linecap="round"/>
+  <line x1="147" y1="230" x2="307" y2="410" stroke="#78350f" stroke-width="2" stroke-linecap="round"/>
+  <line x1="147" y1="410" x2="307" y2="230" stroke="#d97706" stroke-width="14" stroke-linecap="round"/>
+  <line x1="147" y1="410" x2="307" y2="230" stroke="#78350f" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Bottom Wedges (Calzos de ajuste) -->
+  <polygon points="125,464 169,452 169,464" fill="#fbbf24" stroke="#78350f" stroke-width="1.5"/>
+  <polygon points="169,464 125,452 125,464" fill="#f59e0b" stroke="#78350f" stroke-width="1.5"/>
+  <polygon points="285,464 329,452 329,464" fill="#fbbf24" stroke="#78350f" stroke-width="1.5"/>
+  <polygon points="329,464 285,452 285,464" fill="#f59e0b" stroke="#78350f" stroke-width="1.5"/>
+
+  <!-- Bottom Sole Plate -->
+  <rect x="90" y="465" width="280" height="24" rx="3" fill="url(#woodGrad)" stroke="#78350f" stroke-width="1.5"/>
+  <text x="230" y="481" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="700" fill="#fef3c7" text-anchor="middle">SOLE PLATE (SOLERA DE PISO)</text>
+
+  <!-- Right: 4x4 Box Cribbing Stack (Torre de apuntalamiento) -->
+  <!-- Layer 1 -->
+  <rect x="460" y="445" width="220" height="20" rx="3" fill="url(#woodCrib)" stroke="#78350f" stroke-width="1.5"/>
+  <!-- Layer 2 (Cross blocks) -->
+  <rect x="470" y="415" width="40" height="30" rx="2" fill="url(#woodGrad)" stroke="#78350f" stroke-width="1.5"/>
+  <rect x="630" y="415" width="40" height="30" rx="2" fill="url(#woodGrad)" stroke="#78350f" stroke-width="1.5"/>
+  <!-- Layer 3 -->
+  <rect x="460" y="395" width="220" height="20" rx="3" fill="url(#woodCrib)" stroke="#78350f" stroke-width="1.5"/>
+  <!-- Layer 4 -->
+  <rect x="470" y="365" width="40" height="30" rx="2" fill="url(#woodGrad)" stroke="#78350f" stroke-width="1.5"/>
+  <rect x="630" y="365" width="40" height="30" rx="2" fill="url(#woodGrad)" stroke="#78350f" stroke-width="1.5"/>
+  <!-- Layer 5 -->
+  <rect x="460" y="345" width="220" height="20" rx="3" fill="url(#woodCrib)" stroke="#78350f" stroke-width="1.5"/>
+  <!-- Layer 6 -->
+  <rect x="470" y="315" width="40" height="30" rx="2" fill="url(#woodGrad)" stroke="#78350f" stroke-width="1.5"/>
+  <rect x="630" y="315" width="40" height="30" rx="2" fill="url(#woodGrad)" stroke="#78350f" stroke-width="1.5"/>
+  <!-- Layer 7 -->
+  <rect x="460" y="295" width="220" height="20" rx="3" fill="url(#woodCrib)" stroke="#78350f" stroke-width="1.5"/>
+  <!-- Top Crib Wedges -->
+  <polygon points="480,270 560,295 480,295" fill="#fde68a" stroke="#78350f" stroke-width="1.5"/>
+  <polygon points="660,270 580,295 660,295" fill="#fde68a" stroke="#78350f" stroke-width="1.5"/>
+  <rect x="460" y="250" width="220" height="20" rx="3" fill="url(#woodGrad)" stroke="#78350f" stroke-width="1.5"/>
+
+  <!-- Stable Ground Slab -->
+  <rect x="50" y="490" width="700" height="50" rx="4" fill="url(#concreteGrad)"/>
+  <text x="400" y="520" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="700" fill="#94a3b8" text-anchor="middle">SOLID FOUNDATION / UNCOMPROMISED GROUND FLOOR</text>
+
+  <!-- Callout Labels -->
+  <rect x="90" y="280" width="130" height="45" rx="6" fill="#0f172a" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="155" y="298" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="700" fill="#38bdf8" text-anchor="middle">VERTICAL POSTS</text>
+  <text x="155" y="314" font-family="'Plus Jakarta Sans', sans-serif" font-size="9.5" fill="#94a3b8" text-anchor="middle">4x4 or 6x6 Timber</text>
+
+  <rect x="510" y="445" width="160" height="40" rx="6" fill="#0f172a" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="590" y="462" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="700" fill="#fbbf24" text-anchor="middle">BOX CRIBBING</text>
+  <text x="590" y="476" font-family="'Plus Jakarta Sans', sans-serif" font-size="9.5" fill="#cbd5e1" text-anchor="middle">Holds up to 50+ Tons</text>
+
+  <!-- Bottom Key Rules Banner -->
+  <rect x="50" y="550" width="700" height="35" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text x="400" y="572" font-family="'Plus Jakarta Sans', sans-serif" font-size="11.5" font-weight="600" fill="#f8fafc" text-anchor="middle">
+    ⚠️ <tspan fill="#f59e0b" font-weight="800">Operational Rule:</tspan> "Lift an inch, crib an inch" — Never enter a void without secondary structural shoring.
+  </text>
+</svg>
