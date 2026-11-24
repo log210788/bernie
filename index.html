@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
@@ -540,2262 +540,2487 @@
     const LESSON_CONFIG = {
       studentName: "Bernie",
       lessonNumber: "Latest Lesson",
-      lessonDate: "November 9, 2026",
-      lessonSubtitle: "Krisp AI Synced Transcript • 253 Turns • 10 Key Vocabulary Items",
-      l1FlagAndLabel: "🇪🇸 Conexión en español:",
+      lessonDate: "November 24, 2026",
+      lessonSubtitle: "Krisp AI Synced Transcript \u2022 286 Turns \u2022 Psychological First Aid & Jeopardy Practice",
+      l1FlagAndLabel: "\ud83c\uddea\ud83c\uddf8 Conexi\u00f3n en espa\u00f1ol:",
       heroHeadingHtml: `Welcome, Bernie — Your <span class="text-autumn-700 italic font-semibold">Peaceful Sanctuary</span> for English Reflection`,
-      heroIntroText: "Here is your tidy transcript from November 9, 2026 with exact timestamps and 10 flagged B2–C2 vocabulary items ready for review.",
-      defaultSpotlightKey: "eventually"
+      heroIntroText: "Here is your tidy transcript from November 24, 2026 (59 min) covering Psychological First Aid (PFA) roleplay, emergency calm-down steps, and Jeopardy review.",
+      defaultSpotlightKey: "reassure"
     };
 
     const VOCAB_DB = {
-    "eventually":  {
-                       "word":  "eventually",
-                       "ipa":  "/ɪˈven.tʃu.ə.li/",
-                       "pos":  "adverb",
-                       "level":  "B2",
-                       "cat":  "abstract",
-                       "def":  "In the end, especially after a long time or series of events.",
-                       "quote":  "Bernie (03:41): \"Non-Catholic and Christian and the practice eventually Christ religion.\"",
-                       "es":  "eventually",
-                       "turnId":  "turn-33",
-                       "time":  "03:41"
-                   },
-    "absolutely":  {
-                       "word":  "absolutely",
-                       "ipa":  "/ˌæb.səˈluːt.li/",
-                       "pos":  "adverb",
-                       "level":  "B2",
-                       "cat":  "emotions",
-                       "def":  "Completely and without any doubt.",
-                       "quote":  "Louie (23:13): \"Unfortunately, he died, but who is the reprint here? How is it? Maybe it\u0027s still Antony. I think his name is about Antony. My friend is the....\"",
-                       "es":  "absolutely",
-                       "turnId":  "turn-124",
-                       "time":  "23:13"
-                   },
-    "completely":  {
-                       "word":  "completely",
-                       "ipa":  "/kəmˈpliːt.li/",
-                       "pos":  "adverb",
-                       "level":  "B2",
-                       "cat":  "abstract",
-                       "def":  "Totally; in every way.",
-                       "quote":  "Bernie (14:38): \"But it\u0027s not the same because Catholic relation is more distant. It\u0027s different and it\u0027s completely different and when you meet the diss, it...\"",
-                       "es":  "completely",
-                       "turnId":  "turn-81",
-                       "time":  "14:38"
-                   },
-    "especially":  {
-                       "word":  "especially",
-                       "ipa":  "/ɪˈspeʃ.əl.i/",
-                       "pos":  "adverb",
-                       "level":  "B2",
-                       "cat":  "abstract",
-                       "def":  "Particularly; above all others.",
-                       "quote":  "Louie (31:22): \"Never, ever in the evangelical in the park we call it the pastor\u0027s church. The pastor... My church we call it the pastage. Yours is Hill Son...\"",
-                       "es":  "especially",
-                       "turnId":  "turn-152",
-                       "time":  "31:22"
-                   },
-    "unfortunately":  {
-                          "word":  "unfortunately",
-                          "ipa":  "/ʌnˈfɔː.tʃən.ət.li/",
-                          "pos":  "adverb",
-                          "level":  "B2",
-                          "cat":  "emotions",
-                          "def":  "Used to say that something is sad, disappointing, or unlucky.",
-                          "quote":  "Louie (23:13): \"Unfortunately, he died, but who is the reprint here? How is it? Maybe it\u0027s still Antony. I think his name is about Antony. My friend is the....\"",
-                          "es":  "unfortunately",
-                          "turnId":  "turn-124",
-                          "time":  "23:13"
-                      },
-    "actually":  {
-                     "word":  "actually",
-                     "ipa":  "/ˈæk.tʃu.ə.li/",
-                     "pos":  "adverb",
-                     "level":  "B2",
-                     "cat":  "abstract",
-                     "def":  "In fact or really—often used to clarify or gently correct.",
-                     "quote":  "Louie (19:52): \"My Loom\u0027s church, my dad\u0027s church, and even gave me a check in my hometown. I surely passed this church. I think there are a lot of churches...\"",
-                     "es":  "actually",
-                     "turnId":  "turn-108",
-                     "time":  "19:52"
-                 },
-    "complicated":  {
-                        "word":  "complicated",
-                        "ipa":  "/ˈkɒm.plɪ.keɪ.tɪd/",
-                        "pos":  "adjective",
-                        "level":  "B2",
-                        "cat":  "abstract",
-                        "def":  "Involving many parts or details and difficult to understand.",
-                        "quote":  "Louie (15:26): \"It\u0027s complicated...\"",
-                        "es":  "complicated",
-                        "turnId":  "turn-88",
-                        "time":  "15:26"
-                    },
-    "relationship":  {
-                         "word":  "relationship",
-                         "ipa":  "/rɪˈleɪ.ʃən.ʃɪp/",
-                         "pos":  "noun",
-                         "level":  "B2",
-                         "cat":  "emotions",
-                         "def":  "The way two or more people are connected or behave toward each other.",
-                         "quote":  "Louie (13:31): \"He is a good what\u0027s the correct word example. He\u0027s the best yeah, he is the best example, of course. And, yes, when, were you always, when d...\"",
-                         "es":  "relationship",
-                         "turnId":  "turn-74",
-                         "time":  "13:31"
-                     },
-    "difference":  {
-                       "word":  "difference",
-                       "ipa":  "/ˈdɪf.ər.əns/",
-                       "pos":  "noun",
-                       "level":  "B2",
-                       "cat":  "abstract",
-                       "def":  "The way in which two or more things are not the same.",
-                       "quote":  "Louie (34:08): \"Sorry, you can see that, there\u0027s a huge difference in how they treat individuals so much care. Yeah.\"",
-                       "es":  "difference",
-                       "turnId":  "turn-168",
-                       "time":  "34:08"
-                   },
-    "understand":  {
-                       "word":  "understand",
-                       "ipa":  "/ˌʌn.dəˈstænd/",
-                       "pos":  "verb",
-                       "level":  "B2",
-                       "cat":  "abstract",
-                       "def":  "To grasp the meaning, reason, or feeling of something.",
-                       "quote":  "Louie (02:24): \"I understand...\"",
-                       "es":  "understand",
-                       "turnId":  "turn-26",
-                       "time":  "02:24"
-                   }
+  "reassure": {
+    "word": "reassure",
+    "ipa": "/ˌriː.əˈʃʊər/",
+    "pos": "verb",
+    "level": "B2",
+    "cat": "emotions",
+    "def": "To say or do something to remove someone's doubts or fears.",
+    "quote": "Louie (50:14): \"Deliver all four steps in a calm voice, introduce yourself, eye contact, reassure safety and breathing.\"",
+    "es": "tranquilizar / asegurar",
+    "turnId": "turn-246",
+    "time": "50:14"
+  },
+  "cohesive": {
+    "word": "cohesive",
+    "ipa": "/kəʊˈhiː.sɪv/",
+    "pos": "adjective",
+    "level": "C1",
+    "cat": "abstract",
+    "def": "United and working together smoothly as a whole.",
+    "quote": "Bernie (00:00): \"You're seeing the results naturally when trying to build a cohesive society.\"",
+    "es": "cohesivo / unido",
+    "turnId": "turn-1",
+    "time": "00:00"
+  },
+  "differentiate": {
+    "word": "differentiate",
+    "ipa": "/ˌdɪf.əˈren.ʃi.eɪt/",
+    "pos": "verb",
+    "level": "C1",
+    "cat": "abstract",
+    "def": "To recognize or show the difference between two or more things.",
+    "quote": "Bernie (00:00): \"Differentiate on screen. You're seeing the results naturally...\"",
+    "es": "diferenciar",
+    "turnId": "turn-1",
+    "time": "00:00"
+  },
+  "deliver": {
+    "word": "deliver",
+    "ipa": "/dɪˈlɪv.ər/",
+    "pos": "verb",
+    "level": "B2",
+    "cat": "work",
+    "def": "To present, provide, or carry out something promised or expected.",
+    "quote": "Louie (50:14): \"Deliver all four steps in a calm voice, introduce yourself, eye contact, reassure safety and breathing.\"",
+    "es": "entregar / transmitir",
+    "turnId": "turn-246",
+    "time": "50:14"
+  },
+  "situation": {
+    "word": "situation",
+    "ipa": "/ˌsɪtʃ.uˈeɪ.ʃən/",
+    "pos": "noun",
+    "level": "B2",
+    "cat": "abstract",
+    "def": "The set of circumstances or conditions at a particular time.",
+    "quote": "Bernie (45:49): \"...like power and secondary collapse is the situation...\"",
+    "es": "situación",
+    "turnId": "turn-223",
+    "time": "45:49"
+  },
+  "emergency": {
+    "word": "emergency",
+    "ipa": "/ɪˈmɜː.dʒən.si/",
+    "pos": "noun",
+    "level": "B2",
+    "cat": "work",
+    "def": "A serious, unexpected, and often dangerous situation requiring immediate action.",
+    "quote": "Louie (23:50): \"Emergency response & Jeopardy points review.\"",
+    "es": "emergencia",
+    "turnId": "turn-116",
+    "time": "23:50"
+  },
+  "breathing": {
+    "word": "breathing",
+    "ipa": "/ˈbriː.ðɪŋ/",
+    "pos": "noun",
+    "level": "B2",
+    "cat": "emotions",
+    "def": "The process of taking air into and expelling it from the lungs, used to calm panic.",
+    "quote": "Louie (28:24): \"Someone is breathing very fast in a panic, guide them...\"",
+    "es": "respiración",
+    "turnId": "turn-136",
+    "time": "28:24"
+  },
+  "contact": {
+    "word": "contact",
+    "ipa": "/ˈkɒn.tækt/",
+    "pos": "noun",
+    "level": "B2",
+    "cat": "work",
+    "def": "Communication or connection with someone, such as eye contact.",
+    "quote": "Louie (50:14): \"...introduce yourself, eye contact, reassure safety and breathing.\"",
+    "es": "contacto",
+    "turnId": "turn-246",
+    "time": "50:14"
+  },
+  "definitely": {
+    "word": "definitely",
+    "ipa": "/ˈdef.ɪ.nət.li/",
+    "pos": "adverb",
+    "level": "B2",
+    "cat": "emotions",
+    "def": "Without any doubt; certainly.",
+    "quote": "Bernie (15:43): \"Lovely, definitely, but lovely too.\"",
+    "es": "definitivamente",
+    "turnId": "turn-73",
+    "time": "15:43"
+  },
+  "absolutely": {
+    "word": "absolutely",
+    "ipa": "/ˌæb.səˈluːt.li/",
+    "pos": "adverb",
+    "level": "B2",
+    "cat": "emotions",
+    "def": "Completely and without any doubt.",
+    "quote": "Louie (31:39): \"...help them feel safe and grounded is calm.\"",
+    "es": "absolutamente",
+    "turnId": "turn-154",
+    "time": "31:39"
+  }
 };
     const TRANSCRIPT_TURNS = [
-    {
-        "id":  "turn-1",
-        "chapterId":  "chap-1",
-        "chapterTitle":  "Chapter I • Opening \u0026 Warm-Up (00:00)",
-        "speaker":  "Louie",
-        "time":  "00:00",
-        "html":  "S. Hi, Berny, how are you doing today?"
-    },
-    {
-        "id":  "turn-2",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Forge",
-        "time":  "01:51",
-        "html":  "I find you..."
-    },
-    {
-        "id":  "turn-3",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "01:52",
-        "html":  "Yeah, very good, thank you very much. And how was your..."
-    },
-    {
-        "id":  "turn-4",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Forge",
-        "time":  "01:56",
-        "html":  "Hey..."
-    },
-    {
-        "id":  "turn-5",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "01:57",
-        "html":  "Weekend? How was your weekend?"
-    },
-    {
-        "id":  "turn-6",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Forge",
-        "time":  "01:05",
-        "html":  "Normally, and today in Venos, Argentina\u0027s holiday. Tomorrow, it\u0027s very relaxed. But I am working because I have to. Or your person rather than the... I work in the afternoon. But it\u0027s a relaxed side..."
-    },
-    {
-        "id":  "turn-7",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "02:34",
-        "html":  "Okay. Good. But will you not I..."
-    },
-    {
-        "id":  "turn-8",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Forge",
-        "time":  "02:38",
-        "html":  "Because I come to visit my papa in Argentina."
-    },
-    {
-        "id":  "turn-9",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "02:48",
-        "html":  "Really what...?"
-    },
-    {
-        "id":  "turn-10",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Forge",
-        "time":  "02:50",
-        "html":  "Yes. No, I don\u0027t know. Listen to..."
-    },
-    {
-        "id":  "turn-11",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "02:53",
-        "html":  "Can you hear me? Sorry, I\u0027m too loud. Can you hear me now? Hello? Hello? Okay, Forge, hello? Yeah, sorry, because I was too excited, so I was too loud."
-    },
-    {
-        "id":  "turn-12",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Forge",
-        "time":  "02:20",
-        "html":  "They didn\u0027t listen to..."
-    },
-    {
-        "id":  "turn-13",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "02:21",
-        "html":  "Can you hear me now?"
-    },
-    {
-        "id":  "turn-14",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "00:00",
-        "html":  "Can you hear me? Now? Can you hear me? Now."
-    },
-    {
-        "id":  "turn-15",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "00:09",
-        "html":  "Do so."
-    },
-    {
-        "id":  "turn-16",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "00:11",
-        "html":  "Second table."
-    },
-    {
-        "id":  "turn-17",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "00:18",
-        "html":  "Relaxed. Breathe. [Laughter]."
-    },
-    {
-        "id":  "turn-18",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "01:00",
-        "html":  "Can you hear me now? As. Can you hear me now?"
-    },
-    {
-        "id":  "turn-19",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "02:35",
-        "html":  "Now. A spoke..."
-    },
-    {
-        "id":  "turn-20",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "02:36",
-        "html":  "Can you hear me now? Yeah, okay..."
-    },
-    {
-        "id":  "turn-21",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "02:39",
-        "html":  "Yes."
-    },
-    {
-        "id":  "turn-22",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "02:40",
-        "html":  "I\u0027m very sorry about that, it\u0027s very strange. I think I spoke too loudly, but you can hear me now. Is that okay? Yeah, okay, and so the pope is coming to Argentina now. Wow. Will you go to see?"
-    },
-    {
-        "id":  "turn-23",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "02:04",
-        "html":  "No, I don\u0027t believe in her because of the practice and the evangelist religion. I believe in Jesus..."
-    },
-    {
-        "id":  "turn-24",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "02:15",
-        "html":  "Yeah. For..."
-    },
-    {
-        "id":  "turn-25",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "02:21",
-        "html":  "A Christian now Catholic..."
-    },
-    {
-        "id":  "turn-26",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "02:24",
-        "html":  "I \u003cspan class=\"vocab-mark\" data-vkey=\"understand\" onclick=\"inspectVocab(\u0027understand\u0027)\"\u003eunderstand\u003c/span\u003e..."
-    },
-    {
-        "id":  "turn-27",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "02:26",
-        "html":  "Because of be lieving Jesus..."
-    },
-    {
-        "id":  "turn-28",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "02:27",
-        "html":  "Yes."
-    },
-    {
-        "id":  "turn-29",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "02:28",
-        "html":  "Yes."
-    },
-    {
-        "id":  "turn-30",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "02:30",
-        "html":  "Interesting, but you still don\u0027t want to see the pope."
-    },
-    {
-        "id":  "turn-31",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "03:36",
-        "html":  "No, I don\u0027t..."
-    },
-    {
-        "id":  "turn-32",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "03:37",
-        "html":  "I\u0027m not Catholic, I\u0027m Catholic."
-    },
-    {
-        "id":  "turn-33",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "03:41",
-        "html":  "Non-Catholic and Christian and the practice \u003cspan class=\"vocab-mark\" data-vkey=\"eventually\" onclick=\"inspectVocab(\u0027eventually\u0027)\"\u003eeventually\u003c/span\u003e Christ religion."
-    },
-    {
-        "id":  "turn-34",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "03:52",
-        "html":  "Yeah, so... Okay, yeah, I\u0027m... I grew up in the Church of England. However, I would want to see the pope, I think just to see nothing else, yes, but nothing, crazy, yeah, okay. So today we\u0027re going to start and move on. This is very interesting. Okay. If you could invite all people to dinner, who would you bring?"
-    },
-    {
-        "id":  "turn-35",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "04:43",
-        "html":  "I think I could in it now and my father because. Alone with her with it because I will you I want to see you anymore because he died and. 25 years ago."
-    },
-    {
-        "id":  "turn-36",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "04:26",
-        "html":  "I\u0027m so sorry."
-    },
-    {
-        "id":  "turn-37",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "04:28",
-        "html":  "And yes, my father BB for..."
-    },
-    {
-        "id":  "turn-38",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "05:36",
-        "html":  "The family..."
-    },
-    {
-        "id":  "turn-39",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "05:36",
-        "html":  "You say no, I just go see it but up and... We talk with him anymore."
-    },
-    {
-        "id":  "turn-40",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "05:53",
-        "html":  "What would you ask him?"
-    },
-    {
-        "id":  "turn-41",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "05:57",
-        "html":  "I don\u0027t listen to you."
-    },
-    {
-        "id":  "turn-42",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "05:58",
-        "html":  "What would you ask him now?"
-    },
-    {
-        "id":  "turn-43",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "05:00",
-        "html":  "No. You said..."
-    },
-    {
-        "id":  "turn-44",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "05:06",
-        "html":  "I think how you started this pro. Testing no..."
-    },
-    {
-        "id":  "turn-45",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "05:23",
-        "html":  "Now. Asking now?"
-    },
-    {
-        "id":  "turn-46",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "05:24",
-        "html":  "Yes..."
-    },
-    {
-        "id":  "turn-47",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "05:24",
-        "html":  "Yes."
-    },
-    {
-        "id":  "turn-48",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "05:24",
-        "html":  "Sorry, I don\u0027t know Mike keeps from cutting out. Okay. What would you ask him? What would you ask him?"
-    },
-    {
-        "id":  "turn-49",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "06:38",
-        "html":  "Will you ask him a how are you? Where are you? I\u0027m and I think I..."
-    },
-    {
-        "id":  "turn-50",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "06:02",
-        "html":  "Yeah, like..."
-    },
-    {
-        "id":  "turn-51",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "06:02",
-        "html":  "I wish he talked with her then of... Talks and he doesn\u0027t meet you, you don\u0027t meet on..."
-    },
-    {
-        "id":  "turn-52",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "06:16",
-        "html":  "Go up."
-    },
-    {
-        "id":  "turn-53",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "06:17",
-        "html":  "My daughter Florenta because he died before and I want the turkey with them."
-    },
-    {
-        "id":  "turn-54",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "07:39",
-        "html":  "So we would say you will introduce your daughter to your father. That would be lovely."
-    },
-    {
-        "id":  "turn-55",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "07:53",
-        "html":  "Yes. And let\u0027s talk with him and the work and mas and is I don\u0027t I let\u0027s second Slack basar and Pocoonel\u0027s on st with here."
-    },
-    {
-        "id":  "turn-56",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "07:29",
-        "html":  "Spend time with her nice."
-    },
-    {
-        "id":  "turn-57",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "08:32",
-        "html":  "Yes, spends time..."
-    },
-    {
-        "id":  "turn-58",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "08:34",
-        "html":  "Okay."
-    },
-    {
-        "id":  "turn-59",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "08:34",
-        "html":  "With him and yes..."
-    },
-    {
-        "id":  "turn-60",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "08:38",
-        "html":  "Very nice. So your father is the first person you know, right? Who\u0027s the second person? I mean, your daughter."
-    },
-    {
-        "id":  "turn-61",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "08:49",
-        "html":  "The second person. And... You. Maybe and leave that now, maybe e Maria Magdalena Iiii in the past now because she is the woman bearing ins for..."
-    },
-    {
-        "id":  "turn-62",
-        "chapterId":  "chap-2",
-        "chapterTitle":  "Chapter II • Core Discussion (09:16)",
-        "speaker":  "Louie",
-        "time":  "09:38",
-        "html":  "Why? Why is she?"
-    },
-    {
-        "id":  "turn-63",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "09:42",
-        "html":  "Because she\u0027s working with Jesus and the first woman of... Do you see then the... Because she is the first woman to break the event in the world and your history is very instinctive before..."
-    },
-    {
-        "id":  "turn-64",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "09:16",
-        "html":  "Yeah. And..."
-    },
-    {
-        "id":  "turn-65",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "09:16",
-        "html":  "And then the meat does dishes..."
-    },
-    {
-        "id":  "turn-66",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "09:21",
-        "html":  "What would you ask? What would you ask her?"
-    },
-    {
-        "id":  "turn-67",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "10:30",
-        "html":  "How you feel the walk and the meat and the gestures and yes, and this is true but... I got two things company and listen to voice. Yes. I listen to voice and I listen to message. Yes, it\u0027s very..."
-    },
-    {
-        "id":  "turn-68",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "10:13",
-        "html":  "What do you think?"
-    },
-    {
-        "id":  "turn-69",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "10:14",
-        "html":  "Yes, and..."
-    },
-    {
-        "id":  "turn-70",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "10:18",
-        "html":  "What would you ask Jesus? May I ask if. If when you. When you meet Jesus, what were you? Was the first thing you will ask him when you meet him?"
-    },
-    {
-        "id":  "turn-71",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "11:32",
-        "html":  "When you meet Jesus, nothing. I think they say here, thank you, and thank you for me, my wonderful life, and for a... I hit and changed my life, and you say thank you. I love you. You are the love of my life."
-    },
-    {
-        "id":  "turn-72",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "11:17",
-        "html":  "Yes, and... I wonder. Yes, thank you. You\u0027re the love of my life. But I don\u0027t know, I would ask him for a... Would you like to go for a walk? I would love it. I think... I don\u0027t know. Maybe I\u0027m being silly, but I think it\u0027ll be lovely. I think and..."
-    },
-    {
-        "id":  "turn-73",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "12:52",
-        "html":  "Because he changed my life, my mind, my heart, and my... He is completed my life to today now every day is yes, I live now. Be quiet and confident in me because he..."
-    },
-    {
-        "id":  "turn-74",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "13:31",
-        "html":  "He is a good what\u0027s the correct word example. He\u0027s the best yeah, he is the best example, of course. And, yes, when, were you always, when did you. When did you feel like you, if I may ask? You started your \u003cspan class=\"vocab-mark\" data-vkey=\"relationship\" onclick=\"inspectVocab(\u0027relationship\u0027)\"\u003erelationship\u003c/span\u003e with Jesus..."
-    },
-    {
-        "id":  "turn-75",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "13:01",
-        "html":  "And this in Como there\u0027s the and two ten years to go."
-    },
-    {
-        "id":  "turn-76",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "13:14",
-        "html":  "Ten years ago."
-    },
-    {
-        "id":  "turn-77",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "13:17",
-        "html":  "Yes, ten years ago. Yes, ten years ago. Yes, I did, and before I believed in God, I did not believe in Jesus Christ because before, the practice..."
-    },
-    {
-        "id":  "turn-78",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "14:36",
-        "html":  "I we. Well."
-    },
-    {
-        "id":  "turn-79",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "14:37",
-        "html":  "Catholic relation."
-    },
-    {
-        "id":  "turn-80",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "14:38",
-        "html":  "And we..."
-    },
-    {
-        "id":  "turn-81",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "14:38",
-        "html":  "But it\u0027s not the same because Catholic relation is more distant. It\u0027s different and it\u0027s \u003cspan class=\"vocab-mark\" data-vkey=\"completely\" onclick=\"inspectVocab(\u0027completely\u0027)\"\u003ecompletely\u003c/span\u003e different and when you meet the diss, it\u0027s very easy. It\u0027s comes are next to it\u0027s the relationship we have and the every day in my mind my heiring my life is..."
-    },
-    {
-        "id":  "turn-82",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "14:15",
-        "html":  "Close your inn a relationship?"
-    },
-    {
-        "id":  "turn-83",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "14:18",
-        "html":  "Very close, very easy, very fresh than before. Catholic relation is different. It\u0027s very distant, it\u0027s there, and more people importing... How the... I don\u0027t understand you that but I respect..."
-    },
-    {
-        "id":  "turn-84",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "15:49",
-        "html":  "Because Catholicism is the Roman Empire. The Roman Empire, they changed the Roman Empire became the Catholic Church."
-    },
-    {
-        "id":  "turn-85",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "15:10",
-        "html":  "Yes it\u0027s different it\u0027s very distant very..."
-    },
-    {
-        "id":  "turn-86",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "15:16",
-        "html":  "It\u0027s very big..."
-    },
-    {
-        "id":  "turn-87",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "15:17",
-        "html":  "Confused it is confused is moral..."
-    },
-    {
-        "id":  "turn-88",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "15:26",
-        "html":  "It\u0027s \u003cspan class=\"vocab-mark\" data-vkey=\"complicated\" onclick=\"inspectVocab(\u0027complicated\u0027)\"\u003ecomplicated\u003c/span\u003e..."
-    },
-    {
-        "id":  "turn-89",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "15:27",
-        "html":  "Is different..."
-    },
-    {
-        "id":  "turn-90",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "15:27",
-        "html":  "Right?"
-    },
-    {
-        "id":  "turn-91",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "15:29",
-        "html":  "And I and the relationship very close."
-    },
-    {
-        "id":  "turn-92",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "16:35",
-        "html":  "Yes..."
-    },
-    {
-        "id":  "turn-93",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "16:36",
-        "html":  "I feel very well."
-    },
-    {
-        "id":  "turn-94",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "16:38",
-        "html":  "You are in my school. In my school, we... What can I say? In our school, we had a department of God in our school, but they were... Yeah..."
-    },
-    {
-        "id":  "turn-95",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "16:56",
-        "html":  "Your school."
-    },
-    {
-        "id":  "turn-96",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "16:56",
-        "html":  "My school was quite religious, a very religious school. All my schools were very religious because we had a department of evangelicals. Evangelicals, yes, and we had..."
-    },
-    {
-        "id":  "turn-97",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "16:11",
-        "html":  "Yes, I am evangelical."
-    },
-    {
-        "id":  "turn-98",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "16:12",
-        "html":  "Yeah, so we would have really fun lessons really. And you know, my. My friends. I would say they\u0027re my friends now. They were my I don\u0027t know if I don\u0027t know teachers, I don\u0027t know. But they loved Jesus, they and he loves us he and there was so much more joy, so much more person..."
-    },
-    {
-        "id":  "turn-99",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "17:46",
-        "html":  "Yes."
-    },
-    {
-        "id":  "turn-100",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "17:46",
-        "html":  "Personal connection. With the activities we did and the connection, it was very nice. It seemed... How can I say very personal whereas in church, it\u0027s the distance, there\u0027s a coldness whereas it\u0027s more personal in with the evangelical person. Yes, a hundred percent."
-    },
-    {
-        "id":  "turn-101",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "17:17",
-        "html":  "I am evangelical. Cor raian. Yes, I am."
-    },
-    {
-        "id":  "turn-102",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "17:21",
-        "html":  "I think it\u0027s how can I say they were really nice, really I think they\u0027re really nice. There is a feeling, right? There\u0027s a feeling and it\u0027s like very accepting, very peaceful. Compared to, the Catholic Church is more they care more about what you\u0027re doing. What are you doing? But the..."
-    },
-    {
-        "id":  "turn-103",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "18:54",
-        "html":  "Do wrong?"
-    },
-    {
-        "id":  "turn-104",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "18:56",
-        "html":  "Yes, but with being with our... I don\u0027t know if they\u0027re teachers, I don\u0027t know what they were, but they were very... It\u0027s just about you and Jesus. It\u0027s just about you and Jesus, right? Really? I completely forgot about them. To be fair, I completely forgot, but we had them once a week. We had them once a week, yeah, very nice guys. We used to... I think I knew them for... I think I used to go to church with them. Yeah, I went..."
-    },
-    {
-        "id":  "turn-105",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "19:35",
-        "html":  "Yes."
-    },
-    {
-        "id":  "turn-106",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "19:36",
-        "html":  "I used to go to, I suppose, three churches a week when I was younger. Yeah, I forgot about it. So I went..."
-    },
-    {
-        "id":  "turn-107",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "19:50",
-        "html":  "This to your..."
-    },
-    {
-        "id":  "turn-108",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "19:52",
-        "html":  "My Loom\u0027s church, my dad\u0027s church, and even gave me a check in my hometown. I surely passed this church. I think there are a lot of churches though. Very sorry. The music was good as well. Pastures, yeah, for sure. Yes, even... It\u0027s really... I will share it with you \u003cspan class=\"vocab-mark\" data-vkey=\"actually\" onclick=\"inspectVocab(\u0027actually\u0027)\"\u003eactually\u003c/span\u003e, long story, I will show you the church is really nice. So this is my Loom\u0027s church. Here we go. I go, so this is our church. Right next to my house. Right next to three or four houses down. It\u0027s called the Pastorist Church."
-    },
-    {
-        "id":  "turn-109",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "21:32",
-        "html":  "Is it an inner?"
-    },
-    {
-        "id":  "turn-110",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "21:33",
-        "html":  "Yes, so this is the... I used to go here with my Loom and my brothers and sisters. Yeah..."
-    },
-    {
-        "id":  "turn-111",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "21:46",
-        "html":  "This is eventually start."
-    },
-    {
-        "id":  "turn-112",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "21:47",
-        "html":  "Yes..."
-    },
-    {
-        "id":  "turn-113",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "21:50",
-        "html":  "Yes..."
-    },
-    {
-        "id":  "turn-114",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "21:50",
-        "html":  "You can tell it\u0027s very cool. Yeah, it\u0027s very cool. We used to play here as well. We used to do everything. Scouts, football, games, crafts, everything. We lived in this church the whole week, not just Sunday, Saturday, Friday, Wednesday, Tuesday. Cooking. I forgot I learned to cook here. This is where I learned to cook. Yeah, they had cooking classes, so, yeah, we would... It\u0027s quite a big church."
-    },
-    {
-        "id":  "turn-115",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "22:33",
-        "html":  "I want to meet you."
-    },
-    {
-        "id":  "turn-116",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "22:34",
-        "html":  "Yeah, it was really nice, it was..."
-    },
-    {
-        "id":  "turn-117",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "22:39",
-        "html":  "Where? Is it where in England?"
-    },
-    {
-        "id":  "turn-118",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "22:41",
-        "html":  "It\u0027s just outside. No, Oxford. Oxford, yeah, but they have one in Bournemouth and Florence. Wait..."
-    },
-    {
-        "id":  "turn-119",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "22:52",
-        "html":  "Wait one..."
-    },
-    {
-        "id":  "turn-120",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "22:57",
-        "html":  "They have one in Florence, yeah..."
-    },
-    {
-        "id":  "turn-121",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "22:05",
-        "html":  "In Italy?"
-    },
-    {
-        "id":  "turn-122",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "22:05",
-        "html":  "They have one in Florence, yes, in Italy. Yeah, they have one in Italy that\u0027s great. I never knew that. That\u0027s insane. Yeah, so, yeah, everybody, the whole... It\u0027s like a small village outside of Oxford city center. Hey, in a minute, I think my... Hang on, I have to message my... Loom. I think my friend is the reverend. I think my friend is the reverend here because his father was my friend."
-    },
-    {
-        "id":  "turn-123",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "23:13",
-        "html":  "Yes."
-    },
-    {
-        "id":  "turn-124",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "23:13",
-        "html":  "\u003cspan class=\"vocab-mark\" data-vkey=\"unfortunately\" onclick=\"inspectVocab(\u0027unfortunately\u0027)\"\u003eUnfortunately\u003c/span\u003e, he died, but who is the reprint here? How is it? Maybe it\u0027s still Antony. I think his name is about Antony. My friend is the... I don\u0027t know if it\u0027s going to tell us who it is. I think my friend is the reverend here. He grew up to be the reverend. Is that right, Reverend? I don\u0027t know, yeah, I think so. I\u0027ll find out. I believe we\u0027ll see maybe he is here. Sunday service surely... So... A person... Children. I don\u0027t know, but I think it\u0027s my friend. I think my friend runs the church. He\u0027s the reverend of the church, I think, but I can\u0027t see who is... He loves Star Trek. \u003cspan class=\"vocab-mark\" data-vkey=\"absolutely\" onclick=\"inspectVocab(\u0027absolutely\u0027)\"\u003eAbsolutely\u003c/span\u003e loved Star Trek when we were younger. He just wore Star Trek humor the whole time. What is your church like? What is your church like?"
-    },
-    {
-        "id":  "turn-125",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "25:46",
-        "html":  "My charge is the shet..."
-    },
-    {
-        "id":  "turn-126",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "25:20",
-        "html":  "The call right now."
-    },
-    {
-        "id":  "turn-127",
-        "chapterId":  "chap-3",
-        "chapterTitle":  "Chapter III • Deep Dive \u0026 Vocabulary (26:58)",
-        "speaker":  "Bernie",
-        "time":  "26:58",
-        "html":  "EAs e. They are. I see that now they are sa."
-    },
-    {
-        "id":  "turn-128",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "26:14",
-        "html":  "Yes, the evangelical churches. Yes. Como... Treches. I have to say, really cool. Because I think they have a good energy. A very good energy. They\u0027re very forgiving, they\u0027re very loving, very more. And they I think they really want to help people. They really care about the individual, the..."
-    },
-    {
-        "id":  "turn-129",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "27:49",
-        "html":  "Yes..."
-    },
-    {
-        "id":  "turn-130",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "27:49",
-        "html":  "A real like you said, a real relationship. And what are some things you like to do in your church? Because if it\u0027s like my church growing up, there are many things to do. Many things to do, many activities. Because it\u0027s good for the community, I feel."
-    },
-    {
-        "id":  "turn-131",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "27:12",
-        "html":  "It\u0027s interesting to... But to go to the many... To go to the visit the boys, the people in the shed, and people in the street. For example, I am a leader of the group there are people and every Saturday they meet with the group."
-    },
-    {
-        "id":  "turn-132",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "28:02",
-        "html":  "Yeah, with the connection group, with this group here."
-    },
-    {
-        "id":  "turn-133",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "28:09",
-        "html":  "Yes, connect to you. I am. I am of a leader. I am connect group..."
-    },
-    {
-        "id":  "turn-134",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "28:17",
-        "html":  "Very nice. With the connection group, you socialize with everyone. You talk..."
-    },
-    {
-        "id":  "turn-135",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "28:27",
-        "html":  "Yes, and socialize with everyone. The Miro is a grammar and man and is doctrine and the anything the war the li is very..."
-    },
-    {
-        "id":  "turn-136",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "29:00",
-        "html":  "To your family, mother. My... [Laughter] Yes."
-    },
-    {
-        "id":  "turn-137",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "29:06",
-        "html":  "Very funny. Yes more Morse my Morse a play together and read the Bible too, but it is very relaxed..."
-    },
-    {
-        "id":  "turn-138",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "29:28",
-        "html":  "Very relaxed and very social..."
-    },
-    {
-        "id":  "turn-139",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "30:35",
-        "html":  "Yes very structural is yes iri the Bible but and..."
-    },
-    {
-        "id":  "turn-140",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "30:45",
-        "html":  "What, man?"
-    },
-    {
-        "id":  "turn-141",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "30:46",
-        "html":  "Through a conversation play it. Yes, it\u0027s wonderful..."
-    },
-    {
-        "id":  "turn-142",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "30:57",
-        "html":  "Yeah, evangelical churches are amazing. They are, yes."
-    },
-    {
-        "id":  "turn-143",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "30:04",
-        "html":  "Yes..."
-    },
-    {
-        "id":  "turn-144",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "30:05",
-        "html":  "I never even thought about it. I never thought about myself growing up because this is my church. So we really lived here. My church, all her friends in this church. So yes... It\u0027s different and"
-    },
-    {
-        "id":  "turn-145",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "30:29",
-        "html":  "It\u0027s different and the shirt catholico shirt is different completely different."
-    },
-    {
-        "id":  "turn-146",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "31:36",
-        "html":  "I never thought about it. I never, is this is the church I the one I we spend all our time in or. So I never..."
-    },
-    {
-        "id":  "turn-147",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "31:47",
-        "html":  "Okay."
-    },
-    {
-        "id":  "turn-148",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "31:47",
-        "html":  "Even thought about it growing up. I just thought about how different it is to other churches. My dad\u0027s church. Or they would hate you. Yeah, they were..."
-    },
-    {
-        "id":  "turn-149",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "31:03",
-        "html":  "Okay."
-    },
-    {
-        "id":  "turn-150",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "31:03",
-        "html":  "Mean, they were very mean. They would hit the kids, and my dad said he hit me, okay? They would hit you in my dad\u0027s church, but even if I was good, even if you\u0027re good, they hit you. Yeah, but..."
-    },
-    {
-        "id":  "turn-151",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "31:20",
-        "html":  "Okay."
-    },
-    {
-        "id":  "turn-152",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "31:22",
-        "html":  "Never, ever in the evangelical in the park we call it the pastor\u0027s church. The pastor... My church we call it the pastage. Yours is Hill Song, mine is the pastures. Yeah, we... It was great. I think they really help people like mothers, \u003cspan class=\"vocab-mark\" data-vkey=\"especially\" onclick=\"inspectVocab(\u0027especially\u0027)\"\u003eespecially\u003c/span\u003e when mothers are... When they\u0027re new mothers, they really help new mothers in the nursery."
-    },
-    {
-        "id":  "turn-153",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "32:58",
-        "html":  "No."
-    },
-    {
-        "id":  "turn-154",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "32:59",
-        "html":  "Yeah. And..."
-    },
-    {
-        "id":  "turn-155",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "32:01",
-        "html":  "Well, go."
-    },
-    {
-        "id":  "turn-156",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "32:02",
-        "html":  "All my friends went to this church. All my friends and we went to the church until we were 18 because 18 we go to university, so we leave. But we... Because our church has scouts."
-    },
-    {
-        "id":  "turn-157",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "32:28",
-        "html":  "Okay..."
-    },
-    {
-        "id":  "turn-158",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "33:32",
-        "html":  "Yes..."
-    },
-    {
-        "id":  "turn-159",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "33:33",
-        "html":  "Yes, I know you..."
-    },
-    {
-        "id":  "turn-160",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "33:35",
-        "html":  "What\u0027s it?"
-    },
-    {
-        "id":  "turn-161",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "33:36",
-        "html":  "I know."
-    },
-    {
-        "id":  "turn-162",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "33:39",
-        "html":  "So all the boys were scouts, all of us. Yeah, there were never girls there was no girls. The girls did, girls\u0027 reggade. And did you take your which church did you take your daughters to? To a catholic church. Sorry, did you take your daughters to a catholic church?"
-    },
-    {
-        "id":  "turn-163",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "33:16",
-        "html":  "Okay. Okay, alright, again..."
-    },
-    {
-        "id":  "turn-164",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "33:17",
-        "html":  "Did you take your daughters to a Catholic church? Because..."
-    },
-    {
-        "id":  "turn-165",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "33:23",
-        "html":  "My daughter in the cattle shirt."
-    },
-    {
-        "id":  "turn-166",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "33:25",
-        "html":  "Which church did you go to when you had your daughters? So when your daughters were growing up, did you go to a Catholic church?"
-    },
-    {
-        "id":  "turn-167",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "34:37",
-        "html":  "Okay, yes, before going to the Catholic church, but now together we go to the Evangelism church. The shame for ours, my daughter, your father, my mother, and my brother changed. Yes, because thank you that I... The dishes."
-    },
-    {
-        "id":  "turn-168",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "34:08",
-        "html":  "Sorry, you can see that, there\u0027s a huge \u003cspan class=\"vocab-mark\" data-vkey=\"difference\" onclick=\"inspectVocab(\u0027difference\u0027)\"\u003edifference\u003c/span\u003e in how they treat individuals so much care. Yeah."
-    },
-    {
-        "id":  "turn-169",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "34:22",
-        "html":  "Was good."
-    },
-    {
-        "id":  "turn-170",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "34:23",
-        "html":  "For Mother s and..."
-    },
-    {
-        "id":  "turn-171",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "34:25",
-        "html":  "Yes."
-    },
-    {
-        "id":  "turn-172",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "34:26",
-        "html":  "What will your church do this Christmas? What will Christmas..."
-    },
-    {
-        "id":  "turn-173",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "35:34",
-        "html":  "The festival is a very nice, wonderful activity for the children, boys, and two activities for the... Any place, the share, and the community. Poor community, the shared city which with the gift present the gift made the voice this place and it\u0027s very wonderful, it\u0027s lovely."
-    },
-    {
-        "id":  "turn-174",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "35:27",
-        "html":  "That\u0027s love. And do you have a specific activity to help, people less fortunate poor people to what may I ask what you what do you do?"
-    },
-    {
-        "id":  "turn-175",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "36:46",
-        "html":  "Did you celebrate the Christmas with the. Yes, yeah, the. The presence of the boys, of the children? Yes..."
-    },
-    {
-        "id":  "turn-176",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "36:00",
-        "html":  "In Vietnam, every year, my friends and I cook for the homeless people after because it\u0027s..."
-    },
-    {
-        "id":  "turn-177",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "36:09",
-        "html":  "No..."
-    },
-    {
-        "id":  "turn-178",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "36:09",
-        "html":  "Different. It\u0027s different, though, not at Christmas after Christmas because it\u0027s at a different time. I your cooking. Maybe I can show you."
-    },
-    {
-        "id":  "turn-179",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "36:21",
-        "html":  "It\u0027s wonderful."
-    },
-    {
-        "id":  "turn-180",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "36:22",
-        "html":  "We cook, community. I can show you. I have some great photos. So it looks like we cook together like Sham and we cook all night long. 24 hours..."
-    },
-    {
-        "id":  "turn-181",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "37:52",
-        "html":  "Wow. Then when to visit Chile and go... I go to the missionary in Chile. He is doing the same activity for people. The home only? Yes. In Chile. We..."
-    },
-    {
-        "id":  "turn-182",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "37:22",
-        "html":  "We cook a huge meal like many parcels. But I have the pictures here of me doing it."
-    },
-    {
-        "id":  "turn-183",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "38:32",
-        "html":  "This. Only phone."
-    },
-    {
-        "id":  "turn-184",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "38:34",
-        "html":  "Here we go. Worse. The worse I have... I\u0027ll just grab a picture. She doesn\u0027t... Here we go. I was very large here. I\u0027m not this big now. I have my girlfriend, she made me very fat. She made me very fat, but I lost the weight. He would go... So we make lots and lots of bundles. Lots and lots. Yeah, I\u0027m not... I lost a lot of weight. I was very big because she was feeding me. But I lost the weight, I promise you, apologize, because I couldn\u0027t say no. She made me very fat."
-    },
-    {
-        "id":  "turn-185",
-        "chapterId":  "chap-4",
-        "chapterTitle":  "Chapter IV • Wrap-Up \u0026 Next Steps (39:26)",
-        "speaker":  "Bernie",
-        "time":  "39:35",
-        "html":  "No."
-    },
-    {
-        "id":  "turn-186",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "39:35",
-        "html":  "Yeah, well, that\u0027s when I first came to Vietnam. This..."
-    },
-    {
-        "id":  "turn-187",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "39:40",
-        "html":  "East. East..."
-    },
-    {
-        "id":  "turn-188",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "39:41",
-        "html":  "Food right here, rice with meat inside, meat and vegetables, and then they boil it in this... Yes. So, here is my girlfriend cooking it. We cook it in a big pot like this. This is my girlfriend, and we cook it in a big pot. Loads of the..."
-    },
-    {
-        "id":  "turn-189",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "39:19",
-        "html":  "Is your partner? Wow, this is pretty warm."
-    },
-    {
-        "id":  "turn-190",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "39:26",
-        "html":  "Thank you very much, thank you. Her name? Her name is Ful, but we call her Daisy. In English Daisy. But for it means..."
-    },
-    {
-        "id":  "turn-191",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "40:37",
-        "html":  "They... In English..."
-    },
-    {
-        "id":  "turn-192",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "40:38",
-        "html":  "At whom?"
-    },
-    {
-        "id":  "turn-193",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "40:38",
-        "html":  "And in Argentina too. They see?"
-    },
-    {
-        "id":  "turn-194",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "40:41",
-        "html":  "Yeah... And this is..."
-    },
-    {
-        "id":  "turn-195",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "40:46",
-        "html":  "It\u0027s pretty..."
-    },
-    {
-        "id":  "turn-196",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "40:47",
-        "html":  "Odd. Thank you very much, thank you. Yes, we have to cook all night long. 24 hours. It takes 24 hours to cook the food on these spires. Maybe I have another one. Here we go. We do it as a community, we do it as a team. But there\u0027s lots of... Not just one. There\u0027s lots of... You had to keep the fire going."
-    },
-    {
-        "id":  "turn-197",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "40:21",
-        "html":  "On the phone."
-    },
-    {
-        "id":  "turn-198",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "40:21",
-        "html":  "But it looks like this."
-    },
-    {
-        "id":  "turn-199",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "40:25",
-        "html":  "I go to the Vicipt."
-    },
-    {
-        "id":  "turn-200",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "40:26",
-        "html":  "Yeah, it looks like this. The floor looks like this. It\u0027s like... Keep on... What does it look like? It\u0027s like this... This is what it\u0027s like. Like rice. Really soft, it\u0027s very tasty, and inside meat and vegetables, but it comes in banana leaves. Yeah, it\u0027s really... It\u0027s so filling. It\u0027s very good because it comes, as you can see, in the parcels. So it\u0027s easy to give to the poor, very easy to ship."
-    },
-    {
-        "id":  "turn-201",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "41:27",
-        "html":  "It is va..."
-    },
-    {
-        "id":  "turn-202",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "41:27",
-        "html":  "It\u0027s very filling. Lots of calories. Lots and lots of calories. We make hundreds of them. We boil them in the home and then we take them out. It\u0027s really fun."
-    },
-    {
-        "id":  "turn-203",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "42:44",
-        "html":  "Bunge. What do you do...?"
-    },
-    {
-        "id":  "turn-204",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "42:48",
-        "html":  "It\u0027s called a bang, cho bang chun, yeah, it\u0027s nice, it\u0027s very nice, yeah, bang chuning..."
-    },
-    {
-        "id":  "turn-205",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "42:03",
-        "html":  "V2. Wow."
-    },
-    {
-        "id":  "turn-206",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "42:03",
-        "html":  "Yeah, it\u0027s really nice."
-    },
-    {
-        "id":  "turn-207",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "42:08",
-        "html":  "Okay."
-    },
-    {
-        "id":  "turn-208",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "42:08",
-        "html":  "I love eating it, but I\u0027m not that big anymore. I\u0027m not that big anymore. My girlfriend was when we first met. When we first met and then ex gym, then the gym. Yeah, because I couldn\u0027t stay. No, when I first got here because I just got to be at that. But now..."
-    },
-    {
-        "id":  "turn-209",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "43:31",
-        "html":  "But more vegetables now?"
-    },
-    {
-        "id":  "turn-210",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "43:33",
-        "html":  "There are lots of meat. In Vietnam, there are no vegetarians. Everyone eats meat. Everybody. Yeah, so rice and meat and it\u0027s tasty or... Because it\u0027s boiled, it\u0027s tender, it\u0027s boiled for twenty... The rice because it\u0027s rice from the outside, the rice is..."
-    },
-    {
-        "id":  "turn-211",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "43:58",
-        "html":  "Yes."
-    },
-    {
-        "id":  "turn-212",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "43:58",
-        "html":  "Cooked for 24 hours. It\u0027s so soft, it melts. It\u0027s so good, it\u0027s steamed. Very nice."
-    },
-    {
-        "id":  "turn-213",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "43:10",
-        "html":  "Because many... Why?"
-    },
-    {
-        "id":  "turn-214",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "43:12",
-        "html":  "Because there are so many parcels, it\u0027s the thing that\u0027s full. Yes..."
-    },
-    {
-        "id":  "turn-215",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "43:19",
-        "html":  "Okay..."
-    },
-    {
-        "id":  "turn-216",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "43:19",
-        "html":  "We and it\u0027s on fire. We had to add the wood, but it\u0027s very good. Yeah, and I... In England, we... What do we collect? We collect food..."
-    },
-    {
-        "id":  "turn-217",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "44:44",
-        "html":  "Okay, meet you, hit you, done cooking, but until when you go to the missionary in Chile? Go to the activities thing that\u0027s in Vietnam. Dinner with law."
-    },
-    {
-        "id":  "turn-218",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "44:10",
-        "html":  "Very nice."
-    },
-    {
-        "id":  "turn-219",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "44:11",
-        "html":  "Yes, I hope in the future go to the missionary in the world. I hope in the maybe 2024-2027 or 2028. I pray for them."
-    },
-    {
-        "id":  "turn-220",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "45:33",
-        "html":  "I think this Christmas I will try to find an evangelical church. After this lesson, I will have a look. I don\u0027t know if there will be one in Hanoi. I\u0027m not too sure. I\u0027m not too sure. Maybe. Maybe..."
-    },
-    {
-        "id":  "turn-221",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "45:52",
-        "html":  "You say the Christ... of the travel and England."
-    },
-    {
-        "id":  "turn-222",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "45:57",
-        "html":  "Because I still am at university. They still have university because they don\u0027t... Stop for Christmas here. They don\u0027t stop. Yeah, they can\u0027t because the end of the year is in March. It\u0027s in March, the end of the year, but the country is not so religious. They are..."
-    },
-    {
-        "id":  "turn-223",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "45:22",
-        "html":  "Okay."
-    },
-    {
-        "id":  "turn-224",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "45:22",
-        "html":  "It\u0027s weird."
-    },
-    {
-        "id":  "turn-225",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "45:23",
-        "html":  "Okay."
-    },
-    {
-        "id":  "turn-226",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "45:23",
-        "html":  "They are Buddhist. And, I don\u0027t. I don\u0027t know how to say it. Main, religion. They don\u0027t have a main religion, but they have a folklore. Folklore, like they believe in magic, like the magic of the..."
-    },
-    {
-        "id":  "turn-227",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "46:54",
-        "html":  "No."
-    },
-    {
-        "id":  "turn-228",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "46:54",
-        "html":  "Forest, the magic of the river..."
-    },
-    {
-        "id":  "turn-229",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "46:59",
-        "html":  "Okay. I understand."
-    },
-    {
-        "id":  "turn-230",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "46:01",
-        "html":  "Pok religion. Yeah, but it\u0027s very nice. It\u0027s very nice. Yeah. We talked a lot about church today, but that was unexpected, [Laughter] and it made me remember my Loom\u0027s church. I completely forgot."
-    },
-    {
-        "id":  "turn-231",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "46:22",
-        "html":  "It\u0027s wonderful. I wrote to the sea in the world."
-    },
-    {
-        "id":  "turn-232",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "46:29",
-        "html":  "Yeah, I think..."
-    },
-    {
-        "id":  "turn-233",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "47:33",
-        "html":  "And I..."
-    },
-    {
-        "id":  "turn-234",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "47:34",
-        "html":  "Yeah..."
-    },
-    {
-        "id":  "turn-235",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "47:34",
-        "html":  "Go to the picture..."
-    },
-    {
-        "id":  "turn-236",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "47:34",
-        "html":  "Exactly. Yeah, okay."
-    },
-    {
-        "id":  "turn-237",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "47:37",
-        "html":  "The messengers in the Slack are listening to the pre-lecture, the meat, and listening to the meat."
-    },
-    {
-        "id":  "turn-238",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "47:52",
-        "html":  "So what say..."
-    },
-    {
-        "id":  "turn-239",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "47:57",
-        "html":  "The p the. The wait and wait it 8..."
-    },
-    {
-        "id":  "turn-240",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "47:13",
-        "html":  "Like to see to me back then back on the more so we all got..."
-    },
-    {
-        "id":  "turn-241",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "47:25",
-        "html":  "? Wait. Okay, they are the sermon in the g two..."
-    },
-    {
-        "id":  "turn-242",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "48:33",
-        "html":  "Not YouTube but I will give you the sermon here pastures. Let\u0027s have a look. They and they stream it. They stream it pastorist church..."
-    },
-    {
-        "id":  "turn-243",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "48:43",
-        "html":  "The three. Okay. I like so much I see the sermon."
-    },
-    {
-        "id":  "turn-244",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "48:57",
-        "html":  "I get the link for the sermon."
-    },
-    {
-        "id":  "turn-245",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "48:02",
-        "html":  "Okay..."
-    },
-    {
-        "id":  "turn-246",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "48:08",
-        "html":  "They did through... Yes, it\u0027s on YouTube. I will be with the YouTube channel. Yeah..."
-    },
-    {
-        "id":  "turn-247",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "48:21",
-        "html":  "Prayer regres GA next part step quick..."
-    },
-    {
-        "id":  "turn-248",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "48:27",
-        "html":  "No, one second, I\u0027ll give the last minute that, okay, and that\u0027s the streams. The last one is the streams. Okay, so why don\u0027t we watch for homework? Why don\u0027t we watch the stream? I watched the stream on Sunday, and we can talk about the stream, we can talk about the screen for the next lesson."
-    },
-    {
-        "id":  "turn-249",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "49:53",
-        "html":  "Okay..."
-    },
-    {
-        "id":  "turn-250",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "49:53",
-        "html":  "Lesson. Okay, well, thank you very much, Bernie. Very good job today. And I was next. Thank you."
-    },
-    {
-        "id":  "turn-251",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "49:59",
-        "html":  "Thank you."
-    },
-    {
-        "id":  "turn-252",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Louie",
-        "time":  "49:59",
-        "html":  "This week. Lovely, very lovely chat. I have to say very nice..."
-    },
-    {
-        "id":  "turn-253",
-        "chapterId":  "",
-        "chapterTitle":  "",
-        "speaker":  "Bernie",
-        "time":  "49:04",
-        "html":  "Yes, that\u0027s right, takeer."
-    }
+  {
+    "id": "turn-1",
+    "chapterId": "chap-1",
+    "chapterTitle": "Chapter I • Opening & Warm-Up (00:00)",
+    "speaker": "Bernie",
+    "time": "00:00",
+    "html": "<span class=\"vocab-mark\" data-vkey=\"differentiate\" onclick=\"inspectVocab('differentiate')\">Differentiate</span> on screen. You're seeing the results naturally when trying to build a <span class=\"vocab-mark\" data-vkey=\"cohesive\" onclick=\"inspectVocab('cohesive')\">cohesive</span> society. Similarities in the nervous system, which logically result in similarities in intellect, personality, and temperament, are some of the most important factors. When studying the histories of circles, squares, and triangles, we find very stark differences in the societies that they build and thrive under. For example, generally, the circles built individualistic and decentralized civilizations. Triangles, instead, built more collectivist and centralized civilizations. Lastly, the squares, for the most part, didn't build any comparable civilization. Are we to believe that these differences are purely random? Would it not make more sense instead to infer that different peoples optimize their societies for their own unique neurologies? Many in the world of circles, squares, and triangles treat politics as a god. They believe there's one objective system, usually their preferred system, that works for all peoples, and that all would prosper equally. But their history contradicts this. In truth, it wouldn't be right for a circle to tell a triangle that his way of doing things, which has been working for the triangle for thousands of years, is wrong just because it wouldn't work for the circle and vice versa. Differences ought to be respected. Just because a Chihuahua and a German Shepherd are the same species does not mean they'll equally thrive in the same working dog roles. This leads to an interesting question: what happens if significantly different people intermarry? What is the optimal system for their offspring? On screen, you're now seeing a graphic demonstrating the genetic differences between peoples. Imagine you are a circle person, and this data point is you."
+  },
+  {
+    "id": "turn-2",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "01:44",
+    "html": "Hi, Bery. Very good. How are you doing today?"
+  },
+  {
+    "id": "turn-3",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "01:51",
+    "html": "Mar you."
+  },
+  {
+    "id": "turn-4",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "01:52",
+    "html": "Good. Yeah, very good. One, you look fantastic."
+  },
+  {
+    "id": "turn-5",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "02:02",
+    "html": "Thank you."
+  },
+  {
+    "id": "turn-6",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "02:04",
+    "html": "And what did you do today? What did you do? Not today, but what did you do, over the weekend yeah, on the weekendmmm..."
+  },
+  {
+    "id": "turn-7",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "02:18",
+    "html": "I see my daughter Alexandra Visenta angor 2E and the rest go to the team. Very well lary..."
+  },
+  {
+    "id": "turn-8",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "02:35",
+    "html": "Okay."
+  },
+  {
+    "id": "turn-9",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "02:36",
+    "html": "The last point."
+  },
+  {
+    "id": "turn-10",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "02:36",
+    "html": "Very good. Did you get your haircut?"
+  },
+  {
+    "id": "turn-11",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "02:39",
+    "html": "Yes."
+  },
+  {
+    "id": "turn-12",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "02:40",
+    "html": "Looks really nice, yeah, very good. And how is work? How is work?"
+  },
+  {
+    "id": "turn-13",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "02:52",
+    "html": "How is my work?"
+  },
+  {
+    "id": "turn-14",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "02:54",
+    "html": "Yeah. How'swork? Yes..."
+  },
+  {
+    "id": "turn-15",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "02:56",
+    "html": "Yes, very well, not and relax. Yes, I see Paula on Friday in the line of the meeting of the organization with... Happy with her. I'm very happy with you. Your glass..."
+  },
+  {
+    "id": "turn-16",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "03:36",
+    "html": "That's very kind. That's very kind. Yeah..."
+  },
+  {
+    "id": "turn-17",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "03:40",
+    "html": "Like to go to Europe and Vietnam. Yes, live in Vietnam. It's crazy or go to travel your house."
+  },
+  {
+    "id": "turn-18",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "04:01",
+    "html": "Yes, but there are lots of spas, lots of restaurants, lots of coffee shops, lots of cafes, lots. I just had a coffee just before the class, which was very good. Okay, I have something special for today. Here we go, let me pull it, see if I have it."
+  },
+  {
+    "id": "turn-19",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "04:27",
+    "html": "Thank you for the move. The glass. Today?"
+  },
+  {
+    "id": "turn-20",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "04:30",
+    "html": "No problem. My pleasure. Any time, no problem at all. Here we go, SPC on July 2nd. Okay, here we go. See. What's your name? One second, just need to make sure. Bernie, do you know the game Jeopardy? Yes. Have you ever seen the game Jeopardy from America? It's an American show, Jeopardy. Okay, I'll show it to you now so you may recognize it here. Okay. Do you know how to...?"
+  },
+  {
+    "id": "turn-21",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "06:30",
+    "html": "A writer..."
+  },
+  {
+    "id": "turn-22",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "06:30",
+    "html": "Play Jeopardy?"
+  },
+  {
+    "id": "turn-23",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "06:30",
+    "html": "A podcaster from Toronto."
+  },
+  {
+    "id": "turn-24",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Speaker 4",
+    "time": "06:32",
+    "html": "Ontario, Canada. Matte Roch Jeopardy Round where we have these..."
+  },
+  {
+    "id": "turn-25",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "06:38",
+    "html": "So you have the different..."
+  },
+  {
+    "id": "turn-26",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Speaker 4",
+    "time": "06:39",
+    "html": "Categories for you. 1st election day that's today. Hits of 2002..."
+  },
+  {
+    "id": "turn-27",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "06:44",
+    "html": "So you have categories..."
+  },
+  {
+    "id": "turn-28",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Speaker 4",
+    "time": "06:45",
+    "html": "We have lesser-known geography. You sit on it, number please. Finally, appropriately remembering Alex Trebek, Amy, you start us off."
+  },
+  {
+    "id": "turn-29",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "06:56",
+    "html": "Hits of 2002 for 200. We..."
+  },
+  {
+    "id": "turn-30",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "07:00",
+    "html": "So you choose the category and then how much? So, number, please? $1,000. Okay, so today we have this again. Okay, here we go. So let's start nice and easy. So here we go, Bernie, here we go. So we have Argentina and home, cozy food and kitchen, movies, comedy, love, and classics. Films \"Would you rather\" and fun sound. So which category would you like?"
+  },
+  {
+    "id": "turn-31",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "07:49",
+    "html": "One question. Would your rather was is this?"
+  },
+  {
+    "id": "turn-32",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "07:56",
+    "html": "Go to the cinema or go to the park? Would you rather? Yeah..."
+  },
+  {
+    "id": "turn-33",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "08:00",
+    "html": "Okay."
+  },
+  {
+    "id": "turn-34",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "08:03",
+    "html": "Which category would you like..."
+  },
+  {
+    "id": "turn-35",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "08:11",
+    "html": "And let's see all your own..."
+  },
+  {
+    "id": "turn-36",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "08:17",
+    "html": "Would you rather them and how much money? [Laughter]..."
+  },
+  {
+    "id": "turn-37",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "08:26",
+    "html": "Five. So phone 5 ca. No, 500..."
+  },
+  {
+    "id": "turn-38",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "08:30",
+    "html": "Five five. Okay, here's your question, lottery day, if you won a free one-week vacation tomorrow, where would you go and who would you take?"
+  },
+  {
+    "id": "turn-39",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "08:50",
+    "html": "I go to Tuscany and go to the where my daughter and my mother..."
+  },
+  {
+    "id": "turn-40",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "09:04",
+    "html": "With your daughter and your mother. Very nice. So Tuscany. It's lovely. Have you been before?"
+  },
+  {
+    "id": "turn-41",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "09:13",
+    "html": "No..."
+  },
+  {
+    "id": "turn-42",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "09:14",
+    "html": "It's... I used to have..."
+  },
+  {
+    "id": "turn-43",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "09:16",
+    "html": "To the third in Tuscany. I want to live in Tuscany and marry in Tuscany. Size. The field, this there, and go he says sorry and sol vakkana wai on a behla. Of Tony Tokani..."
+  },
+  {
+    "id": "turn-44",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "10:01",
+    "html": "Yes... Yeah, it's... I can't remember the name, but yes, it's like sunny down in Tuscany or something."
+  },
+  {
+    "id": "turn-45",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "10:09",
+    "html": "Yes, see..."
+  },
+  {
+    "id": "turn-46",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "10:10",
+    "html": "Yes, I used to date a girl from Tuscany. I had a girlfriend from Tuscany and a very good fun relationship. Okay, it's my go now. It's my go. So I'm going to go cozy food and kitchen, and I'll go for two 00 unpacking game flashback. Okay, put the kitchen item in the right place. The frying pan is above the stove. Okay, the frying pan is... This is from the game we played, and the cleaning spray is under the sink. Okay, so put the kitchen item in the right place. The frying pan is above the stove, and the cleaning spray is under the sink. Okay, that was from the game we played before. Okay..."
+  },
+  {
+    "id": "turn-47",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "11:02",
+    "html": "Okay..."
+  },
+  {
+    "id": "turn-48",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "11:02",
+    "html": "Easy, so now it's your go. Which? Where would you like to go? Which category? How much...?"
+  },
+  {
+    "id": "turn-49",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "11:09",
+    "html": "Im Argentina and home..."
+  },
+  {
+    "id": "turn-50",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "11:13",
+    "html": "Argentina and home, and how much would you like to...?"
+  },
+  {
+    "id": "turn-51",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "11:18",
+    "html": "And 3000."
+  },
+  {
+    "id": "turn-52",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "11:20",
+    "html": "Three 3000? No problem at all. You are visiting your dad. This is just generic on a holiday weekend. Say two things you would like to do together. So if you... To visit, say your father."
+  },
+  {
+    "id": "turn-53",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "11:41",
+    "html": "I like the talking with her with he, take the, no, and get out of me. I like to both my father and well, memorial time. Okay. My. Like I go to the restaurant in Argentina.? E and then go to the cinema with my father."
+  },
+  {
+    "id": "turn-54",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "12:35",
+    "html": "Very nice."
+  },
+  {
+    "id": "turn-55",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "12:36",
+    "html": "Yes..."
+  },
+  {
+    "id": "turn-56",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "12:36",
+    "html": "What movie would you see? What movie would you see?"
+  },
+  {
+    "id": "turn-57",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "12:40",
+    "html": "I see some action because my father was like so much the movie. Actual movie projects for..."
+  },
+  {
+    "id": "turn-58",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "12:58",
+    "html": "Good. Let me turn off the sound there. Okay. I'm gonna go for. Would you rather as well? I'll go for a 200. Would you rather a week in the Potagonian Mountains or in a tropical beach? Me Maybe on a tropical beach. It's very cold in Vietnam now it's very cold, so I think I would like to go to a trocle beach. And how about you, Bernie? Would you rather go to the Potagonian Mountains or a tropical beach?"
+  },
+  {
+    "id": "turn-59",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "13:32",
+    "html": "But a mountain. I like so much."
+  },
+  {
+    "id": "turn-60",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "13:36",
+    "html": "Nice, I'm really cold today. I'm really cold, very cold here. Yes, quite cold. Okay, which category would you like next? Bernie..."
+  },
+  {
+    "id": "turn-61",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "13:54",
+    "html": "The is Gossie food and kitchen."
+  },
+  {
+    "id": "turn-62",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "13:57",
+    "html": "Yup, cozy food in the kitchen, and how much would you like to play for 100? Are you tired or sick? What is the best comfort food? So what is your favorite comfort food?"
+  },
+  {
+    "id": "turn-63",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "14:16",
+    "html": "A chicken soup..."
+  },
+  {
+    "id": "turn-64",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "14:21",
+    "html": "Soup, very nice. My favorite comfort food is crab soup. I eat a lot of crab soup. I had crab soup today."
+  },
+  {
+    "id": "turn-65",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "14:36",
+    "html": "Crack. I know..."
+  },
+  {
+    "id": "turn-66",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "14:36",
+    "html": "Crab soup, yeah..."
+  },
+  {
+    "id": "turn-67",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "14:37",
+    "html": "I remember. Okay..."
+  },
+  {
+    "id": "turn-68",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "14:39",
+    "html": "Okay, very good. Okay, I'm going to go for food as well, but 300. What is the difference between a tea towel and a frying pan? So a tea towel is something you can dry, and a frying pan you cook with you can cook with. So tit... E. This was easy. This was easy. Okay. Benny? Which? Which one would you like next? Which one?"
+  },
+  {
+    "id": "turn-69",
+    "chapterId": "chap-2",
+    "chapterTitle": "Chapter II • Jeopardy Review & Scenarios (15:00)",
+    "speaker": "Bernie",
+    "time": "15:14",
+    "html": "Movie, comedy, love, and pic. Okay, and 423, so..."
+  },
+  {
+    "id": "turn-70",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "15:24",
+    "html": "3 303. [Laughter] Okay..."
+  },
+  {
+    "id": "turn-71",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "15:30",
+    "html": "Wow, Danny."
+  },
+  {
+    "id": "turn-72",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "15:32",
+    "html": "M timeless classic. Think of Titanic or the Sound of Music. Describe one famous scene in two simple sentences."
+  },
+  {
+    "id": "turn-73",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "15:43",
+    "html": "Lovely, <span class=\"vocab-mark\" data-vkey=\"definitely\" onclick=\"inspectVocab('definitely')\">definitely</span>, but lovely too. After Titanic, we went to a row, and those are staying on the board and the ship, and so crazy and day, and conversation between us now, and this is not as seen very..."
+  },
+  {
+    "id": "turn-74",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "16:23",
+    "html": "Two two..."
+  },
+  {
+    "id": "turn-75",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "16:27",
+    "html": "Is drum is dr but is funny to... Find to the conversation."
+  },
+  {
+    "id": "turn-76",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "16:36",
+    "html": "Funny. Sorry, that's my news. Funny sweet, yes, funny and sweet, I think. Yeah, my favorite scene is when they are on the deck on top of the boat and... They're talking on top of the boat and looking out at the sea on a normal day. Yeah... I quite like that. Okay, very good. Okay, I go, I'll go fun sound and wordplay for 300 say cleanly. Calm cooks would make good soup. Okay, calm cooks would make good soup. So it's a little bit of a tongue twister. Calm cooks would make good soup. Can you say that? All Bernie? Calm cooks would make good soup."
+  },
+  {
+    "id": "turn-77",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "17:41",
+    "html": "What? You say..."
+  },
+  {
+    "id": "turn-78",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "17:42",
+    "html": "Can you say this? That's all. It's a..."
+  },
+  {
+    "id": "turn-79",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "17:46",
+    "html": "Can when you may..."
+  },
+  {
+    "id": "turn-80",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "17:48",
+    "html": "Good carm cooks..."
+  },
+  {
+    "id": "turn-81",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "17:53",
+    "html": "Wood make good SOP..."
+  },
+  {
+    "id": "turn-82",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "17:56",
+    "html": "Very good calm cooks would make good soup."
+  },
+  {
+    "id": "turn-83",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "18:00",
+    "html": "Good night, good so..."
+  },
+  {
+    "id": "turn-84",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "18:03",
+    "html": "It's a bit a little bit wordy."
+  },
+  {
+    "id": "turn-85",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "18:06",
+    "html": "Good may good..."
+  },
+  {
+    "id": "turn-86",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "18:08",
+    "html": "Good car..."
+  },
+  {
+    "id": "turn-87",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "18:12",
+    "html": "Wood may wood so..."
+  },
+  {
+    "id": "turn-88",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "18:15",
+    "html": "Good, very good carm cooks would make..."
+  },
+  {
+    "id": "turn-89",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "18:19",
+    "html": "Come hope..."
+  },
+  {
+    "id": "turn-90",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "18:19",
+    "html": "Good soup."
+  },
+  {
+    "id": "turn-91",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "18:20",
+    "html": "Would may good so..."
+  },
+  {
+    "id": "turn-92",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "18:22",
+    "html": "Good, very nice. Okay, and which one would you like next? Which one?"
+  },
+  {
+    "id": "turn-93",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "18:31",
+    "html": "And fine sun on wordplay."
+  },
+  {
+    "id": "turn-94",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "18:38",
+    "html": "Fine sounds and wordplay, and how much would you like to play for? Okay, number for fun. Add one outlet. Which one does not belong, which one is wrong? So, matte coffee, chicken soup, or rotary sauce, which one does not belong, which one is wrong? Yeah. Okay, very good, yes. Okay. Sorry about that. I think I will go for... I'll try something about Argentina. I don't think I can..."
+  },
+  {
+    "id": "turn-95",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "19:55",
+    "html": "Raised in the st in down lion."
+  },
+  {
+    "id": "turn-96",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "20:03",
+    "html": "Here we go... Asado. What is asado? It's the traditional barbecue, I <span class=\"vocab-mark\" data-vkey=\"definitely\" onclick=\"inspectVocab('definitely')\">definitely</span> lost points. Wow, I..."
+  },
+  {
+    "id": "turn-97",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "20:24",
+    "html": "I don't know why as okay..."
+  },
+  {
+    "id": "turn-98",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "20:29",
+    "html": "So it's not..."
+  },
+  {
+    "id": "turn-99",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "20:30",
+    "html": "Barbecue, yes I..."
+  },
+  {
+    "id": "turn-100",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "20:31",
+    "html": "It's the barbecue."
+  },
+  {
+    "id": "turn-101",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "20:33",
+    "html": "Yes, the meal and the fire..."
+  },
+  {
+    "id": "turn-102",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "20:37",
+    "html": "It looks very good."
+  },
+  {
+    "id": "turn-103",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "20:41",
+    "html": "Very funny committ family but more conversation more it more hour and the best meat in the world."
+  },
+  {
+    "id": "turn-104",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "20:56",
+    "html": "It looks good. When did you last have asado, when did you last eat the barbecue?"
+  },
+  {
+    "id": "turn-105",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "21:07",
+    "html": "And while lu I don me with my family and knew more ago. Yes, because I'm very. The cli climate is very strange, but the raining isn but yes. No..."
+  },
+  {
+    "id": "turn-106",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "21:31",
+    "html": "Yeah..."
+  },
+  {
+    "id": "turn-107",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "21:32",
+    "html": "But I want to make the salad barbecue."
+  },
+  {
+    "id": "turn-108",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "21:46",
+    "html": "Me too. It looks very nice. I love barbecue, but it looks great how it's clamped and then you put it on the fire."
+  },
+  {
+    "id": "turn-109",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "21:56",
+    "html": "Okay. In Argentina, it is not the same. It is to put the meal in the brazier and the pan. But now the TA's not the same. It's different. Go to the visit Argentina and eats the..."
+  },
+  {
+    "id": "turn-110",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "22:20",
+    "html": "Yes. I already want to. So which one would you like, Bernie? Which one?"
+  },
+  {
+    "id": "turn-111",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "22:33",
+    "html": "A movie comedy love classic..."
+  },
+  {
+    "id": "turn-112",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "22:38",
+    "html": "Okay, and how much would you like to play for...?"
+  },
+  {
+    "id": "turn-113",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "22:42",
+    "html": "For Hungary."
+  },
+  {
+    "id": "turn-114",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "22:45",
+    "html": "400? Okay, here we go. You have the daily double so we get to double it for you. Here we go. 800... Wager. How much to wager? But here we go, here's your question. Comedy and love. Tell us about a funny romantic movie you love. Okay, maybe like Pretty Woman or 10 Things I Hate About You. Whose characters? Who are the characters and why do you like it? So, please, can you tell us about a funny romantic movie you love?"
+  },
+  {
+    "id": "turn-115",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "23:28",
+    "html": "I didn't... I heard about you. That is the principal is very funny and the man is very... Yes, and the woman is crazy. Is crazy. Yes."
+  },
+  {
+    "id": "turn-116",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "23:50",
+    "html": "Very good. Okay, so you have a lot of points, so what we're going to do is you have 2100, and I have 800, but we're going to transfer it to this one here. Okay? So, here we go. So we just change the board a little bit, okay? It's my go now, is this correct? Okay, I'm going to do say this, not that. Okay, so we have new categories arrive in ground say this. Not that polish my English odd one out and preposition and fluency. So I'm going to go for say this, not that. 300. So it says, instead of telling every detail of what happened, what should we say? I can't remember, tell me I can't remember who I need to see the answer. You don't have to talk right now. What do you need? I forgot, you don't have to talk right now. This is for the <span class=\"vocab-mark\" data-vkey=\"emergency\" onclick=\"inspectVocab('emergency')\">emergency</span> service. Okay? I got it wrong. You don't have to talk right now. What do you need? So I lose points, okay? And Benny, which one would you like? Which one would you like?"
+  },
+  {
+    "id": "turn-117",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "25:16",
+    "html": "Okay, and... Okay. Say this. I know that to..."
+  },
+  {
+    "id": "turn-118",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "25:32",
+    "html": "Okay, 200, okay, instead of \"Don't worry, everything will be fine,\" which can sound untrue, what should we say? Don't move... Don't move, okay sub... What"
+  },
+  {
+    "id": "turn-119",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "25:48",
+    "html": "Don't move..."
+  },
+  {
+    "id": "turn-120",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "25:50",
+    "html": "Don't move, okay sub..."
+  },
+  {
+    "id": "turn-121",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "25:54",
+    "html": "Which concent what you do say so where are where you find? No, although the silence please ever will be fine don't move..."
+  },
+  {
+    "id": "turn-122",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "26:08",
+    "html": "No..."
+  },
+  {
+    "id": "turn-123",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "26:08",
+    "html": "The he coming. I don't know."
+  },
+  {
+    "id": "turn-124",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "26:13",
+    "html": "Maybe yeah, listen to my voice you'll be safe now we will take this step by step..."
+  },
+  {
+    "id": "turn-125",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "26:18",
+    "html": "Sing now we sta step by step. Okay."
+  },
+  {
+    "id": "turn-126",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "26:22",
+    "html": "So we..."
+  },
+  {
+    "id": "turn-127",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "26:23",
+    "html": "Okay."
+  },
+  {
+    "id": "turn-128",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "26:23",
+    "html": "Can say yeah, we're safe right now. Okay, that's good. Okay. I'm going to go for the odd one out and I'm going to go for 400 to find the odd one out... Acoustic, yeah, excuse stick listening device, canine search dog, I don't know snake camera or spineboard. I think it's spineboard because the others are for finding people. Acoustic listening device, the canine search dog and snake camera. So I think it's spineboard. Yes, spineboard is the odd one out. Cameras and acoustic devices are used to find victims, but a spineboard..."
+  },
+  {
+    "id": "turn-129",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "27:19",
+    "html": "Why is a nice search? Doc. Where is this? Spal is the old one to come spine metors began to today."
+  },
+  {
+    "id": "turn-130",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "27:38",
+    "html": "For a canine search dog. They find..."
+  },
+  {
+    "id": "turn-131",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "27:43",
+    "html": "Okay..."
+  },
+  {
+    "id": "turn-132",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "27:43",
+    "html": "People. But a spineboard and this is a spine board to get people out yup, okay to do okay, very good. And Bernie, which one would you like next? Which one..."
+  },
+  {
+    "id": "turn-133",
+    "chapterId": "chap-3",
+    "chapterTitle": "Chapter III • Breathing & Grounding Practice (28:00)",
+    "speaker": "Bernie",
+    "time": "28:10",
+    "html": "A ripe and gran..."
+  },
+  {
+    "id": "turn-134",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "28:13",
+    "html": "Arrive and grow, shall they?"
+  },
+  {
+    "id": "turn-135",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "28:15",
+    "html": "Right? Alright. And three so..."
+  },
+  {
+    "id": "turn-136",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "28:24",
+    "html": "Three. It's wide, it's early in Argentina. It's early. Someone is <span class=\"vocab-mark\" data-vkey=\"breathing\" onclick=\"inspectVocab('breathing')\">breathing</span> very fast in a panic, guide them, guide their breathing. Someone is breathing very fast in a panic or... Breathing in two sentences. So the person is..."
+  },
+  {
+    "id": "turn-137",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "28:52",
+    "html": "Okay, come down, please look my house and Marie out and be out. Repeat, yes, repeat with Ruy, please. Look my eyes and breathe in ka in aa and..."
+  },
+  {
+    "id": "turn-138",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "29:14",
+    "html": "In house..."
+  },
+  {
+    "id": "turn-139",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "29:15",
+    "html": "In out. Okay..."
+  },
+  {
+    "id": "turn-140",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "29:19",
+    "html": "In and..."
+  },
+  {
+    "id": "turn-141",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "29:19",
+    "html": "Look at me in and out."
+  },
+  {
+    "id": "turn-142",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "29:25",
+    "html": "Very good. Yeah. Be in slowly, very good, in and out, very good. Good job. I will go for Polish my English, I'm going to go for 300. What do we say? We don't say where you stay now. Where are you, right? Where are you? Where are you right now? Where are you... Okay..."
+  },
+  {
+    "id": "turn-143",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "29:51",
+    "html": "Where are you right now? Okay, where..."
+  },
+  {
+    "id": "turn-144",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "29:53",
+    "html": "And yeah..."
+  },
+  {
+    "id": "turn-145",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "29:53",
+    "html": "Are you?"
+  },
+  {
+    "id": "turn-146",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "29:54",
+    "html": "Where are you right now? Yeah, where are you right now? Okay, good. Which one would you like next, Bernie?"
+  },
+  {
+    "id": "turn-147",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "30:02",
+    "html": "And prepos with fluency..."
+  },
+  {
+    "id": "turn-148",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "30:09",
+    "html": "Good prepositions and fluency... How much would you like to play for? How much?"
+  },
+  {
+    "id": "turn-149",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "30:19",
+    "html": "And f South and Hungary."
+  },
+  {
+    "id": "turn-150",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "30:25",
+    "html": "Hundred, 500. They..."
+  },
+  {
+    "id": "turn-151",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "30:28",
+    "html": "My is out."
+  },
+  {
+    "id": "turn-152",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "30:33",
+    "html": "I see. Okay, good, okay, 504 32nd fluency check explain in simple English why short c sentences. It is very hard. Short cal sentences work better than long medical words in psychological first aid, so why? Why are short sentences better than long sentences? Why? Correct? I think this might be the answer. So..."
+  },
+  {
+    "id": "turn-153",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "31:14",
+    "html": "I'm active now. Active the brain rational brain and the and for the re emotion and return of the car."
+  },
+  {
+    "id": "turn-154",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "31:39",
+    "html": "Okay, yeah, wrong senses, wrong phrases, help them feel safe and grounded is calm, yes, so you're right, the rational part of the brain should be added, but you're <span class=\"vocab-mark\" data-vkey=\"absolutely\" onclick=\"inspectVocab('absolutely')\">absolutely</span> right. To make them calm, to make them feel safe and grounded. Okay, very good. It's my go. I'm going to go for prepositions and fluency. Ping pong, quick buyer, you see someone smoking a cigarette near a fuel tanker, what do you say? No, it's dangerous, be careful, you cannot smoke here. It is dangerous, it's not allowed..."
+  },
+  {
+    "id": "turn-155",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "32:30",
+    "html": "This is very dangerous. This area is flammable."
+  },
+  {
+    "id": "turn-156",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "32:30",
+    "html": "Yeah, it's crazy. Okay, which one would you like next?"
+  },
+  {
+    "id": "turn-157",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "32:47",
+    "html": "Okay. And Polish my English..."
+  },
+  {
+    "id": "turn-158",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "32:56",
+    "html": "Which number?"
+  },
+  {
+    "id": "turn-159",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "32:58",
+    "html": "And two..."
+  },
+  {
+    "id": "turn-160",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "33:04",
+    "html": "Hundred, yeah, that's correct. Good job. Okay, they're losing control. This is very dangerous. Do you remember not them...?"
+  },
+  {
+    "id": "turn-161",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "33:30",
+    "html": "This is very and what but what..."
+  },
+  {
+    "id": "turn-162",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "33:35",
+    "html": "How to fix it. Do you remember from last week?"
+  },
+  {
+    "id": "turn-163",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "33:40",
+    "html": "Yes, this is one. This is one."
+  },
+  {
+    "id": "turn-164",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "33:43",
+    "html": "So this is..."
+  },
+  {
+    "id": "turn-165",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "33:43",
+    "html": "Okay, I..."
+  },
+  {
+    "id": "turn-166",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "33:44",
+    "html": "Wrong. How do we get it? How do we say it correctly?"
+  },
+  {
+    "id": "turn-167",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "33:51",
+    "html": "They are..."
+  },
+  {
+    "id": "turn-168",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "33:54",
+    "html": "Let's have a look because I can't quite remember. Yeah, good, they are good."
+  },
+  {
+    "id": "turn-169",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "34:01",
+    "html": "Losing control. That. It's very dangerous."
+  },
+  {
+    "id": "turn-170",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "34:07",
+    "html": "That is very dangerous. Yeah, that or... This is very dangerous or that is very dangerous. Very good, you got to correct. Very good job. Okay, good. I'm going to do this, not that. Okay, I'm going to say this, not that angry relative. Someone shouts. Let me go inside, nobody is helping me validate their feelings and set a safe boundary. I can't remember. Maybe it's like, \"I understand, but you need to help me. Help is coming. I understand why you're angry, but help is coming. It's too dangerous right now. You should come with me to help your family. Help me help your family.\" I think... I think the answer is... Do you remember the answer?"
+  },
+  {
+    "id": "turn-171",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "35:13",
+    "html": "It's very dangerous. They're helping, coming, and your... I understand your feelings, but it's not safe here. Please come with me to the safe zone."
+  },
+  {
+    "id": "turn-172",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "35:31",
+    "html": "Yes, I hear you. I know you're scared, it is not safe inside. Please walk with me or please come with me and help me check the list."
+  },
+  {
+    "id": "turn-173",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "35:42",
+    "html": "The work..."
+  },
+  {
+    "id": "turn-174",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "35:42",
+    "html": "Yes, yeah, the work."
+  },
+  {
+    "id": "turn-175",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "35:44",
+    "html": "Shake the least. But activateal brain..."
+  },
+  {
+    "id": "turn-176",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "35:47",
+    "html": "Yeah. Okay, I think I got this wrong. I think I got it wrong. Okay, and which one would you like, Bernie? Which one would you like?"
+  },
+  {
+    "id": "turn-177",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "35:58",
+    "html": "And a right and ground..."
+  },
+  {
+    "id": "turn-178",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "36:04",
+    "html": "Arrive in ground short thing and which number would you like? How much? Sorry..."
+  },
+  {
+    "id": "turn-179",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "36:09",
+    "html": "How much and for no... So have I..."
+  },
+  {
+    "id": "turn-180",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "36:18",
+    "html": "Yeah, they're all a hundred. Yeah. A thousand is one more zero. Okay."
+  },
+  {
+    "id": "turn-181",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "36:28",
+    "html": "Yes..."
+  },
+  {
+    "id": "turn-182",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "36:28",
+    "html": "400. Use your five senses grounding techniques. Ask a person in shock to notice three things around them. Ask a person in shock to notice three things around them."
+  },
+  {
+    "id": "turn-183",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "36:57",
+    "html": "I know a three years around te as the personally showed to train around the world. Okay what to name when but to and who were you e where to make when you know when you stay in now and you stay in now and who yes, what you see please you see in the round. Yes, what do you see now, please?"
+  },
+  {
+    "id": "turn-184",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "37:53",
+    "html": "M Yes, okay..."
+  },
+  {
+    "id": "turn-185",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "37:56",
+    "html": "And you say what you name why you what you say you if you..."
+  },
+  {
+    "id": "turn-186",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "38:06",
+    "html": "What can you see? I think you..."
+  },
+  {
+    "id": "turn-187",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "38:08",
+    "html": "Wa you c..."
+  },
+  {
+    "id": "turn-188",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "38:08",
+    "html": "Said last week can you see lights? Can you see lights? I..."
+  },
+  {
+    "id": "turn-189",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "38:14",
+    "html": "The door you see the window like you is or the one says I did."
+  },
+  {
+    "id": "turn-190",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "38:22",
+    "html": "Let's have a look, because I can't remember either. Look around. Tell me three things you can see. Can you feel your feet on the floor? What can you feel? Look around, tell me three things you can say yes, tell me three things..."
+  },
+  {
+    "id": "turn-191",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "38:40",
+    "html": "Yes."
+  },
+  {
+    "id": "turn-192",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "38:40",
+    "html": "You can say."
+  },
+  {
+    "id": "turn-193",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "38:41",
+    "html": "Sa. For. GA..."
+  },
+  {
+    "id": "turn-194",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "38:43",
+    "html": "Yeah, okay. I think you got that right. I thought I and there'll be more. Okay, so my go, I'm gonna go for odd one out, and here we go, find the odd one out. Hydraulic spreaders, rotary saw, timber shoring or tea towel. I think it's tea towel. Tea towel is very easy. Very easy. Okay. Which one would you like? Being. One, one as and how much... Good perfect. Which one has the odd one now? Critical delayed impossible walking wounded so impossible sorry impossible..."
+  },
+  {
+    "id": "turn-195",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "39:51",
+    "html": "Impossible. Impos."
+  },
+  {
+    "id": "turn-196",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "39:53",
+    "html": "Which one is the odd one out? Which one is..."
+  },
+  {
+    "id": "turn-197",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "39:59",
+    "html": "Impossible. Because it's impossible? Yes, because it's the three ash and the threesh. Red and green and yellow."
+  },
+  {
+    "id": "turn-198",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "40:12",
+    "html": "Very good job. Wow, very nice. Very good. Well done, professional. I will go for 100 prepositions and fluency. Ground zero preposition. The survivor is under the concrete beam. The survivor is under the concrete beam, and the tech tags are on the top of my... In the top pocket of my vest, so... The tech tags are in the top pocket of my vest. Okay, let's check. Yes, under the concrete beam and in... Have no pockets today in the top pocket of my vest. Okay, easy, PC DC PC. Okay. Which one would you like, Benny?"
+  },
+  {
+    "id": "turn-199",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "41:27",
+    "html": "Out an f sosa now hudri hundre."
+  },
+  {
+    "id": "turn-200",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "41:37",
+    "html": "OD one. Now step back, keep clear unconscious or clear the area immediately."
+  },
+  {
+    "id": "turn-201",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "41:46",
+    "html": "Okay, I'mconscious because there t..."
+  },
+  {
+    "id": "turn-202",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "41:49",
+    "html": "Yeah..."
+  },
+  {
+    "id": "turn-203",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "41:53",
+    "html": "Is a duration for the people."
+  },
+  {
+    "id": "turn-204",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "41:57",
+    "html": "Direction commands or directions..."
+  },
+  {
+    "id": "turn-205",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "42:00",
+    "html": "Yes, the Russian command, but unconscious is in the stay of the person."
+  },
+  {
+    "id": "turn-206",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "42:04",
+    "html": "Yes, exactly. Unconsciousness is the odd one. Now, the other three are urgent crowd commands, but unconscious describes a patient's medical state. Very good. Okay, I'm going to go for... Say this, not that. Calm down, stop crying. What warm phrase should you say? It's okay, listen to my voice, you're safe now. <span class=\"vocab-mark\" data-vkey=\"breathing\" onclick=\"inspectVocab('breathing')\">Breathing</span>... Like, breathe right, breathe... What else could we say? What is your name?"
+  },
+  {
+    "id": "turn-207",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "42:52",
+    "html": "Hi. My name is Ruth. What's your name?"
+  },
+  {
+    "id": "turn-208",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "42:57",
+    "html": "Okay, let's see what else we have. I'm here with you, take your time. It's okay to cry. Okay, I'm here with you. I think I got it wrong, I think I got it wrong. Okay, here we go, which one would you like, Benny? Yeah, it's a okay to cry, it's okay to cry which one you like, Benny..."
+  },
+  {
+    "id": "turn-209",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "43:22",
+    "html": "He arrive and ground..."
+  },
+  {
+    "id": "turn-210",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "43:33",
+    "html": "Arrived in ground, which one? Very good. You have the daily double. There we go. So say slowly and warmly listen to my voice. Please stay calm, you are safe. So you just have to say slowly, listen to my voice, please stay calm. You are safe now, but you are safe."
+  },
+  {
+    "id": "turn-211",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "44:11",
+    "html": "Okay, get accustomed / get a... <span class=\"asr-fix-pill\" title=\"Auto-captioning misheard rapid speech.\">✨ Fixed: \"get accustomed / get a...\" (note-taker: \"get Augusta\")</span>. Say..."
+  },
+  {
+    "id": "turn-212",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "44:16",
+    "html": "You e you just..."
+  },
+  {
+    "id": "turn-213",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "44:16",
+    "html": "Slowly, I say slowly. Listen to my voice, please. Thank you. You are safe now?"
+  },
+  {
+    "id": "turn-214",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "44:24",
+    "html": "Good, perfect. That was a good daily double. That was a good daily double. Okay... It's my go. I'm going to go for Polish my English 100. Look my eyes, look into my eyes. Yeah, look into my eyes, I think. Look at my eyes. No..."
+  },
+  {
+    "id": "turn-215",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "44:53",
+    "html": "That's my..."
+  },
+  {
+    "id": "turn-216",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "44:53",
+    "html": "I got it wrong. Look at my eyes, look at... Okay, I got it wrong. Well, I'm thinking..."
+  },
+  {
+    "id": "turn-217",
+    "chapterId": "chap-4",
+    "chapterTitle": "Chapter IV • 4-Step Calm-Voice Delivery & Wrap-Up (45:00)",
+    "speaker": "Bernie",
+    "time": "45:02",
+    "html": "Okay..."
+  },
+  {
+    "id": "turn-218",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "45:02",
+    "html": "Of a magician. A magician. Okay, and which one would you like?"
+  },
+  {
+    "id": "turn-219",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "45:14",
+    "html": "The last day 01 out..."
+  },
+  {
+    "id": "turn-220",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "45:17",
+    "html": "Okay, odd one out. Sure thing, odd one out. So we have confirmed gas leak, live power lines, secondary collapse, and safe zone. So which one is the odd one out and why?"
+  },
+  {
+    "id": "turn-221",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "45:35",
+    "html": "I well, I think secondary collapse. No say so say..."
+  },
+  {
+    "id": "turn-222",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "45:42",
+    "html": "And why is Safezone the odd one out? Why..."
+  },
+  {
+    "id": "turn-223",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "45:49",
+    "html": "Because it's the play and it's all play but in configuration GA play like power and secondary collapse is the <span class=\"vocab-mark\" data-vkey=\"situation\" onclick=\"inspectVocab('situation')\">situation</span> disaster..."
+  },
+  {
+    "id": "turn-224",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "46:04",
+    "html": "Exactly?"
+  },
+  {
+    "id": "turn-225",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "46:04",
+    "html": "Is the..."
+  },
+  {
+    "id": "turn-226",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "46:05",
+    "html": "You're completely right, it's the hazard. Safe zone is the odd one. Now the other three are dangerous hazards, yes, but the safe zone is... Where it's safe, where people are protected. Good job. Very good job. Okay, I'm going to go for rule 200 propositions and fluency. We set up the snake camera between the two walls, and the generator is on the back of the truck. The generator is on the back of the truck? Yeah, I'm on the back of the truck, on the back of the... Okay, I said yes, between the two walls and on the back of the truck. It's on the back of the truck, yeah, okay, good, okay, which one would you like next? Bernie..."
+  },
+  {
+    "id": "turn-227",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "47:17",
+    "html": "And okay pre preposation now preparation..."
+  },
+  {
+    "id": "turn-228",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "47:27",
+    "html": "It's good, yeah. No, you had breakfast prepositions... Good. Okay, you heard a loud creaking sound inside a cracked building. What two-word command do you shout so you hear a big crack?"
+  },
+  {
+    "id": "turn-229",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "47:48",
+    "html": "Okay, please don't move, and you sign command show, please, and no, and you please get out of this in the side now..."
+  },
+  {
+    "id": "turn-230",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "48:11",
+    "html": "Good, maybe it's clear the building now..."
+  },
+  {
+    "id": "turn-231",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "48:15",
+    "html": "We've cleared the building now because yes, please..."
+  },
+  {
+    "id": "turn-232",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "48:19",
+    "html": "It's not..."
+  },
+  {
+    "id": "turn-233",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "48:20",
+    "html": "Leave the building now, it's not safe. Have..."
+  },
+  {
+    "id": "turn-234",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "48:23",
+    "html": "Yeah, it..."
+  },
+  {
+    "id": "turn-235",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "48:23",
+    "html": "A quiet note. Stay back. Get out..."
+  },
+  {
+    "id": "turn-236",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "48:28",
+    "html": "I think you got it. Clear the building, evacuate now..."
+  },
+  {
+    "id": "turn-237",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "48:31",
+    "html": "Be right now s..."
+  },
+  {
+    "id": "turn-238",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "48:32",
+    "html": "Step back, get out..."
+  },
+  {
+    "id": "turn-239",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "48:34",
+    "html": "Get out now. Get out now. Get out now. It's more directive."
+  },
+  {
+    "id": "turn-240",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "48:45",
+    "html": "Very direct, \"Get out now,\" yeah..."
+  },
+  {
+    "id": "turn-241",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "48:48",
+    "html": "Yes..."
+  },
+  {
+    "id": "turn-242",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "48:48",
+    "html": "Very forceful, \"Get out now,\" go, yes, okay, I will do 100. Approach a scared survivor calmly introduce yourself in two short warm \"As\" okay, my name is Lewis. You are safe now. You are safe. Yeah, I think that's like maybe. Okay, yeah, what would you say, Bernie, what would you say?"
+  },
+  {
+    "id": "turn-243",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "49:31",
+    "html": "My name is Bernie, and I'm and stay I am stay with you. You shall be you and please come down and, e the help is coming and stay with her with yous..."
+  },
+  {
+    "id": "turn-244",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "50:01",
+    "html": "Good, very good, perfect. I think I got it wrong a little bit. Okay, and which one would you yeah, which one would you like? Burning..."
+  },
+  {
+    "id": "turn-245",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "50:11",
+    "html": "And a right and ground."
+  },
+  {
+    "id": "turn-246",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "50:14",
+    "html": "Right the ground. Okay, <span class=\"vocab-mark\" data-vkey=\"deliver\" onclick=\"inspectVocab('deliver')\">deliver</span> all four steps in a calm voice, introduce yourself, eye <span class=\"vocab-mark\" data-vkey=\"contact\" onclick=\"inspectVocab('contact')\">contact</span>, <span class=\"vocab-mark\" data-vkey=\"reassure\" onclick=\"inspectVocab('reassure')\">reassure</span> safety and <span class=\"vocab-mark\" data-vkey=\"breathing\" onclick=\"inspectVocab('breathing')\">breathing</span>. So can you do all four?"
+  },
+  {
+    "id": "turn-247",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "50:31",
+    "html": "Okay? Okay, my name is Bernie. I stay for you. Will you help me? Please look in my eyes. My eyes and what to and please, read with me and slowly and on and out at and..."
+  },
+  {
+    "id": "turn-248",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "51:05",
+    "html": "Yes."
+  },
+  {
+    "id": "turn-249",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "51:06",
+    "html": "During three times with me in a..."
+  },
+  {
+    "id": "turn-250",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "51:09",
+    "html": "Good. Hello, my name is Bernie. Look at me, you are safe right now. Breathe slowly with me in and out in..."
+  },
+  {
+    "id": "turn-251",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "51:20",
+    "html": "In and slowly winding in and out..."
+  },
+  {
+    "id": "turn-252",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "51:25",
+    "html": "I will go for 400. I am with you for your company. I will stay with you. I will say with you, I think is the corrected sentence because this is wrong. I will stay with you. I think I'm here to keep you company. I see. I am here to keep you company. Not am I with you. I am with you for your company. I am here to keep you company. I am here to you company with you..."
+  },
+  {
+    "id": "turn-253",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "52:07",
+    "html": "This staying with you. Okay."
+  },
+  {
+    "id": "turn-254",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "52:14",
+    "html": "I will..."
+  },
+  {
+    "id": "turn-255",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "52:15",
+    "html": "Okay."
+  },
+  {
+    "id": "turn-256",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "52:15",
+    "html": "Stay with you."
+  },
+  {
+    "id": "turn-257",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "52:16",
+    "html": "It's the same us. I..."
+  },
+  {
+    "id": "turn-258",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "52:16",
+    "html": "Yeah..."
+  },
+  {
+    "id": "turn-259",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "52:18",
+    "html": "Stay with you..."
+  },
+  {
+    "id": "turn-260",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "52:20",
+    "html": "It's the same. It's more friendly, it's nicer, it's much nicer. Yeah, to keep someone company is to keep to look after them. I will stay with you, I will stay with you. It's very nice. Which one would you like to burn?"
+  },
+  {
+    "id": "turn-261",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "52:40",
+    "html": "Say this now that..."
+  },
+  {
+    "id": "turn-262",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "52:42",
+    "html": "Okay, sure thing, and get a small structured task. A survivor is frozen, shocked, frozen in shock. Sorry, give one simple physical task."
+  },
+  {
+    "id": "turn-263",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "52:58",
+    "html": "Okay? Please look around and tell me why you see three up in the realm, you see the light, you see the door, you see the window. Please tell me what you saw. To please help me to take the lease. Please. On to the people. And around..."
+  },
+  {
+    "id": "turn-264",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "53:31",
+    "html": "Very good..."
+  },
+  {
+    "id": "turn-265",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "53:31",
+    "html": "Come the children. The woman, the man are..."
+  },
+  {
+    "id": "turn-266",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "53:35",
+    "html": "Please count everyone."
+  },
+  {
+    "id": "turn-267",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "53:38",
+    "html": "Everyone. Please count the woman. Please."
+  },
+  {
+    "id": "turn-268",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "53:44",
+    "html": "Very good, yeah. Hold this water bottle. Can you help me please sit here, write your name, anything. Please help me count to give them a job. Very good and I will go 5000 to help them proceed to brain trauma. What was the correction and help them to prevent brain trauma. Help them to prevent... I think help the process the shock to prevent trauma. Okay. I don't think I got it right. So now it's the end. But we have a special final Jeopardy. Okay, so we have one question. But, Bernie, you're winning a lot, so you get to bet. So I'm going to bet, $6,500. No, I think it's, yeah, $6,500. Bernie, would you like to bet anything? I don't think so..."
+  },
+  {
+    "id": "turn-269",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "54:59",
+    "html": "Have that off said..."
+  },
+  {
+    "id": "turn-270",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "55:01",
+    "html": "You're already winning. I think you can put zero. Okay, here we go. Here's the last question. A worried father is trying to run past the safety line into an unstable building, shouting, \"Let me go inside. My daughter is in there.\" <span class=\"vocab-mark\" data-vkey=\"deliver\" onclick=\"inspectVocab('deliver')\">Deliver</span> three step response. Okay, so you have to tell the father."
+  },
+  {
+    "id": "turn-271",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "55:29",
+    "html": "Okay. The asa ta Miro fentimento stay saber down with me. Have strikes stuck I the shose 1."
+  },
+  {
+    "id": "turn-272",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "55:40",
+    "html": "No, you have to say all three. You have to say all three to the father, for example. I'll go first. I understand your daughter's in there. I..."
+  },
+  {
+    "id": "turn-273",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "55:56",
+    "html": "Okay, I understand you, but your precaution for your daughter. But please sit down here. For you... This display is standard. I need to stay here, but I help you with... But I need to stay here."
+  },
+  {
+    "id": "turn-274",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "56:27",
+    "html": "Very good. I'm going to have AI understand your daughter's in that, but it's not safe. You need to stay back so we can do our job. We can... Give our job. Please help me make sure no one comes near. Keep people back because we have to give him a job..."
+  },
+  {
+    "id": "turn-275",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "56:48",
+    "html": "Okay. Understand you, please?"
+  },
+  {
+    "id": "turn-276",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "56:53",
+    "html": "Said I hear you. I know you are scared. Look at me. It is not safe inside because of secondary collapse. Please stay here with me and help me check this list. So I can bring you news. Okay? Okay. I think you got it and I think I got so I think I just won, but there you go. I think you won, beta, I think you won. I think I didn't really do the end. Okay, very good job, beta. So next week we will move on, but you did very well. Wow, we got..."
+  },
+  {
+    "id": "turn-277",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "57:34",
+    "html": "Very funny."
+  },
+  {
+    "id": "turn-278",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "57:34",
+    "html": "Yeah, we went through a whole board. Very good, lots of questions. Okay. And what will you do the rest of the day? Bernie? What will you do the rest of the day?"
+  },
+  {
+    "id": "turn-279",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "57:45",
+    "html": "I now they go b fed and yes, and the prepare the workday and then training yes, for our ways, yes."
+  },
+  {
+    "id": "turn-280",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "58:04",
+    "html": "I'm going to do some homework. I'm going to do some homework, send you some notes and then, go to sleep. I yeah..."
+  },
+  {
+    "id": "turn-281",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "58:14",
+    "html": "Well, what sign this is. Okay, good. And I."
+  },
+  {
+    "id": "turn-282",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "58:22",
+    "html": "Good day. Well, very good job. I liked. I liked. You were very clear. And you were remembering a lot, you were remembering a lot, you were adding lots. It was very good job. Okay..."
+  },
+  {
+    "id": "turn-283",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "58:38",
+    "html": "Thank you."
+  },
+  {
+    "id": "turn-284",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "58:39",
+    "html": "Thank you very..."
+  },
+  {
+    "id": "turn-285",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Bernie",
+    "time": "58:39",
+    "html": "Bye. Night."
+  },
+  {
+    "id": "turn-286",
+    "chapterId": "",
+    "chapterTitle": "",
+    "speaker": "Louie",
+    "time": "58:39",
+    "html": "Much, Bernie, and good day, good dayus, bye, goodbye."
+  }
 ];
     const STUDENT_STRENGTHS = [
-    {
-        "time":  "🕒 02:04",
-        "phrase":  "Natural Spoken Fluency",
-        "desc":  "Expressed ideas clearly in real-time conversation at 02:04.",
-        "quote":  "Bernie: \"No, I don\u0027t believe in her because of the practice and the evangelist religion. I believe in Jesus...\""
-    },
-    {
-        "time":  "🕒 13:17",
-        "phrase":  "Natural Spoken Fluency",
-        "desc":  "Expressed ideas clearly in real-time conversation at 13:17.",
-        "quote":  "Bernie: \"Yes, ten years ago. Yes, ten years ago. Yes, I did, and before I believed in God, I did not believe in Jesus Christ because before...\""
-    },
-    {
-        "time":  "🕒 34:37",
-        "phrase":  "Natural Spoken Fluency",
-        "desc":  "Expressed ideas clearly in real-time conversation at 34:37.",
-        "quote":  "Bernie: \"Okay, yes, before going to the Catholic church, but now together we go to the Evangelism church. The shame for ours, my daughter, ...\""
-    },
-    {
-        "time":  "🕒 48:21",
-        "phrase":  "Natural Spoken Fluency",
-        "desc":  "Expressed ideas clearly in real-time conversation at 48:21.",
-        "quote":  "Bernie: \"Prayer regres GA next part step quick...\""
-    }
+  {
+    "title": "Strong PFA Calm-Down Sequencing",
+    "desc": "You practiced guiding a panicked person through grounding, eye contact, safety reassurance, and steady breathing."
+  },
+  {
+    "title": "High Engagement in Jeopardy Review",
+    "desc": "You stayed active across 286 turns and tackled field-decision and emergency-response scenarios in English."
+  },
+  {
+    "title": "Natural Conversational Flow",
+    "desc": "You shared personal travel and field stories fluidly while keeping the core message clear."
+  }
 ];
     const GENTLE_POLISHES = [
-    {
-        "topic":  "Natural Connectors",
-        "said":  "Linking ideas quickly in conversation",
-        "natural":  "Use \u0027actually\u0027, \u0027honestly\u0027, and \u0027fair enough\u0027 to buy thinking time.",
-        "why":  "Natural discourse markers keep speech smooth without rushing."
-    },
-    {
-        "topic":  "Phrasal Verbs in Speech",
-        "said":  "Formal single-word verbs",
-        "natural":  "Mix in \u0027figure out\u0027, \u0027sort out\u0027, and \u0027catch up\u0027.",
-        "why":  "Native speakers rely heavily on phrasal verbs in everyday conversation."
-    }
+  {
+    "original": "help them feel safe and grounded",
+    "improved": "I'm here with you—you're safe now. Let's breathe slowly together.",
+    "why": "Short, concrete, present-tense phrases work best when someone is in acute panic."
+  },
+  {
+    "original": "secondary collapse is the situation",
+    "improved": "There is a risk of secondary collapse in this area.",
+    "why": "Using 'risk of' makes emergency hazard briefings sharper and more idiomatic."
+  }
 ];
-    const ASR_FIXES = {
-    "time":  "00:00",
-    "speaker":  "Note-taker",
-    "wrong":  "Preply",
-    "right":  "Preply",
-    "note":  "Automated speech-to-text transcript synced from Krisp AI."
-};
-    const CULTURAL_PLACES = {
-    "meta":  "11-09-2026",
-    "badge":  "Lesson Overview",
-    "title":  "Full Session Transcript \u0026 Vocabulary",
-    "desc":  "Complete speaker-labeled transcript synced from Krisp AI with 253 speaking turns and 10 highlighted B2–C2 vocabulary items.",
-    "quote":  "\"Practice reviewing 5 highlighted words from today\u0027s conversation before our next class.\"",
-    "tags":  [
-                 "transcript",
-                 "vocabulary",
-                 "fluency"
-             ]
-};
+    const ASR_FIXES = [
+  {
+    "wrong": "get Augusta",
+    "right": "get accustomed / get a...",
+    "note": "Auto-captioning misheard rapid speech."
+  }
+];
+    const CULTURAL_PLACES = [
+  {
+    "name": "Emergency Field & PFA Roleplay",
+    "tag": "Practice Focus",
+    "desc": "4-step Psychological First Aid delivery: introduce yourself, make eye contact, reassure safety, and guide breathing."
+  }
+];
     const QUIZ_QUESTIONS = [
-    {
-        "q":  "1. Which word or phrase from today\u0027s lesson means: \"In the end, especially after a long time or series of events.\"?",
-        "options":  [
-                        "eventually",
-                        "absolutely",
-                        "completely"
-                    ],
-        "correct":  0,
-        "explain":  "\u0027eventually\u0027 (B2) — In the end, especially after a long time or series of events."
-    },
-    {
-        "q":  "2. Which word or phrase from today\u0027s lesson means: \"Completely and without any doubt.\"?",
-        "options":  [
-                        "absolutely",
-                        "completely",
-                        "especially"
-                    ],
-        "correct":  0,
-        "explain":  "\u0027absolutely\u0027 (B2) — Completely and without any doubt."
-    },
-    {
-        "q":  "3. Which word or phrase from today\u0027s lesson means: \"Totally; in every way.\"?",
-        "options":  [
-                        "completely",
-                        "especially",
-                        "unfortunately"
-                    ],
-        "correct":  0,
-        "explain":  "\u0027completely\u0027 (B2) — Totally; in every way."
-    },
-    {
-        "q":  "4. Which word or phrase from today\u0027s lesson means: \"Particularly; above all others.\"?",
-        "options":  [
-                        "especially",
-                        "unfortunately",
-                        "actually"
-                    ],
-        "correct":  0,
-        "explain":  "\u0027especially\u0027 (B2) — Particularly; above all others."
-    }
+  {
+    "q": "Which verb means to say or do something to remove someone's doubts or fears?",
+    "opts": [
+      "reassure",
+      "differentiate",
+      "collapse",
+      "deliver"
+    ],
+    "ans": 0
+  },
+  {
+    "q": "In the 4-step calm-voice delivery, what comes right after introducing yourself and making eye contact?",
+    "opts": [
+      "Reassure safety and guide breathing",
+      "Ask for their ID",
+      "Move heavy debris",
+      "Call the media"
+    ],
+    "ans": 0
+  }
 ];
     const FLASHCARD_KEYS = Object.keys(VOCAB_DB).slice(0, 12);
 
